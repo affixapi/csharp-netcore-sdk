@@ -195,52 +195,76 @@ namespace Org.OpenAPITools.Model
         Fourthhr = 27,
 
         /// <summary>
+        /// Enum Gusto for value: gusto
+        /// </summary>
+        [EnumMember(Value = "gusto")]
+        Gusto = 28,
+
+        /// <summary>
         /// Enum Itrent for value: itrent
         /// </summary>
         [EnumMember(Value = "itrent")]
-        Itrent = 28,
+        Itrent = 29,
+
+        /// <summary>
+        /// Enum Justworks for value: justworks
+        /// </summary>
+        [EnumMember(Value = "justworks")]
+        Justworks = 30,
 
         /// <summary>
         /// Enum Oysterhr for value: oysterhr
         /// </summary>
         [EnumMember(Value = "oysterhr")]
-        Oysterhr = 29,
+        Oysterhr = 31,
 
         /// <summary>
         /// Enum Paycircle for value: paycircle
         /// </summary>
         [EnumMember(Value = "paycircle")]
-        Paycircle = 30,
+        Paycircle = 32,
 
         /// <summary>
         /// Enum PentoIo for value: pento.io
         /// </summary>
         [EnumMember(Value = "pento.io")]
-        PentoIo = 31,
+        PentoIo = 33,
 
         /// <summary>
         /// Enum Peoplehr for value: peoplehr
         /// </summary>
         [EnumMember(Value = "peoplehr")]
-        Peoplehr = 32,
+        Peoplehr = 34,
 
         /// <summary>
         /// Enum RemoteCom for value: remote.com
         /// </summary>
         [EnumMember(Value = "remote.com")]
-        RemoteCom = 33,
+        RemoteCom = 35,
+
+        /// <summary>
+        /// Enum Rippling for value: rippling
+        /// </summary>
+        [EnumMember(Value = "rippling")]
+        Rippling = 36,
 
         /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 34,
+        Sageone = 37,
+
+        /// <summary>
+        /// Enum ShapePayroll for value: shape payroll
+        /// </summary>
+        [EnumMember(Value = "shape payroll")]
+        ShapePayroll = 38,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 35
+        SimplepayIe = 39
 
     }
 
