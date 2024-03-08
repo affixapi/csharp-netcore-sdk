@@ -40,6 +40,10 @@ jobs:
             --configuration Release \
             --output .
 
+          echo 'testing'
+
+          dotnet test --configuration Release --no-restore
+
       - uses: cycjimmy/semantic-release-action@v4.0.0
         with:
           semantic_version: 18
@@ -51,6 +55,6 @@ jobs:
       - name: Publish package distributions to NuGet
         run: |
           dotnet nuget push \
-            AffixApi.${{ github.ref_name }}.nopkg \
-            -s https://nuget.pkg.github.com/affixapi/csharp-dotnet-sdk/index.json \
-            -k ${{ secrets.NUGET_AUTH_TOKEN }}
+            "$(ls -a AffixApi.Api.*.nupkg)" \
+            --source https://api.nuget.org/v3/index.json \
+            -k ${{ secrets.NUGET_API_KEY }}
