@@ -28,21 +28,11 @@ jobs:
 
       - name: prepare csharp-dotnet-sdk
         run: |
-          echo 'building'
-
           dotnet build --configuration Release
 
-          echo 'packing'
-
-          dotnet pack \
-            --no-restore \
-            --no-build \
-            --configuration Release \
-            --output .
-
-          echo 'testing'
-
           dotnet test --configuration Release --no-restore
+
+          dotnet pack --configuration Release --no-build --no-restore --output .
 
       - uses: cycjimmy/semantic-release-action@v4.0.0
         with:
