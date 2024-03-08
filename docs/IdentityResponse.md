@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IdentityResponse
+# AffixApi.Api.Model.IdentityResponse
 
 ## Properties
 

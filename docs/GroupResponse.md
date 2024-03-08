@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.GroupResponse
+# AffixApi.Api.Model.GroupResponse
 
 ## Properties
 

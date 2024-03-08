@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EmploymentResponse
+# AffixApi.Api.Model.EmploymentResponse
 
 ## Properties
 

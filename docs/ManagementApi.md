@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ManagementApi
+# AffixApi.Api.Api.ManagementApi
 
 All URIs are relative to *https://api.affixapi.com*
 
@@ -24,9 +24,9 @@ View client attributes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -100,9 +100,9 @@ Disconnect the token. A disconnected token will no longer return data. Data requ
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -175,9 +175,9 @@ Retrieve data about the token, such as `scopes`, `mode`, `provider`, and if it i
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -252,9 +252,9 @@ Exchange an `authorization_code` for an `access_token` after receiving on from t
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -328,9 +328,9 @@ View tokens and token status for respective client
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -405,9 +405,9 @@ Update attributes of the client.  Update the `name`, `client_secret`, or `webhoo
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {

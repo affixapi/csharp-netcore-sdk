@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TokenResponse
+# AffixApi.Api.Model.TokenResponse
 
 ## Properties
 

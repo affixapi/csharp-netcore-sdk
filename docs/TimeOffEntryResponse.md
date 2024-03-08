@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimeOffEntryResponse
+# AffixApi.Api.Model.TimeOffEntryResponse
 
 ## Properties
 

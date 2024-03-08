@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ClientRequest
+# AffixApi.Api.Model.ClientRequest
 
 ## Properties
 

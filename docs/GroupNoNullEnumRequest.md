@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.GroupNoNullEnumRequest
+# AffixApi.Api.Model.GroupNoNullEnumRequest
 
 ## Properties
 

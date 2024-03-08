@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.IdAndMessageResponse
+# AffixApi.Api.Model.IdAndMessageResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ModeRequest
+# AffixApi.Api.Model.ModeRequest
 
 ## Properties
 

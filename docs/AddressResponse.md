@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressResponse
+# AffixApi.Api.Model.AddressResponse
 
 ## Properties
 

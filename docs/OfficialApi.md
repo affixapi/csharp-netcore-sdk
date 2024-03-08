@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.OfficialApi
+# AffixApi.Api.Api.OfficialApi
 
 All URIs are relative to *https://api.affixapi.com*
 
@@ -27,9 +27,9 @@ Retrieve company information
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -104,9 +104,9 @@ Creates a new Employee
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -184,9 +184,9 @@ List the individuals (employees, contractors, accountants, and others) listed in
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -261,9 +261,9 @@ The Group object is used to represent any subset of employees, such as PayGroup,
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -338,9 +338,9 @@ Retrieve all time off balances.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -415,9 +415,9 @@ Retrieve time off / absence entries
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -492,9 +492,9 @@ Retrieve Timesheets
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -569,9 +569,9 @@ The Location object is used to represent an address that can be associated with 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {
@@ -646,9 +646,9 @@ List information of the user for the respective account
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {

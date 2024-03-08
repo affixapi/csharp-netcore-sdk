@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CurrencyResponse
+# AffixApi.Api.Model.CurrencyResponse
 
 ## Properties
 

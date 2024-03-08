@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.InlineResponse400
+# AffixApi.Api.Model.InlineResponse400
 
 ## Properties
 

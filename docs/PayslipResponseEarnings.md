@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PayslipResponseEarnings
+# AffixApi.Api.Model.PayslipResponseEarnings
 The breakdown of gross pay
 
 ## Properties

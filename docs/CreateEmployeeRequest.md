@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateEmployeeRequest
+# AffixApi.Api.Model.CreateEmployeeRequest
 
 ## Properties
 

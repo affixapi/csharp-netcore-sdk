@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ScopesRequest
+# AffixApi.Api.Model.ScopesRequest
 
 ## Properties
 

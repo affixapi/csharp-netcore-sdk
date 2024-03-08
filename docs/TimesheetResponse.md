@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimesheetResponse
+# AffixApi.Api.Model.TimesheetResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.CoreApi
+# AffixApi.Api.Api.CoreApi
 
 All URIs are relative to *https://api.affixapi.com*
 
@@ -19,9 +19,9 @@ Retrieve the api modes (official, developer) and providers for the respective mo
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
 
 namespace Example
 {

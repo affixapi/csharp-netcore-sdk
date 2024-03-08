@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.EmploymentNoNullEnumRequest
+# AffixApi.Api.Model.EmploymentNoNullEnumRequest
 
 ## Properties
 

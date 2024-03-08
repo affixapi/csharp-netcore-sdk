@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.TimeOffBalanceResponse
+# AffixApi.Api.Model.TimeOffBalanceResponse
 
 ## Properties
 

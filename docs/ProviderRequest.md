@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.ProviderRequest
+# AffixApi.Api.Model.ProviderRequest
 
 ## Properties
 

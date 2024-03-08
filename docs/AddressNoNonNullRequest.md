@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.AddressNoNonNullRequest
+# AffixApi.Api.Model.AddressNoNonNullRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.LocationResponse
+# AffixApi.Api.Model.LocationResponse
 
 ## Properties
 

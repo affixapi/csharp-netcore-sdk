@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CompanyResponse
+# AffixApi.Api.Model.CompanyResponse
 
 ## Properties
 

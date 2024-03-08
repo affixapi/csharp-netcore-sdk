@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PayslipResponseDeductions
+# AffixApi.Api.Model.PayslipResponseDeductions
 
 ## Properties
 

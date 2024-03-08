@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PayrunResponse
+# AffixApi.Api.Model.PayrunResponse
 
 ## Properties
 

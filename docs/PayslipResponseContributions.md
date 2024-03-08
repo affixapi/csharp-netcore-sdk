@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.PayslipResponseContributions
+# AffixApi.Api.Model.PayslipResponseContributions
 
 ## Properties
 

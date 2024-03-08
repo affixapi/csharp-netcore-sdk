@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Model.CreateEmployeeRequestBankAccount
+# AffixApi.Api.Model.CreateEmployeeRequestBankAccount
 
 ## Properties
 
