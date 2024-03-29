@@ -1,25 +1,25 @@
-# AffixApi.Api.Api.DeveloperApi
+# AffixApi.Api.Api.XHRApi
 
 All URIs are relative to *https://api.affixapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeveloperCompanies20230301**](DeveloperApi.md#developercompanies20230301) | **GET** /2023-03-01/developer/company | Company
-[**DeveloperCreateEmployee20230301**](DeveloperApi.md#developercreateemployee20230301) | **POST** /2023-03-01/developer/employee | Create employee
-[**DeveloperEmployees20230301**](DeveloperApi.md#developeremployees20230301) | **GET** /2023-03-01/developer/employees | Employees
-[**DeveloperGroups20230301**](DeveloperApi.md#developergroups20230301) | **GET** /2023-03-01/developer/groups | Groups
-[**DeveloperIdentity20230301**](DeveloperApi.md#developeridentity20230301) | **GET** /2023-03-01/developer/identity | Identity
-[**DeveloperPayruns20230301**](DeveloperApi.md#developerpayruns20230301) | **GET** /2023-03-01/developer/payruns | Payruns
-[**DeveloperPayslips20230301**](DeveloperApi.md#developerpayslips20230301) | **GET** /2023-03-01/developer/payruns/{payrun_id} | Payslips
-[**DeveloperTimeOffBalances20230301**](DeveloperApi.md#developertimeoffbalances20230301) | **GET** /2023-03-01/developer/time-off-balances | Time off balances
-[**DeveloperTimeOffEntries20230301**](DeveloperApi.md#developertimeoffentries20230301) | **GET** /2023-03-01/developer/time-off-entries | Time off entries
-[**DeveloperTimesheets20230301**](DeveloperApi.md#developertimesheets20230301) | **GET** /2023-03-01/developer/timesheets | Timesheets
-[**DeveloperWorkLocations20230301**](DeveloperApi.md#developerworklocations20230301) | **GET** /2023-03-01/developer/work-locations | Work locations
+[**XhrCompanies20230301**](XHRApi.md#xhrcompanies20230301) | **GET** /2023-03-01/xhr/company | Company
+[**XhrCreateEmployee20230301**](XHRApi.md#xhrcreateemployee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
+[**XhrEmployees20230301**](XHRApi.md#xhremployees20230301) | **GET** /2023-03-01/xhr/employees | Employees
+[**XhrGroups20230301**](XHRApi.md#xhrgroups20230301) | **GET** /2023-03-01/xhr/groups | Groups
+[**XhrIdentity20230301**](XHRApi.md#xhridentity20230301) | **GET** /2023-03-01/xhr/identity | Identity
+[**XhrPayruns20230301**](XHRApi.md#xhrpayruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns
+[**XhrPayslips20230301**](XHRApi.md#xhrpayslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips
+[**XhrTimeOffBalances20230301**](XHRApi.md#xhrtimeoffbalances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances
+[**XhrTimeOffEntries20230301**](XHRApi.md#xhrtimeoffentries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries
+[**XhrTimesheets20230301**](XHRApi.md#xhrtimesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets
+[**XhrWorkLocations20230301**](XHRApi.md#xhrworklocations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations
 
 
-<a name="developercompanies20230301"></a>
-# **DeveloperCompanies20230301**
-> List&lt;CompanyResponse&gt; DeveloperCompanies20230301 ()
+<a name="xhrcompanies20230301"></a>
+# **XhrCompanies20230301**
+> List&lt;CompanyResponse&gt; XhrCompanies20230301 ()
 
 Company
 
@@ -35,7 +35,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperCompanies20230301Example
+    public class XhrCompanies20230301Example
     {
         public static void Main()
         {
@@ -46,17 +46,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Company
-                List<CompanyResponse> result = apiInstance.DeveloperCompanies20230301();
+                List<CompanyResponse> result = apiInstance.XhrCompanies20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperCompanies20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrCompanies20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -94,9 +94,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developercreateemployee20230301"></a>
-# **DeveloperCreateEmployee20230301**
-> EmployeeResponse DeveloperCreateEmployee20230301 (CreateEmployeeRequest createEmployeeRequest)
+<a name="xhrcreateemployee20230301"></a>
+# **XhrCreateEmployee20230301**
+> EmployeeResponse XhrCreateEmployee20230301 (CreateEmployeeRequest createEmployeeRequest)
 
 Create employee
 
@@ -112,7 +112,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperCreateEmployee20230301Example
+    public class XhrCreateEmployee20230301Example
     {
         public static void Main()
         {
@@ -123,18 +123,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
             var createEmployeeRequest = new CreateEmployeeRequest(); // CreateEmployeeRequest | 
 
             try
             {
                 // Create employee
-                EmployeeResponse result = apiInstance.DeveloperCreateEmployee20230301(createEmployeeRequest);
+                EmployeeResponse result = apiInstance.XhrCreateEmployee20230301(createEmployeeRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperCreateEmployee20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrCreateEmployee20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -174,9 +174,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developeremployees20230301"></a>
-# **DeveloperEmployees20230301**
-> List&lt;EmployeeResponse&gt; DeveloperEmployees20230301 ()
+<a name="xhremployees20230301"></a>
+# **XhrEmployees20230301**
+> List&lt;EmployeeResponse&gt; XhrEmployees20230301 ()
 
 Employees
 
@@ -192,7 +192,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperEmployees20230301Example
+    public class XhrEmployees20230301Example
     {
         public static void Main()
         {
@@ -203,17 +203,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Employees
-                List<EmployeeResponse> result = apiInstance.DeveloperEmployees20230301();
+                List<EmployeeResponse> result = apiInstance.XhrEmployees20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperEmployees20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrEmployees20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -251,9 +251,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developergroups20230301"></a>
-# **DeveloperGroups20230301**
-> List&lt;GroupResponse&gt; DeveloperGroups20230301 ()
+<a name="xhrgroups20230301"></a>
+# **XhrGroups20230301**
+> List&lt;GroupResponse&gt; XhrGroups20230301 ()
 
 Groups
 
@@ -269,7 +269,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperGroups20230301Example
+    public class XhrGroups20230301Example
     {
         public static void Main()
         {
@@ -280,17 +280,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Groups
-                List<GroupResponse> result = apiInstance.DeveloperGroups20230301();
+                List<GroupResponse> result = apiInstance.XhrGroups20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperGroups20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrGroups20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -328,9 +328,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developeridentity20230301"></a>
-# **DeveloperIdentity20230301**
-> IdentityResponse DeveloperIdentity20230301 ()
+<a name="xhridentity20230301"></a>
+# **XhrIdentity20230301**
+> IdentityResponse XhrIdentity20230301 ()
 
 Identity
 
@@ -346,7 +346,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperIdentity20230301Example
+    public class XhrIdentity20230301Example
     {
         public static void Main()
         {
@@ -357,17 +357,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Identity
-                IdentityResponse result = apiInstance.DeveloperIdentity20230301();
+                IdentityResponse result = apiInstance.XhrIdentity20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperIdentity20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrIdentity20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -403,9 +403,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developerpayruns20230301"></a>
-# **DeveloperPayruns20230301**
-> List&lt;PayrunResponse&gt; DeveloperPayruns20230301 (DateTime startDate, DateTime endDate)
+<a name="xhrpayruns20230301"></a>
+# **XhrPayruns20230301**
+> List&lt;PayrunResponse&gt; XhrPayruns20230301 (DateTime startDate, DateTime endDate)
 
 Payruns
 
@@ -421,7 +421,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperPayruns20230301Example
+    public class XhrPayruns20230301Example
     {
         public static void Main()
         {
@@ -432,19 +432,19 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
             var startDate = 2013-10-20;  // DateTime | The start date of the search period
             var endDate = 2013-10-20;  // DateTime | The end date of the search period
 
             try
             {
                 // Payruns
-                List<PayrunResponse> result = apiInstance.DeveloperPayruns20230301(startDate, endDate);
+                List<PayrunResponse> result = apiInstance.XhrPayruns20230301(startDate, endDate);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperPayruns20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrPayruns20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -486,9 +486,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developerpayslips20230301"></a>
-# **DeveloperPayslips20230301**
-> List&lt;PayslipResponse&gt; DeveloperPayslips20230301 (string payrunId)
+<a name="xhrpayslips20230301"></a>
+# **XhrPayslips20230301**
+> List&lt;PayslipResponse&gt; XhrPayslips20230301 (string payrunId)
 
 Payslips
 
@@ -504,7 +504,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperPayslips20230301Example
+    public class XhrPayslips20230301Example
     {
         public static void Main()
         {
@@ -515,18 +515,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
             var payrunId = payrunId_example;  // string | The id of the payrun.
 
             try
             {
                 // Payslips
-                List<PayslipResponse> result = apiInstance.DeveloperPayslips20230301(payrunId);
+                List<PayslipResponse> result = apiInstance.XhrPayslips20230301(payrunId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperPayslips20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrPayslips20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -567,9 +567,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developertimeoffbalances20230301"></a>
-# **DeveloperTimeOffBalances20230301**
-> List&lt;TimeOffBalanceResponse&gt; DeveloperTimeOffBalances20230301 ()
+<a name="xhrtimeoffbalances20230301"></a>
+# **XhrTimeOffBalances20230301**
+> List&lt;TimeOffBalanceResponse&gt; XhrTimeOffBalances20230301 ()
 
 Time off balances
 
@@ -585,7 +585,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperTimeOffBalances20230301Example
+    public class XhrTimeOffBalances20230301Example
     {
         public static void Main()
         {
@@ -596,17 +596,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Time off balances
-                List<TimeOffBalanceResponse> result = apiInstance.DeveloperTimeOffBalances20230301();
+                List<TimeOffBalanceResponse> result = apiInstance.XhrTimeOffBalances20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperTimeOffBalances20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrTimeOffBalances20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -644,9 +644,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developertimeoffentries20230301"></a>
-# **DeveloperTimeOffEntries20230301**
-> List&lt;TimeOffEntryResponse&gt; DeveloperTimeOffEntries20230301 ()
+<a name="xhrtimeoffentries20230301"></a>
+# **XhrTimeOffEntries20230301**
+> List&lt;TimeOffEntryResponse&gt; XhrTimeOffEntries20230301 ()
 
 Time off entries
 
@@ -662,7 +662,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperTimeOffEntries20230301Example
+    public class XhrTimeOffEntries20230301Example
     {
         public static void Main()
         {
@@ -673,17 +673,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Time off entries
-                List<TimeOffEntryResponse> result = apiInstance.DeveloperTimeOffEntries20230301();
+                List<TimeOffEntryResponse> result = apiInstance.XhrTimeOffEntries20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperTimeOffEntries20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrTimeOffEntries20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -721,9 +721,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developertimesheets20230301"></a>
-# **DeveloperTimesheets20230301**
-> List&lt;TimesheetResponse&gt; DeveloperTimesheets20230301 ()
+<a name="xhrtimesheets20230301"></a>
+# **XhrTimesheets20230301**
+> List&lt;TimesheetResponse&gt; XhrTimesheets20230301 ()
 
 Timesheets
 
@@ -739,7 +739,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperTimesheets20230301Example
+    public class XhrTimesheets20230301Example
     {
         public static void Main()
         {
@@ -750,17 +750,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Timesheets
-                List<TimesheetResponse> result = apiInstance.DeveloperTimesheets20230301();
+                List<TimesheetResponse> result = apiInstance.XhrTimesheets20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperTimesheets20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrTimesheets20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -798,9 +798,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="developerworklocations20230301"></a>
-# **DeveloperWorkLocations20230301**
-> List&lt;LocationResponse&gt; DeveloperWorkLocations20230301 ()
+<a name="xhrworklocations20230301"></a>
+# **XhrWorkLocations20230301**
+> List&lt;LocationResponse&gt; XhrWorkLocations20230301 ()
 
 Work locations
 
@@ -816,7 +816,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class DeveloperWorkLocations20230301Example
+    public class XhrWorkLocations20230301Example
     {
         public static void Main()
         {
@@ -827,17 +827,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DeveloperApi(config);
+            var apiInstance = new XHRApi(config);
 
             try
             {
                 // Work locations
-                List<LocationResponse> result = apiInstance.DeveloperWorkLocations20230301();
+                List<LocationResponse> result = apiInstance.XhrWorkLocations20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DeveloperApi.DeveloperWorkLocations20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRApi.XhrWorkLocations20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
