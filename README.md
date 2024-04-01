@@ -28,27 +28,27 @@ in order to get started, you must:
 # Sandbox keys (xhr mode)
 ### dev
 ```
-eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6ImQ1OTZhMmYzLWYzNzktNGE1ZC1hMmRhLTk4OWJmYWViYTg1ZCIsImlhdCI6MTcwMjkyMDkwMywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5kZXYuZW5naW5lZXJpbmcuYWZmaXhhcGkuY29tIiwic3ViIjoiZGV2ZWxvcGVyIiwiYXVkIjoiM0ZEQUVERjktMURDQTRGNTQtODc5NDlGNkEtNDEwMjc2NDMifQ.VLWYjCQvBS0C3ZA6_J3-U-idZj5EYI2IlDdTjAWBxSIHGufp6cqaVodKsF2BeIqcIeB3P0lW-KL9mY3xGd7ckQ
+eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEveGhyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEveGhyL2dyb3VwcyIsIi8yMDIzLTAzLTAxL3hoci9pZGVudGl0eSIsIi8yMDIzLTAzLTAxL3hoci9wYXlydW5zIiwiLzIwMjMtMDMtMDEveGhyL3BheXJ1bnMvOnBheXJ1bl9pZCIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1iYWxhbmNlcyIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1lbnRyaWVzIiwiLzIwMjMtMDMtMDEveGhyL3RpbWVzaGVldHMiLCIvMjAyMy0wMy0wMS94aHIvd29yay1sb2NhdGlvbnMiXSwidG9rZW4iOiIzODIzNTNlMi05N2ZiLTRmMWEtOTYxYy0zZDI5OTViNzYxMTUiLCJpYXQiOjE3MTE4MTA3MTQsImlzcyI6InB1YmxpY2FwaS1pbnRlcm1lZGlhdGUuZGV2LmVuZ2luZWVyaW5nLmFmZml4YXBpLmNvbSIsInN1YiI6InhociIsImF1ZCI6IjNGREFFREY5LTFEQ0E0RjU0LTg3OTQ5RjZBLTQxMDI3NjQzIn0.zUJPaT6IxcIdr8b9iO6u-Rr5I-ohTHPYTrQGrgOFghbEbovItiwr9Wk479GnJVJc3WR8bxAwUMAE4Ul6Okdk6Q
 ```
 
 #### `employees` endpoint sample:
 ```
 curl - -fail \\
   -X GET \\
-  -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6ImQ1OTZhMmYzLWYzNzktNGE1ZC1hMmRhLTk4OWJmYWViYTg1ZCIsImlhdCI6MTcwMjkyMDkwMywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5kZXYuZW5naW5lZXJpbmcuYWZmaXhhcGkuY29tIiwic3ViIjoiZGV2ZWxvcGVyIiwiYXVkIjoiM0ZEQUVERjktMURDQTRGNTQtODc5NDlGNkEtNDEwMjc2NDMifQ.VLWYjCQvBS0C3ZA6_J3-U-idZj5EYI2IlDdTjAWBxSIHGufp6cqaVodKsF2BeIqcIeB3P0lW-KL9mY3xGd7ckQ' \\
+  -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEveGhyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEveGhyL2dyb3VwcyIsIi8yMDIzLTAzLTAxL3hoci9pZGVudGl0eSIsIi8yMDIzLTAzLTAxL3hoci9wYXlydW5zIiwiLzIwMjMtMDMtMDEveGhyL3BheXJ1bnMvOnBheXJ1bl9pZCIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1iYWxhbmNlcyIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1lbnRyaWVzIiwiLzIwMjMtMDMtMDEveGhyL3RpbWVzaGVldHMiLCIvMjAyMy0wMy0wMS94aHIvd29yay1sb2NhdGlvbnMiXSwidG9rZW4iOiIzODIzNTNlMi05N2ZiLTRmMWEtOTYxYy0zZDI5OTViNzYxMTUiLCJpYXQiOjE3MTE4MTA3MTQsImlzcyI6InB1YmxpY2FwaS1pbnRlcm1lZGlhdGUuZGV2LmVuZ2luZWVyaW5nLmFmZml4YXBpLmNvbSIsInN1YiI6InhociIsImF1ZCI6IjNGREFFREY5LTFEQ0E0RjU0LTg3OTQ5RjZBLTQxMDI3NjQzIn0.zUJPaT6IxcIdr8b9iO6u-Rr5I-ohTHPYTrQGrgOFghbEbovItiwr9Wk479GnJVJc3WR8bxAwUMAE4Ul6Okdk6Q' \\
   'https://dev.api.affixapi.com/2023-03-01/xhr/employees'
 ```
 
 ### prod
 ```
-eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6IjI5YjFjYTg4LWNlNjktNDgyZC1iNGZjLTkzMWMzZmJkYWM4ZSIsImlhdCI6MTcwMjkyMTA4MywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5wcm9kLmVuZ2luZWVyaW5nLmFmZml4YXBpLmNvbSIsInN1YiI6ImRldmVsb3BlciIsImF1ZCI6IjA4QkIwODFFLUQ5QUI0RDE0LThERjk5MjMzLTY2NjE1Q0U5In0.2zdpFAmiyYiYk6MOcbXNUwwR4M1Fextnaac340x54AidiWXCyw-u9KeavbqfYF6q8a9kcDLrxhJ8Wc_3tIzuVw
+eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEveGhyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEveGhyL2dyb3VwcyIsIi8yMDIzLTAzLTAxL3hoci9pZGVudGl0eSIsIi8yMDIzLTAzLTAxL3hoci9wYXlydW5zIiwiLzIwMjMtMDMtMDEveGhyL3BheXJ1bnMvOnBheXJ1bl9pZCIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1iYWxhbmNlcyIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1lbnRyaWVzIiwiLzIwMjMtMDMtMDEveGhyL3RpbWVzaGVldHMiLCIvMjAyMy0wMy0wMS94aHIvd29yay1sb2NhdGlvbnMiXSwidG9rZW4iOiIzYjg4MDc2NC1kMGFmLTQ5ZDAtOGM5OS00YzIwYjE2MTJjOTMiLCJpYXQiOjE3MTE4MTA4NTgsImlzcyI6InB1YmxpY2FwaS1pbnRlcm1lZGlhdGUucHJvZC5lbmdpbmVlcmluZy5hZmZpeGFwaS5jb20iLCJzdWIiOiJ4aHIiLCJhdWQiOiIwOEJCMDgxRS1EOUFCNEQxNC04REY5OTIzMy02NjYxNUNFOSJ9.n3pJmmfegU21Tko_TyUyCHi4ITvfd75T8NFFTHmf1r8AI8yCUYTWdfNjyZZWcZD6z50I3Wsk2rAd8GDWXn4vlg
 ```
 
 #### `employees` endpoint sample:
 ```
 curl - -fail \\
   -X GET \\
-  -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6IjI5YjFjYTg4LWNlNjktNDgyZC1iNGZjLTkzMWMzZmJkYWM4ZSIsImlhdCI6MTcwMjkyMTA4MywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5wcm9kLmVuZ2luZWVyaW5nLmFmZml4YXBpLmNvbSIsInN1YiI6ImRldmVsb3BlciIsImF1ZCI6IjA4QkIwODFFLUQ5QUI0RDE0LThERjk5MjMzLTY2NjE1Q0U5In0.2zdpFAmiyYiYk6MOcbXNUwwR4M1Fextnaac340x54AidiWXCyw-u9KeavbqfYF6q8a9kcDLrxhJ8Wc_3tIzuVw' \\
+  -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEveGhyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS94aHIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEveGhyL2dyb3VwcyIsIi8yMDIzLTAzLTAxL3hoci9pZGVudGl0eSIsIi8yMDIzLTAzLTAxL3hoci9wYXlydW5zIiwiLzIwMjMtMDMtMDEveGhyL3BheXJ1bnMvOnBheXJ1bl9pZCIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1iYWxhbmNlcyIsIi8yMDIzLTAzLTAxL3hoci90aW1lLW9mZi1lbnRyaWVzIiwiLzIwMjMtMDMtMDEveGhyL3RpbWVzaGVldHMiLCIvMjAyMy0wMy0wMS94aHIvd29yay1sb2NhdGlvbnMiXSwidG9rZW4iOiIzYjg4MDc2NC1kMGFmLTQ5ZDAtOGM5OS00YzIwYjE2MTJjOTMiLCJpYXQiOjE3MTE4MTA4NTgsImlzcyI6InB1YmxpY2FwaS1pbnRlcm1lZGlhdGUucHJvZC5lbmdpbmVlcmluZy5hZmZpeGFwaS5jb20iLCJzdWIiOiJ4aHIiLCJhdWQiOiIwOEJCMDgxRS1EOUFCNEQxNC04REY5OTIzMy02NjYxNUNFOSJ9.n3pJmmfegU21Tko_TyUyCHi4ITvfd75T8NFFTHmf1r8AI8yCUYTWdfNjyZZWcZD6z50I3Wsk2rAd8GDWXn4vlg' \\
   'https://api.affixapi.com/2023-03-01/xhr/employees'
 ```
 
@@ -211,7 +211,7 @@ Things to keep in mind:
 This C# SDK is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: 2023-03-01
-- SDK version: 1.1.46
+- SDK version: 1.1.47
 - Build package: org.openapitools.codegen.languages.CSharpNetCoreClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -301,12 +301,12 @@ namespace Example
             try
             {
                 // Company
-                List<CompanyResponse> result = apiInstance.OfficialCompanies20230301();
+                List<CompanyResponse> result = apiInstance.XhrCompanies20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling Class20230301Api.OfficialCompanies20230301: " + e.Message );
+                Debug.Print("Exception when calling Class20230301Api.XhrCompanies20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -323,15 +323,6 @@ All URIs are relative to *https://api.affixapi.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Class20230301Api* | [**OfficialCompanies20230301**](docs/Class20230301Api.md#officialcompanies20230301) | **GET** /2023-03-01/official/company | Company
-*Class20230301Api* | [**OfficialCreateEmployee20230301**](docs/Class20230301Api.md#officialcreateemployee20230301) | **POST** /2023-03-01/official/employee | Create Employee
-*Class20230301Api* | [**OfficialEmployees20230301**](docs/Class20230301Api.md#officialemployees20230301) | **GET** /2023-03-01/official/employees | Employees
-*Class20230301Api* | [**OfficialGroups20230301**](docs/Class20230301Api.md#officialgroups20230301) | **GET** /2023-03-01/official/groups | Groups
-*Class20230301Api* | [**OfficialTimeOffBalances20230301**](docs/Class20230301Api.md#officialtimeoffbalances20230301) | **GET** /2023-03-01/official/time-off-balances | Time off balances
-*Class20230301Api* | [**OfficialTimeOffEntries20230301**](docs/Class20230301Api.md#officialtimeoffentries20230301) | **GET** /2023-03-01/official/time-off-entries | Time off entries
-*Class20230301Api* | [**OfficialTimesheets20230301**](docs/Class20230301Api.md#officialtimesheets20230301) | **GET** /2023-03-01/official/timesheets | Timesheets
-*Class20230301Api* | [**OfficialWorkLocations20230301**](docs/Class20230301Api.md#officialworklocations20230301) | **GET** /2023-03-01/official/work-locations | Work locations
-*Class20230301Api* | [**Officialdentity20230301**](docs/Class20230301Api.md#officialdentity20230301) | **GET** /2023-03-01/official/identity | Identity
 *Class20230301Api* | [**XhrCompanies20230301**](docs/Class20230301Api.md#xhrcompanies20230301) | **GET** /2023-03-01/xhr/company | Company
 *Class20230301Api* | [**XhrCreateEmployee20230301**](docs/Class20230301Api.md#xhrcreateemployee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
 *Class20230301Api* | [**XhrEmployees20230301**](docs/Class20230301Api.md#xhremployees20230301) | **GET** /2023-03-01/xhr/employees | Employees
@@ -350,26 +341,17 @@ Class | Method | HTTP request | Description
 *ManagementApi* | [**Token**](docs/ManagementApi.md#token) | **POST** /2023-03-01/management/token | Create token
 *ManagementApi* | [**Tokens**](docs/ManagementApi.md#tokens) | **GET** /2023-03-01/management/tokens | Tokens
 *ManagementApi* | [**UpdateClient**](docs/ManagementApi.md#updateclient) | **POST** /2023-03-01/management/client | Update client
-*OfficialApi* | [**OfficialCompanies20230301**](docs/OfficialApi.md#officialcompanies20230301) | **GET** /2023-03-01/official/company | Company
-*OfficialApi* | [**OfficialCreateEmployee20230301**](docs/OfficialApi.md#officialcreateemployee20230301) | **POST** /2023-03-01/official/employee | Create Employee
-*OfficialApi* | [**OfficialEmployees20230301**](docs/OfficialApi.md#officialemployees20230301) | **GET** /2023-03-01/official/employees | Employees
-*OfficialApi* | [**OfficialGroups20230301**](docs/OfficialApi.md#officialgroups20230301) | **GET** /2023-03-01/official/groups | Groups
-*OfficialApi* | [**OfficialTimeOffBalances20230301**](docs/OfficialApi.md#officialtimeoffbalances20230301) | **GET** /2023-03-01/official/time-off-balances | Time off balances
-*OfficialApi* | [**OfficialTimeOffEntries20230301**](docs/OfficialApi.md#officialtimeoffentries20230301) | **GET** /2023-03-01/official/time-off-entries | Time off entries
-*OfficialApi* | [**OfficialTimesheets20230301**](docs/OfficialApi.md#officialtimesheets20230301) | **GET** /2023-03-01/official/timesheets | Timesheets
-*OfficialApi* | [**OfficialWorkLocations20230301**](docs/OfficialApi.md#officialworklocations20230301) | **GET** /2023-03-01/official/work-locations | Work locations
-*OfficialApi* | [**Officialdentity20230301**](docs/OfficialApi.md#officialdentity20230301) | **GET** /2023-03-01/official/identity | Identity
-*XHRApi* | [**XhrCompanies20230301**](docs/XHRApi.md#xhrcompanies20230301) | **GET** /2023-03-01/xhr/company | Company
-*XHRApi* | [**XhrCreateEmployee20230301**](docs/XHRApi.md#xhrcreateemployee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
-*XHRApi* | [**XhrEmployees20230301**](docs/XHRApi.md#xhremployees20230301) | **GET** /2023-03-01/xhr/employees | Employees
-*XHRApi* | [**XhrGroups20230301**](docs/XHRApi.md#xhrgroups20230301) | **GET** /2023-03-01/xhr/groups | Groups
-*XHRApi* | [**XhrIdentity20230301**](docs/XHRApi.md#xhridentity20230301) | **GET** /2023-03-01/xhr/identity | Identity
-*XHRApi* | [**XhrPayruns20230301**](docs/XHRApi.md#xhrpayruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns
-*XHRApi* | [**XhrPayslips20230301**](docs/XHRApi.md#xhrpayslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips
-*XHRApi* | [**XhrTimeOffBalances20230301**](docs/XHRApi.md#xhrtimeoffbalances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances
-*XHRApi* | [**XhrTimeOffEntries20230301**](docs/XHRApi.md#xhrtimeoffentries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries
-*XHRApi* | [**XhrTimesheets20230301**](docs/XHRApi.md#xhrtimesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets
-*XHRApi* | [**XhrWorkLocations20230301**](docs/XHRApi.md#xhrworklocations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations
+*XHRVerticallyIntegratedApi* | [**XhrCompanies20230301**](docs/XHRVerticallyIntegratedApi.md#xhrcompanies20230301) | **GET** /2023-03-01/xhr/company | Company
+*XHRVerticallyIntegratedApi* | [**XhrCreateEmployee20230301**](docs/XHRVerticallyIntegratedApi.md#xhrcreateemployee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
+*XHRVerticallyIntegratedApi* | [**XhrEmployees20230301**](docs/XHRVerticallyIntegratedApi.md#xhremployees20230301) | **GET** /2023-03-01/xhr/employees | Employees
+*XHRVerticallyIntegratedApi* | [**XhrGroups20230301**](docs/XHRVerticallyIntegratedApi.md#xhrgroups20230301) | **GET** /2023-03-01/xhr/groups | Groups
+*XHRVerticallyIntegratedApi* | [**XhrIdentity20230301**](docs/XHRVerticallyIntegratedApi.md#xhridentity20230301) | **GET** /2023-03-01/xhr/identity | Identity
+*XHRVerticallyIntegratedApi* | [**XhrPayruns20230301**](docs/XHRVerticallyIntegratedApi.md#xhrpayruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns
+*XHRVerticallyIntegratedApi* | [**XhrPayslips20230301**](docs/XHRVerticallyIntegratedApi.md#xhrpayslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips
+*XHRVerticallyIntegratedApi* | [**XhrTimeOffBalances20230301**](docs/XHRVerticallyIntegratedApi.md#xhrtimeoffbalances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances
+*XHRVerticallyIntegratedApi* | [**XhrTimeOffEntries20230301**](docs/XHRVerticallyIntegratedApi.md#xhrtimeoffentries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries
+*XHRVerticallyIntegratedApi* | [**XhrTimesheets20230301**](docs/XHRVerticallyIntegratedApi.md#xhrtimesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets
+*XHRVerticallyIntegratedApi* | [**XhrWorkLocations20230301**](docs/XHRVerticallyIntegratedApi.md#xhrworklocations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations
 
 
 <a name="documentation-for-models"></a>

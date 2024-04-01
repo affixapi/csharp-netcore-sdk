@@ -33,7 +33,6 @@ docs/ManagementApi.md
 docs/MessageResponse.md
 docs/ModeRequest.md
 docs/ModeResponse.md
-docs/OfficialApi.md
 docs/PayrunResponse.md
 docs/PayslipResponse.md
 docs/PayslipResponseContributions.md
@@ -49,14 +48,13 @@ docs/TimeOffEntryResponse.md
 docs/TimesheetResponse.md
 docs/TokenRequest.md
 docs/TokenResponse.md
-docs/XHRApi.md
+docs/XHRVerticallyIntegratedApi.md
 git_push.sh
 src/AffixApi.Api.Test/AffixApi.Api.Test.csproj
 src/AffixApi.Api.Test/Api/Class20230301ApiTests.cs
 src/AffixApi.Api.Test/Api/CoreApiTests.cs
 src/AffixApi.Api.Test/Api/ManagementApiTests.cs
-src/AffixApi.Api.Test/Api/OfficialApiTests.cs
-src/AffixApi.Api.Test/Api/XHRApiTests.cs
+src/AffixApi.Api.Test/Api/XHRVerticallyIntegratedApiTests.cs
 src/AffixApi.Api.Test/Model/AddressNoNonNullRequestTests.cs
 src/AffixApi.Api.Test/Model/AddressResponseTests.cs
 src/AffixApi.Api.Test/Model/ClientRequestTests.cs
@@ -103,8 +101,7 @@ src/AffixApi.Api/AffixApi.Api.csproj
 src/AffixApi.Api/Api/Class20230301Api.cs
 src/AffixApi.Api/Api/CoreApi.cs
 src/AffixApi.Api/Api/ManagementApi.cs
-src/AffixApi.Api/Api/OfficialApi.cs
-src/AffixApi.Api/Api/XHRApi.cs
+src/AffixApi.Api/Api/XHRVerticallyIntegratedApi.cs
 src/AffixApi.Api/Client/ApiClient.cs
 src/AffixApi.Api/Client/ApiException.cs
 src/AffixApi.Api/Client/ApiResponse.cs

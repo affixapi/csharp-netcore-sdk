@@ -1,23 +1,25 @@
-# AffixApi.Api.Api.OfficialApi
+# AffixApi.Api.Api.XHRVerticallyIntegratedApi
 
 All URIs are relative to *https://api.affixapi.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OfficialCompanies20230301**](OfficialApi.md#officialcompanies20230301) | **GET** /2023-03-01/official/company | Company
-[**OfficialCreateEmployee20230301**](OfficialApi.md#officialcreateemployee20230301) | **POST** /2023-03-01/official/employee | Create Employee
-[**OfficialEmployees20230301**](OfficialApi.md#officialemployees20230301) | **GET** /2023-03-01/official/employees | Employees
-[**OfficialGroups20230301**](OfficialApi.md#officialgroups20230301) | **GET** /2023-03-01/official/groups | Groups
-[**OfficialTimeOffBalances20230301**](OfficialApi.md#officialtimeoffbalances20230301) | **GET** /2023-03-01/official/time-off-balances | Time off balances
-[**OfficialTimeOffEntries20230301**](OfficialApi.md#officialtimeoffentries20230301) | **GET** /2023-03-01/official/time-off-entries | Time off entries
-[**OfficialTimesheets20230301**](OfficialApi.md#officialtimesheets20230301) | **GET** /2023-03-01/official/timesheets | Timesheets
-[**OfficialWorkLocations20230301**](OfficialApi.md#officialworklocations20230301) | **GET** /2023-03-01/official/work-locations | Work locations
-[**Officialdentity20230301**](OfficialApi.md#officialdentity20230301) | **GET** /2023-03-01/official/identity | Identity
+[**XhrCompanies20230301**](XHRVerticallyIntegratedApi.md#xhrcompanies20230301) | **GET** /2023-03-01/xhr/company | Company
+[**XhrCreateEmployee20230301**](XHRVerticallyIntegratedApi.md#xhrcreateemployee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
+[**XhrEmployees20230301**](XHRVerticallyIntegratedApi.md#xhremployees20230301) | **GET** /2023-03-01/xhr/employees | Employees
+[**XhrGroups20230301**](XHRVerticallyIntegratedApi.md#xhrgroups20230301) | **GET** /2023-03-01/xhr/groups | Groups
+[**XhrIdentity20230301**](XHRVerticallyIntegratedApi.md#xhridentity20230301) | **GET** /2023-03-01/xhr/identity | Identity
+[**XhrPayruns20230301**](XHRVerticallyIntegratedApi.md#xhrpayruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns
+[**XhrPayslips20230301**](XHRVerticallyIntegratedApi.md#xhrpayslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips
+[**XhrTimeOffBalances20230301**](XHRVerticallyIntegratedApi.md#xhrtimeoffbalances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances
+[**XhrTimeOffEntries20230301**](XHRVerticallyIntegratedApi.md#xhrtimeoffentries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries
+[**XhrTimesheets20230301**](XHRVerticallyIntegratedApi.md#xhrtimesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets
+[**XhrWorkLocations20230301**](XHRVerticallyIntegratedApi.md#xhrworklocations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations
 
 
-<a name="officialcompanies20230301"></a>
-# **OfficialCompanies20230301**
-> List&lt;CompanyResponse&gt; OfficialCompanies20230301 ()
+<a name="xhrcompanies20230301"></a>
+# **XhrCompanies20230301**
+> List&lt;CompanyResponse&gt; XhrCompanies20230301 ()
 
 Company
 
@@ -33,7 +35,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialCompanies20230301Example
+    public class XhrCompanies20230301Example
     {
         public static void Main()
         {
@@ -44,17 +46,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Company
-                List<CompanyResponse> result = apiInstance.OfficialCompanies20230301();
+                List<CompanyResponse> result = apiInstance.XhrCompanies20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialCompanies20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrCompanies20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -92,11 +94,11 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialcreateemployee20230301"></a>
-# **OfficialCreateEmployee20230301**
-> EmployeeResponse OfficialCreateEmployee20230301 (CreateEmployeeRequest createEmployeeRequest)
+<a name="xhrcreateemployee20230301"></a>
+# **XhrCreateEmployee20230301**
+> EmployeeResponse XhrCreateEmployee20230301 (CreateEmployeeRequest createEmployeeRequest)
 
-Create Employee
+Create employee
 
 Creates a new Employee 
 
@@ -110,7 +112,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialCreateEmployee20230301Example
+    public class XhrCreateEmployee20230301Example
     {
         public static void Main()
         {
@@ -121,18 +123,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
             var createEmployeeRequest = new CreateEmployeeRequest(); // CreateEmployeeRequest | 
 
             try
             {
-                // Create Employee
-                EmployeeResponse result = apiInstance.OfficialCreateEmployee20230301(createEmployeeRequest);
+                // Create employee
+                EmployeeResponse result = apiInstance.XhrCreateEmployee20230301(createEmployeeRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialCreateEmployee20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrCreateEmployee20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -172,9 +174,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialemployees20230301"></a>
-# **OfficialEmployees20230301**
-> List&lt;EmployeeResponse&gt; OfficialEmployees20230301 ()
+<a name="xhremployees20230301"></a>
+# **XhrEmployees20230301**
+> List&lt;EmployeeResponse&gt; XhrEmployees20230301 ()
 
 Employees
 
@@ -190,7 +192,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialEmployees20230301Example
+    public class XhrEmployees20230301Example
     {
         public static void Main()
         {
@@ -201,17 +203,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Employees
-                List<EmployeeResponse> result = apiInstance.OfficialEmployees20230301();
+                List<EmployeeResponse> result = apiInstance.XhrEmployees20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialEmployees20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrEmployees20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -249,9 +251,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialgroups20230301"></a>
-# **OfficialGroups20230301**
-> List&lt;GroupResponse&gt; OfficialGroups20230301 ()
+<a name="xhrgroups20230301"></a>
+# **XhrGroups20230301**
+> List&lt;GroupResponse&gt; XhrGroups20230301 ()
 
 Groups
 
@@ -267,7 +269,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialGroups20230301Example
+    public class XhrGroups20230301Example
     {
         public static void Main()
         {
@@ -278,17 +280,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Groups
-                List<GroupResponse> result = apiInstance.OfficialGroups20230301();
+                List<GroupResponse> result = apiInstance.XhrGroups20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialGroups20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrGroups20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -326,9 +328,248 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialtimeoffbalances20230301"></a>
-# **OfficialTimeOffBalances20230301**
-> List&lt;TimeOffBalanceResponse&gt; OfficialTimeOffBalances20230301 ()
+<a name="xhridentity20230301"></a>
+# **XhrIdentity20230301**
+> IdentityResponse XhrIdentity20230301 ()
+
+Identity
+
+List information of the user for the respective account 
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
+
+namespace Example
+{
+    public class XhrIdentity20230301Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.affixapi.com";
+            // Configure API key authorization: access-token
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
+
+            try
+            {
+                // Identity
+                IdentityResponse result = apiInstance.XhrIdentity20230301();
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrIdentity20230301: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**IdentityResponse**](IdentityResponse.md)
+
+### Authorization
+
+[access-token](../README.md#access-token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **401** | Authentication Error |  -  |
+| **429** | Rate Limited / Too Many Requests |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
+| **500** | Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="xhrpayruns20230301"></a>
+# **XhrPayruns20230301**
+> List&lt;PayrunResponse&gt; XhrPayruns20230301 (DateTime startDate, DateTime endDate)
+
+Payruns
+
+List all the pay runs that occurred during the respective period.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
+
+namespace Example
+{
+    public class XhrPayruns20230301Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.affixapi.com";
+            // Configure API key authorization: access-token
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
+            var startDate = 2013-10-20;  // DateTime | The start date of the search period
+            var endDate = 2013-10-20;  // DateTime | The end date of the search period
+
+            try
+            {
+                // Payruns
+                List<PayrunResponse> result = apiInstance.XhrPayruns20230301(startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrPayruns20230301: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startDate** | **DateTime**| The start date of the search period | 
+ **endDate** | **DateTime**| The end date of the search period | 
+
+### Return type
+
+[**List&lt;PayrunResponse&gt;**](PayrunResponse.md)
+
+### Authorization
+
+[access-token](../README.md#access-token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **202** | Accepted + pending (async job started) |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
+| **401** | Authentication Error |  -  |
+| **429** | Rate Limited / Too Many Requests |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
+| **500** | Server Error |  -  |
+| **501** | Not Implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="xhrpayslips20230301"></a>
+# **XhrPayslips20230301**
+> List&lt;PayslipResponse&gt; XhrPayslips20230301 (string payrunId)
+
+Payslips
+
+Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using AffixApi.Api.Api;
+using AffixApi.Api.Client;
+using AffixApi.Api.Model;
+
+namespace Example
+{
+    public class XhrPayslips20230301Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.affixapi.com";
+            // Configure API key authorization: access-token
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
+            var payrunId = payrunId_example;  // string | The id of the payrun.
+
+            try
+            {
+                // Payslips
+                List<PayslipResponse> result = apiInstance.XhrPayslips20230301(payrunId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrPayslips20230301: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payrunId** | **string**| The id of the payrun. | 
+
+### Return type
+
+[**List&lt;PayslipResponse&gt;**](PayslipResponse.md)
+
+### Authorization
+
+[access-token](../README.md#access-token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **202** | Accepted + pending (async job started) |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
+| **401** | Authentication Error |  -  |
+| **429** | Rate Limited / Too Many Requests |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
+| **500** | Server Error |  -  |
+| **501** | Not Implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="xhrtimeoffbalances20230301"></a>
+# **XhrTimeOffBalances20230301**
+> List&lt;TimeOffBalanceResponse&gt; XhrTimeOffBalances20230301 ()
 
 Time off balances
 
@@ -344,7 +585,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialTimeOffBalances20230301Example
+    public class XhrTimeOffBalances20230301Example
     {
         public static void Main()
         {
@@ -355,17 +596,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Time off balances
-                List<TimeOffBalanceResponse> result = apiInstance.OfficialTimeOffBalances20230301();
+                List<TimeOffBalanceResponse> result = apiInstance.XhrTimeOffBalances20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialTimeOffBalances20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrTimeOffBalances20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -403,9 +644,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialtimeoffentries20230301"></a>
-# **OfficialTimeOffEntries20230301**
-> List&lt;TimeOffEntryResponse&gt; OfficialTimeOffEntries20230301 ()
+<a name="xhrtimeoffentries20230301"></a>
+# **XhrTimeOffEntries20230301**
+> List&lt;TimeOffEntryResponse&gt; XhrTimeOffEntries20230301 ()
 
 Time off entries
 
@@ -421,7 +662,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialTimeOffEntries20230301Example
+    public class XhrTimeOffEntries20230301Example
     {
         public static void Main()
         {
@@ -432,17 +673,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Time off entries
-                List<TimeOffEntryResponse> result = apiInstance.OfficialTimeOffEntries20230301();
+                List<TimeOffEntryResponse> result = apiInstance.XhrTimeOffEntries20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialTimeOffEntries20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrTimeOffEntries20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -480,9 +721,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialtimesheets20230301"></a>
-# **OfficialTimesheets20230301**
-> List&lt;TimesheetResponse&gt; OfficialTimesheets20230301 ()
+<a name="xhrtimesheets20230301"></a>
+# **XhrTimesheets20230301**
+> List&lt;TimesheetResponse&gt; XhrTimesheets20230301 ()
 
 Timesheets
 
@@ -498,7 +739,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialTimesheets20230301Example
+    public class XhrTimesheets20230301Example
     {
         public static void Main()
         {
@@ -509,17 +750,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Timesheets
-                List<TimesheetResponse> result = apiInstance.OfficialTimesheets20230301();
+                List<TimesheetResponse> result = apiInstance.XhrTimesheets20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialTimesheets20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrTimesheets20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -557,9 +798,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="officialworklocations20230301"></a>
-# **OfficialWorkLocations20230301**
-> List&lt;LocationResponse&gt; OfficialWorkLocations20230301 ()
+<a name="xhrworklocations20230301"></a>
+# **XhrWorkLocations20230301**
+> List&lt;LocationResponse&gt; XhrWorkLocations20230301 ()
 
 Work locations
 
@@ -575,7 +816,7 @@ using AffixApi.Api.Model;
 
 namespace Example
 {
-    public class OfficialWorkLocations20230301Example
+    public class XhrWorkLocations20230301Example
     {
         public static void Main()
         {
@@ -586,17 +827,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new OfficialApi(config);
+            var apiInstance = new XHRVerticallyIntegratedApi(config);
 
             try
             {
                 // Work locations
-                List<LocationResponse> result = apiInstance.OfficialWorkLocations20230301();
+                List<LocationResponse> result = apiInstance.XhrWorkLocations20230301();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling OfficialApi.OfficialWorkLocations20230301: " + e.Message );
+                Debug.Print("Exception when calling XHRVerticallyIntegratedApi.XhrWorkLocations20230301: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -631,81 +872,6 @@ This endpoint does not need any parameter.
 | **429** | Rate Limited / Too Many Requests |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
 | **500** | Server Error |  -  |
 | **501** | Not Implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="officialdentity20230301"></a>
-# **Officialdentity20230301**
-> IdentityResponse Officialdentity20230301 ()
-
-Identity
-
-List information of the user for the respective account 
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using AffixApi.Api.Api;
-using AffixApi.Api.Client;
-using AffixApi.Api.Model;
-
-namespace Example
-{
-    public class Officialdentity20230301Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://api.affixapi.com";
-            // Configure API key authorization: access-token
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new OfficialApi(config);
-
-            try
-            {
-                // Identity
-                IdentityResponse result = apiInstance.Officialdentity20230301();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling OfficialApi.Officialdentity20230301: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**IdentityResponse**](IdentityResponse.md)
-
-### Authorization
-
-[access-token](../README.md#access-token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **401** | Authentication Error |  -  |
-| **429** | Rate Limited / Too Many Requests |  * Retry-After - Retry your call after the specified amount of seconds <br>  |
-| **500** | Server Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
