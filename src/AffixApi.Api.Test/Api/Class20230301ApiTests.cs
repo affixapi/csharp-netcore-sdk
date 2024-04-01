@@ -67,18 +67,6 @@ namespace AffixApi.Api.Test.Api
         }
 
         /// <summary>
-        /// Test XhrCreateEmployee20230301
-        /// </summary>
-        [Fact]
-        public void XhrCreateEmployee20230301Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CreateEmployeeRequest createEmployeeRequest = null;
-            //var response = instance.XhrCreateEmployee20230301(createEmployeeRequest);
-            //Assert.IsType<EmployeeResponse>(response);
-        }
-
-        /// <summary>
         /// Test XhrEmployees20230301
         /// </summary>
         [Fact]

@@ -47,27 +47,6 @@ namespace AffixApi.Api.Api
         /// <returns>ApiResponse of List&lt;CompanyResponse&gt;</returns>
         ApiResponse<List<CompanyResponse>> XhrCompanies20230301WithHttpInfo();
         /// <summary>
-        /// Create employee
-        /// </summary>
-        /// <remarks>
-        /// Creates a new Employee 
-        /// </remarks>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <returns>EmployeeResponse</returns>
-        EmployeeResponse XhrCreateEmployee20230301(CreateEmployeeRequest createEmployeeRequest);
-
-        /// <summary>
-        /// Create employee
-        /// </summary>
-        /// <remarks>
-        /// Creates a new Employee 
-        /// </remarks>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <returns>ApiResponse of EmployeeResponse</returns>
-        ApiResponse<EmployeeResponse> XhrCreateEmployee20230301WithHttpInfo(CreateEmployeeRequest createEmployeeRequest);
-        /// <summary>
         /// Employees
         /// </summary>
         /// <remarks>
@@ -274,29 +253,6 @@ namespace AffixApi.Api.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CompanyResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CompanyResponse>>> XhrCompanies20230301WithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Create employee
-        /// </summary>
-        /// <remarks>
-        /// Creates a new Employee 
-        /// </remarks>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EmployeeResponse</returns>
-        System.Threading.Tasks.Task<EmployeeResponse> XhrCreateEmployee20230301Async(CreateEmployeeRequest createEmployeeRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Create employee
-        /// </summary>
-        /// <remarks>
-        /// Creates a new Employee 
-        /// </remarks>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EmployeeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmployeeResponse>> XhrCreateEmployee20230301WithHttpInfoAsync(CreateEmployeeRequest createEmployeeRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Employees
         /// </summary>
@@ -717,133 +673,6 @@ namespace AffixApi.Api.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("XhrCompanies20230301", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Create employee Creates a new Employee 
-        /// </summary>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <returns>EmployeeResponse</returns>
-        public EmployeeResponse XhrCreateEmployee20230301(CreateEmployeeRequest createEmployeeRequest)
-        {
-            AffixApi.Api.Client.ApiResponse<EmployeeResponse> localVarResponse = XhrCreateEmployee20230301WithHttpInfo(createEmployeeRequest);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create employee Creates a new Employee 
-        /// </summary>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <returns>ApiResponse of EmployeeResponse</returns>
-        public AffixApi.Api.Client.ApiResponse<EmployeeResponse> XhrCreateEmployee20230301WithHttpInfo(CreateEmployeeRequest createEmployeeRequest)
-        {
-            // verify the required parameter 'createEmployeeRequest' is set
-            if (createEmployeeRequest == null)
-                throw new AffixApi.Api.Client.ApiException(400, "Missing required parameter 'createEmployeeRequest' when calling Class20230301Api->XhrCreateEmployee20230301");
-
-            AffixApi.Api.Client.RequestOptions localVarRequestOptions = new AffixApi.Api.Client.RequestOptions();
-
-            String[] _contentTypes = new String[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            String[] _accepts = new String[] {
-                "application/json"
-            };
-
-            var localVarContentType = AffixApi.Api.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = AffixApi.Api.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = createEmployeeRequest;
-
-            // authentication (access-token) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EmployeeResponse>("/2023-03-01/xhr/employee", localVarRequestOptions, this.Configuration);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("XhrCreateEmployee20230301", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Create employee Creates a new Employee 
-        /// </summary>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EmployeeResponse</returns>
-        public async System.Threading.Tasks.Task<EmployeeResponse> XhrCreateEmployee20230301Async(CreateEmployeeRequest createEmployeeRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            AffixApi.Api.Client.ApiResponse<EmployeeResponse> localVarResponse = await XhrCreateEmployee20230301WithHttpInfoAsync(createEmployeeRequest, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create employee Creates a new Employee 
-        /// </summary>
-        /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createEmployeeRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EmployeeResponse)</returns>
-        public async System.Threading.Tasks.Task<AffixApi.Api.Client.ApiResponse<EmployeeResponse>> XhrCreateEmployee20230301WithHttpInfoAsync(CreateEmployeeRequest createEmployeeRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'createEmployeeRequest' is set
-            if (createEmployeeRequest == null)
-                throw new AffixApi.Api.Client.ApiException(400, "Missing required parameter 'createEmployeeRequest' when calling Class20230301Api->XhrCreateEmployee20230301");
-
-
-            AffixApi.Api.Client.RequestOptions localVarRequestOptions = new AffixApi.Api.Client.RequestOptions();
-
-            String[] _contentTypes = new String[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            String[] _accepts = new String[] {
-                "application/json"
-            };
-
-
-            var localVarContentType = AffixApi.Api.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = AffixApi.Api.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = createEmployeeRequest;
-
-            // authentication (access-token) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EmployeeResponse>("/2023-03-01/xhr/employee", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("XhrCreateEmployee20230301", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
