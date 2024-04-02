@@ -13,7 +13,7 @@ docs/CoreApi.md
 docs/CreateEmployeeRequest.md
 docs/CreateEmployeeRequestBankAccount.md
 docs/CreateEmployeeRequestManager.md
-docs/CurrencyRequest.md
+docs/CurrencyNotNullRequest.md
 docs/CurrencyResponse.md
 docs/DisconnectResponse.md
 docs/EmployeeResponse.md
@@ -63,7 +63,7 @@ src/AffixApi.Api.Test/Model/CompanyResponseTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestBankAccountTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestManagerTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestTests.cs
-src/AffixApi.Api.Test/Model/CurrencyRequestTests.cs
+src/AffixApi.Api.Test/Model/CurrencyNotNullRequestTests.cs
 src/AffixApi.Api.Test/Model/CurrencyResponseTests.cs
 src/AffixApi.Api.Test/Model/DisconnectResponseTests.cs
 src/AffixApi.Api.Test/Model/EmployeeResponseTests.cs
@@ -127,7 +127,7 @@ src/AffixApi.Api/Model/CompanyResponse.cs
 src/AffixApi.Api/Model/CreateEmployeeRequest.cs
 src/AffixApi.Api/Model/CreateEmployeeRequestBankAccount.cs
 src/AffixApi.Api/Model/CreateEmployeeRequestManager.cs
-src/AffixApi.Api/Model/CurrencyRequest.cs
+src/AffixApi.Api/Model/CurrencyNotNullRequest.cs
 src/AffixApi.Api/Model/CurrencyResponse.cs
 src/AffixApi.Api/Model/DisconnectResponse.cs
 src/AffixApi.Api/Model/EmployeeResponse.cs

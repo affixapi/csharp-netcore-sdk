@@ -130,7 +130,7 @@ namespace AffixApi.Api.Model
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
         public CurrencyResponse Currency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EmploymentResponse" /> class.

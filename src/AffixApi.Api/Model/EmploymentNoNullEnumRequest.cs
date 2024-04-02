@@ -114,12 +114,6 @@ namespace AffixApi.Api.Model
         /// </summary>
         [DataMember(Name = "employment_type", IsRequired = true, EmitDefaultValue = true)]
         public EmploymentTypeEnum EmploymentType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Currency
-        /// </summary>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = false)]
-        public CurrencyRequest Currency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EmploymentNoNullEnumRequest" /> class.
         /// </summary>
@@ -135,7 +129,7 @@ namespace AffixApi.Api.Model
         /// <param name="employmentType">employmentType (required).</param>
         /// <param name="currency">currency (required).</param>
         /// <param name="effectiveDate">effectiveDate (required).</param>
-        public EmploymentNoNullEnumRequest(string jobTitle = default(string), decimal? payRate = default(decimal?), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyRequest currency = default(CurrencyRequest), DateTime? effectiveDate = default(DateTime?))
+        public EmploymentNoNullEnumRequest(string jobTitle = default(string), decimal? payRate = default(decimal?), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyNotNullRequest currency = default(CurrencyNotNullRequest), DateTime? effectiveDate = default(DateTime?))
         {
             // to ensure "jobTitle" is required (not null)
             this.JobTitle = jobTitle ?? throw new ArgumentNullException("jobTitle is a required property for EmploymentNoNullEnumRequest and cannot be null");
@@ -145,7 +139,8 @@ namespace AffixApi.Api.Model
             this.PayPeriod = payPeriod ?? throw new ArgumentNullException("payPeriod is a required property for EmploymentNoNullEnumRequest and cannot be null");
             this.PayFrequency = payFrequency;
             this.EmploymentType = employmentType;
-            this.Currency = currency;
+            // to ensure "currency" is required (not null)
+            this.Currency = currency ?? throw new ArgumentNullException("currency is a required property for EmploymentNoNullEnumRequest and cannot be null");
             // to ensure "effectiveDate" is required (not null)
             this.EffectiveDate = effectiveDate ?? throw new ArgumentNullException("effectiveDate is a required property for EmploymentNoNullEnumRequest and cannot be null");
         }
@@ -167,6 +162,12 @@ namespace AffixApi.Api.Model
         /// </summary>
         [DataMember(Name = "pay_period", IsRequired = true, EmitDefaultValue = true)]
         public string PayPeriod { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Currency
+        /// </summary>
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = false)]
+        public CurrencyNotNullRequest Currency { get; set; }
 
         /// <summary>
         /// Gets or Sets EffectiveDate
@@ -249,7 +250,8 @@ namespace AffixApi.Api.Model
                 ) && 
                 (
                     this.Currency == input.Currency ||
-                    this.Currency.Equals(input.Currency)
+                    (this.Currency != null &&
+                    this.Currency.Equals(input.Currency))
                 ) && 
                 (
                     this.EffectiveDate == input.EffectiveDate ||
@@ -275,7 +277,8 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.PayPeriod.GetHashCode();
                 hashCode = hashCode * 59 + this.PayFrequency.GetHashCode();
                 hashCode = hashCode * 59 + this.EmploymentType.GetHashCode();
-                hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.Currency != null)
+                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.EffectiveDate != null)
                     hashCode = hashCode * 59 + this.EffectiveDate.GetHashCode();
                 return hashCode;

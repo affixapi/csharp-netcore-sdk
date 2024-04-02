@@ -33,22 +33,28 @@ namespace AffixApi.Api.Model
     public enum CurrencyResponse
     {
         /// <summary>
+        /// Enum Null for value: null
+        /// </summary>
+        [EnumMember(Value = "null")]
+        Null = 1,
+
+        /// <summary>
         /// Enum Usd for value: usd
         /// </summary>
         [EnumMember(Value = "usd")]
-        Usd = 1,
+        Usd = 2,
 
         /// <summary>
         /// Enum Gbp for value: gbp
         /// </summary>
         [EnumMember(Value = "gbp")]
-        Gbp = 2,
+        Gbp = 3,
 
         /// <summary>
         /// Enum Eur for value: eur
         /// </summary>
         [EnumMember(Value = "eur")]
-        Eur = 3
+        Eur = 4
 
     }
 

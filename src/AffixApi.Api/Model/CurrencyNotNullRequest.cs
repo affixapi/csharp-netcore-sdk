@@ -27,10 +27,10 @@ using OpenAPIDateConverter = AffixApi.Api.Client.OpenAPIDateConverter;
 namespace AffixApi.Api.Model
 {
     /// <summary>
-    /// Defines CurrencyRequest
+    /// Defines currency-not-nullRequest
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum CurrencyRequest
+    public enum CurrencyNotNullRequest
     {
         /// <summary>
         /// Enum Usd for value: usd
