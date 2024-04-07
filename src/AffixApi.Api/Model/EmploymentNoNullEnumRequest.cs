@@ -166,7 +166,7 @@ namespace AffixApi.Api.Model
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
         public CurrencyNotNullRequest Currency { get; set; }
 
         /// <summary>

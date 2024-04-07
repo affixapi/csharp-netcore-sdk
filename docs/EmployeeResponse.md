@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **Avatar** | **string** |  | 
 **HomeLocation** | [**AddressResponse**](AddressResponse.md) |  | 
 **WorkLocation** | [**LocationResponse**](LocationResponse.md) |  | 
-**Manager** | [**CreateEmployeeRequestManager**](CreateEmployeeRequestManager.md) |  | 
+**Manager** | [**EmployeeResponseManager**](EmployeeResponseManager.md) |  | 
 **BankAccount** | [**CreateEmployeeRequestBankAccount**](CreateEmployeeRequestBankAccount.md) |  | 
 **Employments** | [**List&lt;EmploymentResponse&gt;**](EmploymentResponse.md) |  | 
 **CustomFields** | **Object** |  | 

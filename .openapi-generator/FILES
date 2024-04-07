@@ -17,6 +17,7 @@ docs/CurrencyNotNullRequest.md
 docs/CurrencyResponse.md
 docs/DisconnectResponse.md
 docs/EmployeeResponse.md
+docs/EmployeeResponseManager.md
 docs/EmploymentNoNullEnumRequest.md
 docs/EmploymentResponse.md
 docs/GroupNoNullEnumRequest.md
@@ -66,6 +67,7 @@ src/AffixApi.Api.Test/Model/CreateEmployeeRequestTests.cs
 src/AffixApi.Api.Test/Model/CurrencyNotNullRequestTests.cs
 src/AffixApi.Api.Test/Model/CurrencyResponseTests.cs
 src/AffixApi.Api.Test/Model/DisconnectResponseTests.cs
+src/AffixApi.Api.Test/Model/EmployeeResponseManagerTests.cs
 src/AffixApi.Api.Test/Model/EmployeeResponseTests.cs
 src/AffixApi.Api.Test/Model/EmploymentNoNullEnumRequestTests.cs
 src/AffixApi.Api.Test/Model/EmploymentResponseTests.cs
@@ -131,6 +133,7 @@ src/AffixApi.Api/Model/CurrencyNotNullRequest.cs
 src/AffixApi.Api/Model/CurrencyResponse.cs
 src/AffixApi.Api/Model/DisconnectResponse.cs
 src/AffixApi.Api/Model/EmployeeResponse.cs
+src/AffixApi.Api/Model/EmployeeResponseManager.cs
 src/AffixApi.Api/Model/EmploymentNoNullEnumRequest.cs
 src/AffixApi.Api/Model/EmploymentResponse.cs
 src/AffixApi.Api/Model/GroupNoNullEnumRequest.cs

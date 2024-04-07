@@ -292,7 +292,7 @@ namespace AffixApi.Api.Model
         /// <param name="employments">employments (required).</param>
         /// <param name="customFields">customFields (required).</param>
         /// <param name="groups">groups (required).</param>
-        public EmployeeResponse(string employeeNumber = default(string), string firstName = default(string), string lastName = default(string), string displayFullName = default(string), string nationality = default(string), string jobTitle = default(string), string workEmail = default(string), string personalEmail = default(string), string mobilePhoneNumber = default(string), string taxId = default(string), GenderEnum gender = default(GenderEnum), EthnicityEnum ethnicity = default(EthnicityEnum), MaritalStatusEnum maritalStatus = default(MaritalStatusEnum), DateTime? dateOfBirth = default(DateTime?), EmploymentStatusEnum employmentStatus = default(EmploymentStatusEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), DateTime? startDate = default(DateTime?), DateTime? terminationDate = default(DateTime?), string avatar = default(string), AddressResponse homeLocation = default(AddressResponse), LocationResponse workLocation = default(LocationResponse), CreateEmployeeRequestManager manager = default(CreateEmployeeRequestManager), CreateEmployeeRequestBankAccount bankAccount = default(CreateEmployeeRequestBankAccount), List<EmploymentResponse> employments = default(List<EmploymentResponse>), Object customFields = default(Object), List<GroupResponse> groups = default(List<GroupResponse>))
+        public EmployeeResponse(string employeeNumber = default(string), string firstName = default(string), string lastName = default(string), string displayFullName = default(string), string nationality = default(string), string jobTitle = default(string), string workEmail = default(string), string personalEmail = default(string), string mobilePhoneNumber = default(string), string taxId = default(string), GenderEnum gender = default(GenderEnum), EthnicityEnum ethnicity = default(EthnicityEnum), MaritalStatusEnum maritalStatus = default(MaritalStatusEnum), DateTime? dateOfBirth = default(DateTime?), EmploymentStatusEnum employmentStatus = default(EmploymentStatusEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), DateTime? startDate = default(DateTime?), DateTime? terminationDate = default(DateTime?), string avatar = default(string), AddressResponse homeLocation = default(AddressResponse), LocationResponse workLocation = default(LocationResponse), EmployeeResponseManager manager = default(EmployeeResponseManager), CreateEmployeeRequestBankAccount bankAccount = default(CreateEmployeeRequestBankAccount), List<EmploymentResponse> employments = default(List<EmploymentResponse>), Object customFields = default(Object), List<GroupResponse> groups = default(List<GroupResponse>))
         {
             // to ensure "employeeNumber" is required (not null)
             this.EmployeeNumber = employeeNumber ?? throw new ArgumentNullException("employeeNumber is a required property for EmployeeResponse and cannot be null");
@@ -499,7 +499,7 @@ namespace AffixApi.Api.Model
         /// Gets or Sets Manager
         /// </summary>
         [DataMember(Name = "manager", IsRequired = true, EmitDefaultValue = true)]
-        public CreateEmployeeRequestManager Manager { get; set; }
+        public EmployeeResponseManager Manager { get; set; }
 
         /// <summary>
         /// Gets or Sets BankAccount
