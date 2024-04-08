@@ -32,7 +32,7 @@ namespace AffixApi.Api.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.1.52";
+        public const string Version = "1.1.53";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -107,7 +107,7 @@ namespace AffixApi.Api.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = "OpenAPI-Generator/1.1.52/csharp";
+            UserAgent = "OpenAPI-Generator/1.1.53/csharp";
             BasePath = "https://api.affixapi.com";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -458,7 +458,7 @@ namespace AffixApi.Api.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2023-03-01\n";
-            report += "    SDK Package Version: 1.1.52\n";
+            report += "    SDK Package Version: 1.1.53\n";
 
             return report;
         }
