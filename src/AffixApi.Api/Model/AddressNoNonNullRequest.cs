@@ -124,94 +124,124 @@ namespace AffixApi.Api.Model
             HK = 14,
 
             /// <summary>
+            /// Enum ID for value: ID
+            /// </summary>
+            [EnumMember(Value = "ID")]
+            ID = 15,
+
+            /// <summary>
             /// Enum IE for value: IE
             /// </summary>
             [EnumMember(Value = "IE")]
-            IE = 15,
+            IE = 16,
+
+            /// <summary>
+            /// Enum IN for value: IN
+            /// </summary>
+            [EnumMember(Value = "IN")]
+            IN = 17,
 
             /// <summary>
             /// Enum IT for value: IT
             /// </summary>
             [EnumMember(Value = "IT")]
-            IT = 16,
+            IT = 18,
 
             /// <summary>
             /// Enum JP for value: JP
             /// </summary>
             [EnumMember(Value = "JP")]
-            JP = 17,
+            JP = 19,
+
+            /// <summary>
+            /// Enum KR for value: KR
+            /// </summary>
+            [EnumMember(Value = "KR")]
+            KR = 20,
 
             /// <summary>
             /// Enum LT for value: LT
             /// </summary>
             [EnumMember(Value = "LT")]
-            LT = 18,
+            LT = 21,
 
             /// <summary>
             /// Enum LV for value: LV
             /// </summary>
             [EnumMember(Value = "LV")]
-            LV = 19,
+            LV = 22,
+
+            /// <summary>
+            /// Enum MO for value: MO
+            /// </summary>
+            [EnumMember(Value = "MO")]
+            MO = 23,
+
+            /// <summary>
+            /// Enum MY for value: MY
+            /// </summary>
+            [EnumMember(Value = "MY")]
+            MY = 24,
 
             /// <summary>
             /// Enum NL for value: NL
             /// </summary>
             [EnumMember(Value = "NL")]
-            NL = 20,
+            NL = 25,
 
             /// <summary>
             /// Enum NO for value: NO
             /// </summary>
             [EnumMember(Value = "NO")]
-            NO = 21,
+            NO = 26,
 
             /// <summary>
             /// Enum PH for value: PH
             /// </summary>
             [EnumMember(Value = "PH")]
-            PH = 22,
+            PH = 27,
 
             /// <summary>
             /// Enum PL for value: PL
             /// </summary>
             [EnumMember(Value = "PL")]
-            PL = 23,
+            PL = 28,
 
             /// <summary>
             /// Enum RO for value: RO
             /// </summary>
             [EnumMember(Value = "RO")]
-            RO = 24,
+            RO = 29,
 
             /// <summary>
             /// Enum SE for value: SE
             /// </summary>
             [EnumMember(Value = "SE")]
-            SE = 25,
+            SE = 30,
 
             /// <summary>
             /// Enum SG for value: SG
             /// </summary>
             [EnumMember(Value = "SG")]
-            SG = 26,
+            SG = 31,
 
             /// <summary>
             /// Enum SK for value: SK
             /// </summary>
             [EnumMember(Value = "SK")]
-            SK = 27,
+            SK = 32,
 
             /// <summary>
             /// Enum TW for value: TW
             /// </summary>
             [EnumMember(Value = "TW")]
-            TW = 28,
+            TW = 33,
 
             /// <summary>
             /// Enum US for value: US
             /// </summary>
             [EnumMember(Value = "US")]
-            US = 29
+            US = 34
 
         }
 
