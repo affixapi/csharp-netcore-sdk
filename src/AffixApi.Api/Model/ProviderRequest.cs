@@ -213,58 +213,64 @@ namespace AffixApi.Api.Model
         Justworks = 30,
 
         /// <summary>
+        /// Enum Onpay for value: onpay
+        /// </summary>
+        [EnumMember(Value = "onpay")]
+        Onpay = 31,
+
+        /// <summary>
         /// Enum Oysterhr for value: oysterhr
         /// </summary>
         [EnumMember(Value = "oysterhr")]
-        Oysterhr = 31,
+        Oysterhr = 32,
 
         /// <summary>
         /// Enum Paycircle for value: paycircle
         /// </summary>
         [EnumMember(Value = "paycircle")]
-        Paycircle = 32,
+        Paycircle = 33,
 
         /// <summary>
         /// Enum PentoIo for value: pento.io
         /// </summary>
         [EnumMember(Value = "pento.io")]
-        PentoIo = 33,
+        PentoIo = 34,
 
         /// <summary>
         /// Enum Peoplehr for value: peoplehr
         /// </summary>
         [EnumMember(Value = "peoplehr")]
-        Peoplehr = 34,
+        Peoplehr = 35,
 
         /// <summary>
         /// Enum RemoteCom for value: remote.com
         /// </summary>
         [EnumMember(Value = "remote.com")]
-        RemoteCom = 35,
+        RemoteCom = 36,
 
         /// <summary>
         /// Enum Rippling for value: rippling
         /// </summary>
         [EnumMember(Value = "rippling")]
-        Rippling = 36,
+        Rippling = 37,
 
         /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 37,
+        Sageone = 38,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 38,
+        ShapePayroll = 39,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 39
+        SimplepayIe = 40
 
     }
 
