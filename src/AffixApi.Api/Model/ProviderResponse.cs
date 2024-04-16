@@ -135,142 +135,148 @@ namespace AffixApi.Api.Model
         Planday = 17,
 
         /// <summary>
-        /// Enum QuickbooksUk for value: quickbooks uk
-        /// </summary>
-        [EnumMember(Value = "quickbooks uk")]
-        QuickbooksUk = 18,
-
-        /// <summary>
         /// Enum Sagehr for value: sagehr
         /// </summary>
         [EnumMember(Value = "sagehr")]
-        Sagehr = 19,
+        Sagehr = 18,
 
         /// <summary>
         /// Enum Saplinghr for value: saplinghr
         /// </summary>
         [EnumMember(Value = "saplinghr")]
-        Saplinghr = 20,
+        Saplinghr = 19,
 
         /// <summary>
         /// Enum Staffology for value: staffology
         /// </summary>
         [EnumMember(Value = "staffology")]
-        Staffology = 21,
+        Staffology = 20,
 
         /// <summary>
         /// Enum XeroUk for value: xero uk
         /// </summary>
         [EnumMember(Value = "xero uk")]
-        XeroUk = 22,
+        XeroUk = 21,
 
         /// <summary>
         /// Enum BrainPayroll for value: brain payroll
         /// </summary>
         [EnumMember(Value = "brain payroll")]
-        BrainPayroll = 23,
+        BrainPayroll = 22,
 
         /// <summary>
         /// Enum BrightpayConnect for value: brightpay connect
         /// </summary>
         [EnumMember(Value = "brightpay connect")]
-        BrightpayConnect = 24,
+        BrightpayConnect = 23,
 
         /// <summary>
         /// Enum EmploymentHero for value: employment hero
         /// </summary>
         [EnumMember(Value = "employment hero")]
-        EmploymentHero = 25,
+        EmploymentHero = 24,
 
         /// <summary>
         /// Enum Factorialhr for value: factorialhr
         /// </summary>
         [EnumMember(Value = "factorialhr")]
-        Factorialhr = 26,
+        Factorialhr = 25,
 
         /// <summary>
         /// Enum Fourthhr for value: fourthhr
         /// </summary>
         [EnumMember(Value = "fourthhr")]
-        Fourthhr = 27,
+        Fourthhr = 26,
 
         /// <summary>
         /// Enum Gusto for value: gusto
         /// </summary>
         [EnumMember(Value = "gusto")]
-        Gusto = 28,
+        Gusto = 27,
 
         /// <summary>
         /// Enum Itrent for value: itrent
         /// </summary>
         [EnumMember(Value = "itrent")]
-        Itrent = 29,
+        Itrent = 28,
 
         /// <summary>
         /// Enum Justworks for value: justworks
         /// </summary>
         [EnumMember(Value = "justworks")]
-        Justworks = 30,
+        Justworks = 29,
 
         /// <summary>
         /// Enum Onpay for value: onpay
         /// </summary>
         [EnumMember(Value = "onpay")]
-        Onpay = 31,
+        Onpay = 30,
 
         /// <summary>
         /// Enum Oysterhr for value: oysterhr
         /// </summary>
         [EnumMember(Value = "oysterhr")]
-        Oysterhr = 32,
+        Oysterhr = 31,
 
         /// <summary>
         /// Enum Paycircle for value: paycircle
         /// </summary>
         [EnumMember(Value = "paycircle")]
-        Paycircle = 33,
+        Paycircle = 32,
 
         /// <summary>
         /// Enum PentoIo for value: pento.io
         /// </summary>
         [EnumMember(Value = "pento.io")]
-        PentoIo = 34,
+        PentoIo = 33,
 
         /// <summary>
         /// Enum Peoplehr for value: peoplehr
         /// </summary>
         [EnumMember(Value = "peoplehr")]
-        Peoplehr = 35,
+        Peoplehr = 34,
 
         /// <summary>
         /// Enum RemoteCom for value: remote.com
         /// </summary>
         [EnumMember(Value = "remote.com")]
-        RemoteCom = 36,
+        RemoteCom = 35,
 
         /// <summary>
         /// Enum Rippling for value: rippling
         /// </summary>
         [EnumMember(Value = "rippling")]
-        Rippling = 37,
+        Rippling = 36,
 
         /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 38,
+        Sageone = 37,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 39,
+        ShapePayroll = 38,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 40
+        SimplepayIe = 39,
+
+        /// <summary>
+        /// Enum QuickbooksOnline for value: quickbooks online
+        /// </summary>
+        [EnumMember(Value = "quickbooks online")]
+        QuickbooksOnline = 40,
+
+        /// <summary>
+        /// Enum Zoho for value: zoho
+        /// </summary>
+        [EnumMember(Value = "zoho")]
+        Zoho = 41
 
     }
 

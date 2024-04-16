@@ -46,94 +46,94 @@ namespace AffixApi.Api.Model
             Null = 1,
 
             /// <summary>
+            /// Enum CA for value: CA
+            /// </summary>
+            [EnumMember(Value = "CA")]
+            CA = 2,
+
+            /// <summary>
+            /// Enum US for value: US
+            /// </summary>
+            [EnumMember(Value = "US")]
+            US = 3,
+
+            /// <summary>
+            /// Enum MX for value: MX
+            /// </summary>
+            [EnumMember(Value = "MX")]
+            MX = 4,
+
+            /// <summary>
             /// Enum AT for value: AT
             /// </summary>
             [EnumMember(Value = "AT")]
-            AT = 2,
+            AT = 5,
 
             /// <summary>
             /// Enum AU for value: AU
             /// </summary>
             [EnumMember(Value = "AU")]
-            AU = 3,
+            AU = 6,
 
             /// <summary>
             /// Enum BE for value: BE
             /// </summary>
             [EnumMember(Value = "BE")]
-            BE = 4,
-
-            /// <summary>
-            /// Enum CA for value: CA
-            /// </summary>
-            [EnumMember(Value = "CA")]
-            CA = 5,
+            BE = 7,
 
             /// <summary>
             /// Enum CH for value: CH
             /// </summary>
             [EnumMember(Value = "CH")]
-            CH = 6,
-
-            /// <summary>
-            /// Enum CN for value: CN
-            /// </summary>
-            [EnumMember(Value = "CN")]
-            CN = 7,
+            CH = 8,
 
             /// <summary>
             /// Enum CZ for value: CZ
             /// </summary>
             [EnumMember(Value = "CZ")]
-            CZ = 8,
+            CZ = 9,
 
             /// <summary>
             /// Enum DE for value: DE
             /// </summary>
             [EnumMember(Value = "DE")]
-            DE = 9,
+            DE = 10,
 
             /// <summary>
             /// Enum DK for value: DK
             /// </summary>
             [EnumMember(Value = "DK")]
-            DK = 10,
+            DK = 11,
 
             /// <summary>
             /// Enum EE for value: EE
             /// </summary>
             [EnumMember(Value = "EE")]
-            EE = 11,
+            EE = 12,
 
             /// <summary>
             /// Enum ES for value: ES
             /// </summary>
             [EnumMember(Value = "ES")]
-            ES = 12,
+            ES = 13,
+
+            /// <summary>
+            /// Enum FI for value: FI
+            /// </summary>
+            [EnumMember(Value = "FI")]
+            FI = 14,
 
             /// <summary>
             /// Enum FR for value: FR
             /// </summary>
             [EnumMember(Value = "FR")]
-            FR = 13,
+            FR = 15,
 
             /// <summary>
             /// Enum GB for value: GB
             /// </summary>
             [EnumMember(Value = "GB")]
-            GB = 14,
-
-            /// <summary>
-            /// Enum HK for value: HK
-            /// </summary>
-            [EnumMember(Value = "HK")]
-            HK = 15,
-
-            /// <summary>
-            /// Enum ID for value: ID
-            /// </summary>
-            [EnumMember(Value = "ID")]
-            ID = 16,
+            GB = 16,
 
             /// <summary>
             /// Enum IE for value: IE
@@ -142,28 +142,28 @@ namespace AffixApi.Api.Model
             IE = 17,
 
             /// <summary>
-            /// Enum IN for value: IN
+            /// Enum IM for value: IM
             /// </summary>
-            [EnumMember(Value = "IN")]
-            IN = 18,
+            [EnumMember(Value = "IM")]
+            IM = 18,
+
+            /// <summary>
+            /// Enum IS for value: IS
+            /// </summary>
+            [EnumMember(Value = "IS")]
+            IS = 19,
 
             /// <summary>
             /// Enum IT for value: IT
             /// </summary>
             [EnumMember(Value = "IT")]
-            IT = 19,
+            IT = 20,
 
             /// <summary>
-            /// Enum KR for value: KR
+            /// Enum LI for value: LI
             /// </summary>
-            [EnumMember(Value = "KR")]
-            KR = 20,
-
-            /// <summary>
-            /// Enum JP for value: JP
-            /// </summary>
-            [EnumMember(Value = "JP")]
-            JP = 21,
+            [EnumMember(Value = "LI")]
+            LI = 21,
 
             /// <summary>
             /// Enum LT for value: LT
@@ -172,22 +172,22 @@ namespace AffixApi.Api.Model
             LT = 22,
 
             /// <summary>
+            /// Enum LT for value: LT
+            /// </summary>
+            [EnumMember(Value = "LT")]
+            LT = 23,
+
+            /// <summary>
             /// Enum LV for value: LV
             /// </summary>
             [EnumMember(Value = "LV")]
-            LV = 23,
+            LV = 24,
 
             /// <summary>
-            /// Enum MO for value: MO
+            /// Enum LU for value: LU
             /// </summary>
-            [EnumMember(Value = "MO")]
-            MO = 24,
-
-            /// <summary>
-            /// Enum MY for value: MY
-            /// </summary>
-            [EnumMember(Value = "MY")]
-            MY = 25,
+            [EnumMember(Value = "LU")]
+            LU = 25,
 
             /// <summary>
             /// Enum NL for value: NL
@@ -238,16 +238,64 @@ namespace AffixApi.Api.Model
             SK = 33,
 
             /// <summary>
+            /// Enum CN for value: CN
+            /// </summary>
+            [EnumMember(Value = "CN")]
+            CN = 34,
+
+            /// <summary>
+            /// Enum ID for value: ID
+            /// </summary>
+            [EnumMember(Value = "ID")]
+            ID = 35,
+
+            /// <summary>
+            /// Enum IN for value: IN
+            /// </summary>
+            [EnumMember(Value = "IN")]
+            IN = 36,
+
+            /// <summary>
+            /// Enum JP for value: JP
+            /// </summary>
+            [EnumMember(Value = "JP")]
+            JP = 37,
+
+            /// <summary>
+            /// Enum KR for value: KR
+            /// </summary>
+            [EnumMember(Value = "KR")]
+            KR = 38,
+
+            /// <summary>
+            /// Enum MO for value: MO
+            /// </summary>
+            [EnumMember(Value = "MO")]
+            MO = 39,
+
+            /// <summary>
+            /// Enum MY for value: MY
+            /// </summary>
+            [EnumMember(Value = "MY")]
+            MY = 40,
+
+            /// <summary>
+            /// Enum SG for value: SG
+            /// </summary>
+            [EnumMember(Value = "SG")]
+            SG = 41,
+
+            /// <summary>
+            /// Enum HK for value: HK
+            /// </summary>
+            [EnumMember(Value = "HK")]
+            HK = 42,
+
+            /// <summary>
             /// Enum TW for value: TW
             /// </summary>
             [EnumMember(Value = "TW")]
-            TW = 34,
-
-            /// <summary>
-            /// Enum US for value: US
-            /// </summary>
-            [EnumMember(Value = "US")]
-            US = 35
+            TW = 43
 
         }
 
