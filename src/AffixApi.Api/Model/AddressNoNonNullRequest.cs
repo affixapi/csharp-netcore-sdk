@@ -298,7 +298,7 @@ namespace AffixApi.Api.Model
         /// The ISO-3166-2 two-letter abbreviation of the country. Reference https://en.wikipedia.org/wiki/ISO_3166-2 for more details 
         /// </summary>
         /// <value>The ISO-3166-2 two-letter abbreviation of the country. Reference https://en.wikipedia.org/wiki/ISO_3166-2 for more details </value>
-        [DataMember(Name = "country", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "country", IsRequired = true, EmitDefaultValue = false)]
         public CountryEnum Country { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressNoNonNullRequest" /> class.
