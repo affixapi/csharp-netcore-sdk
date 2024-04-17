@@ -172,10 +172,10 @@ namespace AffixApi.Api.Model
             LT = 22,
 
             /// <summary>
-            /// Enum LT for value: LT
+            /// Enum LU for value: LU
             /// </summary>
-            [EnumMember(Value = "LT")]
-            LT = 23,
+            [EnumMember(Value = "LU")]
+            LU = 23,
 
             /// <summary>
             /// Enum LV for value: LV
@@ -184,118 +184,106 @@ namespace AffixApi.Api.Model
             LV = 24,
 
             /// <summary>
-            /// Enum LU for value: LU
-            /// </summary>
-            [EnumMember(Value = "LU")]
-            LU = 25,
-
-            /// <summary>
             /// Enum NL for value: NL
             /// </summary>
             [EnumMember(Value = "NL")]
-            NL = 26,
+            NL = 25,
 
             /// <summary>
             /// Enum NO for value: NO
             /// </summary>
             [EnumMember(Value = "NO")]
-            NO = 27,
+            NO = 26,
 
             /// <summary>
             /// Enum PH for value: PH
             /// </summary>
             [EnumMember(Value = "PH")]
-            PH = 28,
+            PH = 27,
 
             /// <summary>
             /// Enum PL for value: PL
             /// </summary>
             [EnumMember(Value = "PL")]
-            PL = 29,
+            PL = 28,
 
             /// <summary>
             /// Enum RO for value: RO
             /// </summary>
             [EnumMember(Value = "RO")]
-            RO = 30,
+            RO = 29,
 
             /// <summary>
             /// Enum SE for value: SE
             /// </summary>
             [EnumMember(Value = "SE")]
-            SE = 31,
-
-            /// <summary>
-            /// Enum SG for value: SG
-            /// </summary>
-            [EnumMember(Value = "SG")]
-            SG = 32,
+            SE = 30,
 
             /// <summary>
             /// Enum SK for value: SK
             /// </summary>
             [EnumMember(Value = "SK")]
-            SK = 33,
+            SK = 31,
 
             /// <summary>
             /// Enum CN for value: CN
             /// </summary>
             [EnumMember(Value = "CN")]
-            CN = 34,
-
-            /// <summary>
-            /// Enum ID for value: ID
-            /// </summary>
-            [EnumMember(Value = "ID")]
-            ID = 35,
-
-            /// <summary>
-            /// Enum IN for value: IN
-            /// </summary>
-            [EnumMember(Value = "IN")]
-            IN = 36,
-
-            /// <summary>
-            /// Enum JP for value: JP
-            /// </summary>
-            [EnumMember(Value = "JP")]
-            JP = 37,
-
-            /// <summary>
-            /// Enum KR for value: KR
-            /// </summary>
-            [EnumMember(Value = "KR")]
-            KR = 38,
-
-            /// <summary>
-            /// Enum MO for value: MO
-            /// </summary>
-            [EnumMember(Value = "MO")]
-            MO = 39,
-
-            /// <summary>
-            /// Enum MY for value: MY
-            /// </summary>
-            [EnumMember(Value = "MY")]
-            MY = 40,
-
-            /// <summary>
-            /// Enum SG for value: SG
-            /// </summary>
-            [EnumMember(Value = "SG")]
-            SG = 41,
+            CN = 32,
 
             /// <summary>
             /// Enum HK for value: HK
             /// </summary>
             [EnumMember(Value = "HK")]
-            HK = 42,
+            HK = 33,
+
+            /// <summary>
+            /// Enum ID for value: ID
+            /// </summary>
+            [EnumMember(Value = "ID")]
+            ID = 34,
+
+            /// <summary>
+            /// Enum IN for value: IN
+            /// </summary>
+            [EnumMember(Value = "IN")]
+            IN = 35,
+
+            /// <summary>
+            /// Enum JP for value: JP
+            /// </summary>
+            [EnumMember(Value = "JP")]
+            JP = 36,
+
+            /// <summary>
+            /// Enum KR for value: KR
+            /// </summary>
+            [EnumMember(Value = "KR")]
+            KR = 37,
+
+            /// <summary>
+            /// Enum MO for value: MO
+            /// </summary>
+            [EnumMember(Value = "MO")]
+            MO = 38,
+
+            /// <summary>
+            /// Enum MY for value: MY
+            /// </summary>
+            [EnumMember(Value = "MY")]
+            MY = 39,
+
+            /// <summary>
+            /// Enum SG for value: SG
+            /// </summary>
+            [EnumMember(Value = "SG")]
+            SG = 40,
 
             /// <summary>
             /// Enum TW for value: TW
             /// </summary>
             [EnumMember(Value = "TW")]
-            TW = 43
+            TW = 41
 
         }
 
