@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **TaxId** | **string** |  | 
 **Gender** | **string** |  | 
 **Ethnicity** | **string** |  | 
-**MaritalStatus** | **string** |  | 
+**MaritalStatus** | **string** | &#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc  | 
 **DateOfBirth** | **DateTime?** |  | 
 **EmploymentStatus** | **string** |  | 
 **EmploymentType** | **string** |  | 
