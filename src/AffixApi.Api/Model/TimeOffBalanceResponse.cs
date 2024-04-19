@@ -104,14 +104,16 @@ namespace AffixApi.Api.Model
         /// <param name="policyType">policyType (required).</param>
         /// <param name="remoteCreatedAt">remoteCreatedAt (required).</param>
         /// <param name="remoteModifiedAt">remoteModifiedAt (required).</param>
-        public TimeOffBalanceResponse(string employeeId = default(string), string remoteId = default(string), decimal balance = default(decimal), decimal used = default(decimal), string policyName = default(string), PolicyTypeEnum policyType = default(PolicyTypeEnum), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
+        public TimeOffBalanceResponse(string employeeId = default(string), string remoteId = default(string), decimal? balance = default(decimal?), decimal? used = default(decimal?), string policyName = default(string), PolicyTypeEnum policyType = default(PolicyTypeEnum), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
         {
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "remoteId" is required (not null)
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for TimeOffBalanceResponse and cannot be null");
-            this.Balance = balance;
-            this.Used = used;
+            // to ensure "balance" is required (not null)
+            this.Balance = balance ?? throw new ArgumentNullException("balance is a required property for TimeOffBalanceResponse and cannot be null");
+            // to ensure "used" is required (not null)
+            this.Used = used ?? throw new ArgumentNullException("used is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "policyName" is required (not null)
             this.PolicyName = policyName ?? throw new ArgumentNullException("policyName is a required property for TimeOffBalanceResponse and cannot be null");
             this.PolicyType = policyType;
@@ -138,14 +140,14 @@ namespace AffixApi.Api.Model
         /// <summary>
         /// Gets or Sets Balance
         /// </summary>
-        [DataMember(Name = "balance", IsRequired = true, EmitDefaultValue = false)]
-        public decimal Balance { get; set; }
+        [DataMember(Name = "balance", IsRequired = true, EmitDefaultValue = true)]
+        public decimal? Balance { get; set; }
 
         /// <summary>
         /// Gets or Sets Used
         /// </summary>
-        [DataMember(Name = "used", IsRequired = true, EmitDefaultValue = false)]
-        public decimal Used { get; set; }
+        [DataMember(Name = "used", IsRequired = true, EmitDefaultValue = true)]
+        public decimal? Used { get; set; }
 
         /// <summary>
         /// The name of the policy, as assigned by the remote system
@@ -230,11 +232,13 @@ namespace AffixApi.Api.Model
                 ) && 
                 (
                     this.Balance == input.Balance ||
-                    this.Balance.Equals(input.Balance)
+                    (this.Balance != null &&
+                    this.Balance.Equals(input.Balance))
                 ) && 
                 (
                     this.Used == input.Used ||
-                    this.Used.Equals(input.Used)
+                    (this.Used != null &&
+                    this.Used.Equals(input.Used))
                 ) && 
                 (
                     this.PolicyName == input.PolicyName ||
@@ -270,8 +274,10 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
                 if (this.RemoteId != null)
                     hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
-                hashCode = hashCode * 59 + this.Balance.GetHashCode();
-                hashCode = hashCode * 59 + this.Used.GetHashCode();
+                if (this.Balance != null)
+                    hashCode = hashCode * 59 + this.Balance.GetHashCode();
+                if (this.Used != null)
+                    hashCode = hashCode * 59 + this.Used.GetHashCode();
                 if (this.PolicyName != null)
                     hashCode = hashCode * 59 + this.PolicyName.GetHashCode();
                 hashCode = hashCode * 59 + this.PolicyType.GetHashCode();
