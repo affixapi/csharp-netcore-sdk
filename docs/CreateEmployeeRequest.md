@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **Ethnicity** | **string** |  | [optional] 
 **MaritalStatus** | **string** |  | [optional] 
 **DateOfBirth** | **DateTime?** |  | [optional] 
-**EmploymentStatus** | **string** |  | [optional] 
+**EmploymentStatus** | [**EmploymentStatusNotNullRequest**](EmploymentStatusNotNullRequest.md) |  | [optional] 
 **EmploymentType** | **string** |  | [optional] 
 **StartDate** | **DateTime?** |  | [optional] 
 **TerminationDate** | **DateTime?** |  | [optional] 
@@ -30,6 +30,8 @@ Name | Type | Description | Notes
 **Employments** | [**List&lt;EmploymentNoNullEnumRequest&gt;**](EmploymentNoNullEnumRequest.md) |  | [optional] 
 **CustomFields** | **Object** |  | [optional] 
 **Groups** | [**List&lt;GroupNoNullEnumRequest&gt;**](GroupNoNullEnumRequest.md) |  | [optional] 
+**Dependents** | [**List&lt;CreateEmployeeRequestDependents&gt;**](CreateEmployeeRequestDependents.md) |  | [optional] 
+**EmergencyContacts** | [**List&lt;CreateEmployeeRequestEmergencyContacts&gt;**](CreateEmployeeRequestEmergencyContacts.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

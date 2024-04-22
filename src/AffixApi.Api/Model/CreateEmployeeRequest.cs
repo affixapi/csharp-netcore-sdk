@@ -153,44 +153,6 @@ namespace AffixApi.Api.Model
         [DataMember(Name = "marital_status", EmitDefaultValue = true)]
         public MaritalStatusEnum? MaritalStatus { get; set; }
         /// <summary>
-        /// Defines EmploymentStatus
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EmploymentStatusEnum
-        {
-            /// <summary>
-            /// Enum Active for value: active
-            /// </summary>
-            [EnumMember(Value = "active")]
-            Active = 1,
-
-            /// <summary>
-            /// Enum Inactive for value: inactive
-            /// </summary>
-            [EnumMember(Value = "inactive")]
-            Inactive = 2,
-
-            /// <summary>
-            /// Enum Pending for value: pending
-            /// </summary>
-            [EnumMember(Value = "pending")]
-            Pending = 3,
-
-            /// <summary>
-            /// Enum Leave for value: leave
-            /// </summary>
-            [EnumMember(Value = "leave")]
-            Leave = 4
-
-        }
-
-
-        /// <summary>
-        /// Gets or Sets EmploymentStatus
-        /// </summary>
-        [DataMember(Name = "employment_status", EmitDefaultValue = true)]
-        public EmploymentStatusEnum? EmploymentStatus { get; set; }
-        /// <summary>
         /// Defines EmploymentType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -262,7 +224,9 @@ namespace AffixApi.Api.Model
         /// <param name="employments">employments.</param>
         /// <param name="customFields">customFields.</param>
         /// <param name="groups">groups.</param>
-        public CreateEmployeeRequest(string employeeNumber = default(string), string firstName = default(string), string lastName = default(string), string displayFullName = default(string), string nationality = default(string), string jobTitle = default(string), string workEmail = default(string), string personalEmail = default(string), string mobilePhoneNumber = default(string), string taxId = default(string), GenderEnum? gender = default(GenderEnum?), EthnicityEnum? ethnicity = default(EthnicityEnum?), MaritalStatusEnum? maritalStatus = default(MaritalStatusEnum?), DateTime? dateOfBirth = default(DateTime?), EmploymentStatusEnum? employmentStatus = default(EmploymentStatusEnum?), EmploymentTypeEnum? employmentType = default(EmploymentTypeEnum?), DateTime? startDate = default(DateTime?), DateTime? terminationDate = default(DateTime?), string avatar = default(string), AddressNoNonNullRequest homeLocation = default(AddressNoNonNullRequest), LocationNoNonNullRequest workLocation = default(LocationNoNonNullRequest), CreateEmployeeRequestManager manager = default(CreateEmployeeRequestManager), CreateEmployeeRequestBankAccount bankAccount = default(CreateEmployeeRequestBankAccount), List<EmploymentNoNullEnumRequest> employments = default(List<EmploymentNoNullEnumRequest>), Object customFields = default(Object), List<GroupNoNullEnumRequest> groups = default(List<GroupNoNullEnumRequest>))
+        /// <param name="dependents">dependents.</param>
+        /// <param name="emergencyContacts">emergencyContacts.</param>
+        public CreateEmployeeRequest(string employeeNumber = default(string), string firstName = default(string), string lastName = default(string), string displayFullName = default(string), string nationality = default(string), string jobTitle = default(string), string workEmail = default(string), string personalEmail = default(string), string mobilePhoneNumber = default(string), string taxId = default(string), GenderEnum? gender = default(GenderEnum?), EthnicityEnum? ethnicity = default(EthnicityEnum?), MaritalStatusEnum? maritalStatus = default(MaritalStatusEnum?), DateTime? dateOfBirth = default(DateTime?), EmploymentStatusNotNullRequest employmentStatus = default(EmploymentStatusNotNullRequest), EmploymentTypeEnum? employmentType = default(EmploymentTypeEnum?), DateTime? startDate = default(DateTime?), DateTime? terminationDate = default(DateTime?), string avatar = default(string), AddressNoNonNullRequest homeLocation = default(AddressNoNonNullRequest), LocationNoNonNullRequest workLocation = default(LocationNoNonNullRequest), CreateEmployeeRequestManager manager = default(CreateEmployeeRequestManager), CreateEmployeeRequestBankAccount bankAccount = default(CreateEmployeeRequestBankAccount), List<EmploymentNoNullEnumRequest> employments = default(List<EmploymentNoNullEnumRequest>), Object customFields = default(Object), List<GroupNoNullEnumRequest> groups = default(List<GroupNoNullEnumRequest>), List<CreateEmployeeRequestDependents> dependents = default(List<CreateEmployeeRequestDependents>), List<CreateEmployeeRequestEmergencyContacts> emergencyContacts = default(List<CreateEmployeeRequestEmergencyContacts>))
         {
             // to ensure "firstName" is required (not null)
             this.FirstName = firstName ?? throw new ArgumentNullException("firstName is a required property for CreateEmployeeRequest and cannot be null");
@@ -292,6 +256,8 @@ namespace AffixApi.Api.Model
             this.Employments = employments;
             this.CustomFields = customFields;
             this.Groups = groups;
+            this.Dependents = dependents;
+            this.EmergencyContacts = emergencyContacts;
         }
 
         /// <summary>
@@ -367,6 +333,12 @@ namespace AffixApi.Api.Model
         public DateTime? DateOfBirth { get; set; }
 
         /// <summary>
+        /// Gets or Sets EmploymentStatus
+        /// </summary>
+        [DataMember(Name = "employment_status", EmitDefaultValue = true)]
+        public EmploymentStatusNotNullRequest EmploymentStatus { get; set; }
+
+        /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name = "start_date", EmitDefaultValue = true)]
@@ -429,6 +401,18 @@ namespace AffixApi.Api.Model
         public List<GroupNoNullEnumRequest> Groups { get; set; }
 
         /// <summary>
+        /// Gets or Sets Dependents
+        /// </summary>
+        [DataMember(Name = "dependents", EmitDefaultValue = true)]
+        public List<CreateEmployeeRequestDependents> Dependents { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EmergencyContacts
+        /// </summary>
+        [DataMember(Name = "emergency_contacts", EmitDefaultValue = true)]
+        public List<CreateEmployeeRequestEmergencyContacts> EmergencyContacts { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -462,6 +446,8 @@ namespace AffixApi.Api.Model
             sb.Append("  Employments: ").Append(Employments).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  Dependents: ").Append(Dependents).Append("\n");
+            sb.Append("  EmergencyContacts: ").Append(EmergencyContacts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -565,7 +551,8 @@ namespace AffixApi.Api.Model
                 ) && 
                 (
                     this.EmploymentStatus == input.EmploymentStatus ||
-                    this.EmploymentStatus.Equals(input.EmploymentStatus)
+                    (this.EmploymentStatus != null &&
+                    this.EmploymentStatus.Equals(input.EmploymentStatus))
                 ) && 
                 (
                     this.EmploymentType == input.EmploymentType ||
@@ -622,6 +609,18 @@ namespace AffixApi.Api.Model
                     this.Groups != null &&
                     input.Groups != null &&
                     this.Groups.SequenceEqual(input.Groups)
+                ) && 
+                (
+                    this.Dependents == input.Dependents ||
+                    this.Dependents != null &&
+                    input.Dependents != null &&
+                    this.Dependents.SequenceEqual(input.Dependents)
+                ) && 
+                (
+                    this.EmergencyContacts == input.EmergencyContacts ||
+                    this.EmergencyContacts != null &&
+                    input.EmergencyContacts != null &&
+                    this.EmergencyContacts.SequenceEqual(input.EmergencyContacts)
                 );
         }
 
@@ -659,7 +658,8 @@ namespace AffixApi.Api.Model
                 hashCode = hashCode * 59 + this.MaritalStatus.GetHashCode();
                 if (this.DateOfBirth != null)
                     hashCode = hashCode * 59 + this.DateOfBirth.GetHashCode();
-                hashCode = hashCode * 59 + this.EmploymentStatus.GetHashCode();
+                if (this.EmploymentStatus != null)
+                    hashCode = hashCode * 59 + this.EmploymentStatus.GetHashCode();
                 hashCode = hashCode * 59 + this.EmploymentType.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
@@ -681,6 +681,10 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.CustomFields.GetHashCode();
                 if (this.Groups != null)
                     hashCode = hashCode * 59 + this.Groups.GetHashCode();
+                if (this.Dependents != null)
+                    hashCode = hashCode * 59 + this.Dependents.GetHashCode();
+                if (this.EmergencyContacts != null)
+                    hashCode = hashCode * 59 + this.EmergencyContacts.GetHashCode();
                 return hashCode;
             }
         }

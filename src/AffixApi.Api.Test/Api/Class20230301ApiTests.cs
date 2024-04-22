@@ -73,7 +73,8 @@ namespace AffixApi.Api.Test.Api
         public void XhrEmployees20230301Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.XhrEmployees20230301();
+            //EmploymentStatusNotNull? employmentStatus = null;
+            //var response = instance.XhrEmployees20230301(employmentStatus);
             //Assert.IsType<List<EmployeeResponse>>(response);
         }
 

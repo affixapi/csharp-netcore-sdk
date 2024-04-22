@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **Ethnicity** | **string** |  | 
 **MaritalStatus** | **string** | &#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc  | 
 **DateOfBirth** | **DateTime?** |  | 
-**EmploymentStatus** | **string** |  | 
+**EmploymentStatus** | [**EmploymentStatusResponse**](EmploymentStatusResponse.md) |  | 
 **EmploymentType** | **string** |  | 
 **StartDate** | **DateTime?** |  | 
 **RemoteCreatedAt** | **DateTime?** |  | [readonly] 
@@ -33,6 +33,8 @@ Name | Type | Description | Notes
 **Employments** | [**List&lt;EmploymentResponse&gt;**](EmploymentResponse.md) |  | 
 **CustomFields** | **Object** |  | 
 **Groups** | [**List&lt;GroupResponse&gt;**](GroupResponse.md) |  | 
+**Dependents** | [**List&lt;CreateEmployeeRequestDependents&gt;**](CreateEmployeeRequestDependents.md) |  | 
+**EmergencyContacts** | [**List&lt;CreateEmployeeRequestEmergencyContacts&gt;**](CreateEmployeeRequestEmergencyContacts.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

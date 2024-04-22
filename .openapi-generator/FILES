@@ -12,6 +12,8 @@ docs/CompanyResponse.md
 docs/CoreApi.md
 docs/CreateEmployeeRequest.md
 docs/CreateEmployeeRequestBankAccount.md
+docs/CreateEmployeeRequestDependents.md
+docs/CreateEmployeeRequestEmergencyContacts.md
 docs/CreateEmployeeRequestManager.md
 docs/CurrencyNotNullRequest.md
 docs/CurrencyResponse.md
@@ -20,6 +22,10 @@ docs/EmployeeResponse.md
 docs/EmployeeResponseManager.md
 docs/EmploymentNoNullEnumRequest.md
 docs/EmploymentResponse.md
+docs/EmploymentStatus.md
+docs/EmploymentStatusNotNull.md
+docs/EmploymentStatusNotNullRequest.md
+docs/EmploymentStatusResponse.md
 docs/GroupNoNullEnumRequest.md
 docs/GroupResponse.md
 docs/IdAndMessageResponse.md
@@ -62,6 +68,8 @@ src/AffixApi.Api.Test/Model/ClientRequestTests.cs
 src/AffixApi.Api.Test/Model/ClientResponseTests.cs
 src/AffixApi.Api.Test/Model/CompanyResponseTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestBankAccountTests.cs
+src/AffixApi.Api.Test/Model/CreateEmployeeRequestDependentsTests.cs
+src/AffixApi.Api.Test/Model/CreateEmployeeRequestEmergencyContactsTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestManagerTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestTests.cs
 src/AffixApi.Api.Test/Model/CurrencyNotNullRequestTests.cs
@@ -71,6 +79,10 @@ src/AffixApi.Api.Test/Model/EmployeeResponseManagerTests.cs
 src/AffixApi.Api.Test/Model/EmployeeResponseTests.cs
 src/AffixApi.Api.Test/Model/EmploymentNoNullEnumRequestTests.cs
 src/AffixApi.Api.Test/Model/EmploymentResponseTests.cs
+src/AffixApi.Api.Test/Model/EmploymentStatusNotNullRequestTests.cs
+src/AffixApi.Api.Test/Model/EmploymentStatusNotNullTests.cs
+src/AffixApi.Api.Test/Model/EmploymentStatusResponseTests.cs
+src/AffixApi.Api.Test/Model/EmploymentStatusTests.cs
 src/AffixApi.Api.Test/Model/GroupNoNullEnumRequestTests.cs
 src/AffixApi.Api.Test/Model/GroupResponseTests.cs
 src/AffixApi.Api.Test/Model/IdAndMessageResponseTests.cs
@@ -128,6 +140,8 @@ src/AffixApi.Api/Model/ClientResponse.cs
 src/AffixApi.Api/Model/CompanyResponse.cs
 src/AffixApi.Api/Model/CreateEmployeeRequest.cs
 src/AffixApi.Api/Model/CreateEmployeeRequestBankAccount.cs
+src/AffixApi.Api/Model/CreateEmployeeRequestDependents.cs
+src/AffixApi.Api/Model/CreateEmployeeRequestEmergencyContacts.cs
 src/AffixApi.Api/Model/CreateEmployeeRequestManager.cs
 src/AffixApi.Api/Model/CurrencyNotNullRequest.cs
 src/AffixApi.Api/Model/CurrencyResponse.cs
@@ -136,6 +150,10 @@ src/AffixApi.Api/Model/EmployeeResponse.cs
 src/AffixApi.Api/Model/EmployeeResponseManager.cs
 src/AffixApi.Api/Model/EmploymentNoNullEnumRequest.cs
 src/AffixApi.Api/Model/EmploymentResponse.cs
+src/AffixApi.Api/Model/EmploymentStatus.cs
+src/AffixApi.Api/Model/EmploymentStatusNotNull.cs
+src/AffixApi.Api/Model/EmploymentStatusNotNullRequest.cs
+src/AffixApi.Api/Model/EmploymentStatusResponse.cs
 src/AffixApi.Api/Model/GroupNoNullEnumRequest.cs
 src/AffixApi.Api/Model/GroupResponse.cs
 src/AffixApi.Api/Model/IdAndMessageResponse.cs

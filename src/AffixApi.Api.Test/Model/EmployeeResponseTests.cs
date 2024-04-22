@@ -289,6 +289,22 @@ namespace AffixApi.Api.Test.Model
         {
             // TODO unit test for the property 'Groups'
         }
+        /// <summary>
+        /// Test the property 'Dependents'
+        /// </summary>
+        [Fact]
+        public void DependentsTest()
+        {
+            // TODO unit test for the property 'Dependents'
+        }
+        /// <summary>
+        /// Test the property 'EmergencyContacts'
+        /// </summary>
+        [Fact]
+        public void EmergencyContactsTest()
+        {
+            // TODO unit test for the property 'EmergencyContacts'
+        }
 
     }
 
