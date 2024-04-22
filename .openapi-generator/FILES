@@ -22,8 +22,7 @@ docs/EmployeeResponse.md
 docs/EmployeeResponseManager.md
 docs/EmploymentNoNullEnumRequest.md
 docs/EmploymentResponse.md
-docs/EmploymentStatus.md
-docs/EmploymentStatusNotNull.md
+docs/EmploymentStatusNotNullNotNullable.md
 docs/EmploymentStatusNotNullRequest.md
 docs/EmploymentStatusResponse.md
 docs/GroupNoNullEnumRequest.md
@@ -79,10 +78,9 @@ src/AffixApi.Api.Test/Model/EmployeeResponseManagerTests.cs
 src/AffixApi.Api.Test/Model/EmployeeResponseTests.cs
 src/AffixApi.Api.Test/Model/EmploymentNoNullEnumRequestTests.cs
 src/AffixApi.Api.Test/Model/EmploymentResponseTests.cs
+src/AffixApi.Api.Test/Model/EmploymentStatusNotNullNotNullableTests.cs
 src/AffixApi.Api.Test/Model/EmploymentStatusNotNullRequestTests.cs
-src/AffixApi.Api.Test/Model/EmploymentStatusNotNullTests.cs
 src/AffixApi.Api.Test/Model/EmploymentStatusResponseTests.cs
-src/AffixApi.Api.Test/Model/EmploymentStatusTests.cs
 src/AffixApi.Api.Test/Model/GroupNoNullEnumRequestTests.cs
 src/AffixApi.Api.Test/Model/GroupResponseTests.cs
 src/AffixApi.Api.Test/Model/IdAndMessageResponseTests.cs
@@ -150,8 +148,7 @@ src/AffixApi.Api/Model/EmployeeResponse.cs
 src/AffixApi.Api/Model/EmployeeResponseManager.cs
 src/AffixApi.Api/Model/EmploymentNoNullEnumRequest.cs
 src/AffixApi.Api/Model/EmploymentResponse.cs
-src/AffixApi.Api/Model/EmploymentStatus.cs
-src/AffixApi.Api/Model/EmploymentStatusNotNull.cs
+src/AffixApi.Api/Model/EmploymentStatusNotNullNotNullable.cs
 src/AffixApi.Api/Model/EmploymentStatusNotNullRequest.cs
 src/AffixApi.Api/Model/EmploymentStatusResponse.cs
 src/AffixApi.Api/Model/GroupNoNullEnumRequest.cs

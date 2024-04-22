@@ -1,4 +1,4 @@
-# AffixApi.Api.Model.EmploymentStatusNotNull
+# AffixApi.Api.Model.EmploymentStatusNotNullNotNullable
 
 ## Properties
 
