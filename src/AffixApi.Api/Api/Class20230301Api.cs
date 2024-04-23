@@ -53,7 +53,7 @@ namespace AffixApi.Api.Api
         /// List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <returns>List&lt;EmployeeResponse&gt;</returns>
         List<EmployeeResponse> XhrEmployees20230301(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?));
 
@@ -64,7 +64,7 @@ namespace AffixApi.Api.Api
         /// List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <returns>ApiResponse of List&lt;EmployeeResponse&gt;</returns>
         ApiResponse<List<EmployeeResponse>> XhrEmployees20230301WithHttpInfo(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?));
         /// <summary>
@@ -262,7 +262,7 @@ namespace AffixApi.Api.Api
         /// List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;EmployeeResponse&gt;</returns>
         System.Threading.Tasks.Task<List<EmployeeResponse>> XhrEmployees20230301Async(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -274,7 +274,7 @@ namespace AffixApi.Api.Api
         /// List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;EmployeeResponse&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<EmployeeResponse>>> XhrEmployees20230301WithHttpInfoAsync(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -687,7 +687,7 @@ namespace AffixApi.Api.Api
         /// Employees List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <returns>List&lt;EmployeeResponse&gt;</returns>
         public List<EmployeeResponse> XhrEmployees20230301(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?))
         {
@@ -699,7 +699,7 @@ namespace AffixApi.Api.Api
         /// Employees List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <returns>ApiResponse of List&lt;EmployeeResponse&gt;</returns>
         public AffixApi.Api.Client.ApiResponse<List<EmployeeResponse>> XhrEmployees20230301WithHttpInfo(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?))
         {
@@ -746,7 +746,7 @@ namespace AffixApi.Api.Api
         /// Employees List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;EmployeeResponse&gt;</returns>
         public async System.Threading.Tasks.Task<List<EmployeeResponse>> XhrEmployees20230301Async(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -759,7 +759,7 @@ namespace AffixApi.Api.Api
         /// Employees List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="employmentStatus">Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
+        /// <param name="employmentStatus">Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;EmployeeResponse&gt;)</returns>
         public async System.Threading.Tasks.Task<AffixApi.Api.Client.ApiResponse<List<EmployeeResponse>>> XhrEmployees20230301WithHttpInfoAsync(EmploymentStatusNotNullNotNullable? employmentStatus = default(EmploymentStatusNotNullNotNullable?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))

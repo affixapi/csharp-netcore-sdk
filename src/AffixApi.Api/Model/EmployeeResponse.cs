@@ -286,7 +286,7 @@ namespace AffixApi.Api.Model
             // to ensure "dateOfBirth" is required (not null)
             this.DateOfBirth = dateOfBirth ?? throw new ArgumentNullException("dateOfBirth is a required property for EmployeeResponse and cannot be null");
             // to ensure "employmentStatus" is required (not null)
-            this.EmploymentStatus = employmentStatus ?? throw new ArgumentNullException("employmentStatus is a required property for EmployeeResponse and cannot be null");
+            this.EmploymentStatus = employmentStatus;
             this.EmploymentType = employmentType;
             // to ensure "startDate" is required (not null)
             this.StartDate = startDate ?? throw new ArgumentNullException("startDate is a required property for EmployeeResponse and cannot be null");

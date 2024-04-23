@@ -123,7 +123,7 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new XHRVerticallyIntegratedApi(config);
-            var employmentStatus = ;  // EmploymentStatusNotNullNotNullable? | Enable server-side filtering of the `employment_status` attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a `null`, it will not be returned if this parameter is set)  (optional) 
+            var employmentStatus = ;  // EmploymentStatusNotNullNotNullable? | Optional query parameter. Use to enable server-side filtering of the `employment_status` attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a `null`, it will not be returned if this parameter is set)  (optional) 
 
             try
             {
@@ -146,7 +146,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **employmentStatus** | **EmploymentStatusNotNullNotNullable?**| Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  | [optional] 
+ **employmentStatus** | **EmploymentStatusNotNullNotNullable?**| Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set)  | [optional] 
 
 ### Return type
 

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = AffixApi.Api.Client.OpenAPIDateConverter;
 namespace AffixApi.Api.Model
 {
     /// <summary>
-    /// Defines employment-status-not-null-not-nullable
+    /// Defines EmploymentStatusNotNullNotNullable
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum EmploymentStatusNotNullNotNullable
