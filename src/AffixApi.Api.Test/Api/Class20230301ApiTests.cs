@@ -143,7 +143,9 @@ namespace AffixApi.Api.Test.Api
         public void XhrTimeOffEntries20230301Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.XhrTimeOffEntries20230301();
+            //DateTime startDate = null;
+            //DateTime endDate = null;
+            //var response = instance.XhrTimeOffEntries20230301(startDate, endDate);
             //Assert.IsType<List<TimeOffEntryResponse>>(response);
         }
 
@@ -154,7 +156,9 @@ namespace AffixApi.Api.Test.Api
         public void XhrTimesheets20230301Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.XhrTimesheets20230301();
+            //DateTime startDate = null;
+            //DateTime endDate = null;
+            //var response = instance.XhrTimesheets20230301(startDate, endDate);
             //Assert.IsType<List<TimesheetResponse>>(response);
         }
 

@@ -175,8 +175,10 @@ namespace AffixApi.Api.Api
         /// Retrieve time off / absence entries 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>List&lt;TimeOffEntryResponse&gt;</returns>
-        List<TimeOffEntryResponse> XhrTimeOffEntries20230301();
+        List<TimeOffEntryResponse> XhrTimeOffEntries20230301(DateTime startDate, DateTime endDate);
 
         /// <summary>
         /// Time off entries
@@ -185,8 +187,10 @@ namespace AffixApi.Api.Api
         /// Retrieve time off / absence entries 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>ApiResponse of List&lt;TimeOffEntryResponse&gt;</returns>
-        ApiResponse<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301WithHttpInfo();
+        ApiResponse<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301WithHttpInfo(DateTime startDate, DateTime endDate);
         /// <summary>
         /// Timesheets
         /// </summary>
@@ -194,8 +198,10 @@ namespace AffixApi.Api.Api
         /// Retrieve Timesheets 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>List&lt;TimesheetResponse&gt;</returns>
-        List<TimesheetResponse> XhrTimesheets20230301();
+        List<TimesheetResponse> XhrTimesheets20230301(DateTime startDate, DateTime endDate);
 
         /// <summary>
         /// Timesheets
@@ -204,8 +210,10 @@ namespace AffixApi.Api.Api
         /// Retrieve Timesheets 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>ApiResponse of List&lt;TimesheetResponse&gt;</returns>
-        ApiResponse<List<TimesheetResponse>> XhrTimesheets20230301WithHttpInfo();
+        ApiResponse<List<TimesheetResponse>> XhrTimesheets20230301WithHttpInfo(DateTime startDate, DateTime endDate);
         /// <summary>
         /// Work locations
         /// </summary>
@@ -396,9 +404,11 @@ namespace AffixApi.Api.Api
         /// Retrieve time off / absence entries 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;TimeOffEntryResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301Async(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301Async(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Time off entries
@@ -407,9 +417,11 @@ namespace AffixApi.Api.Api
         /// Retrieve time off / absence entries 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;TimeOffEntryResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TimeOffEntryResponse>>> XhrTimeOffEntries20230301WithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<TimeOffEntryResponse>>> XhrTimeOffEntries20230301WithHttpInfoAsync(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Timesheets
         /// </summary>
@@ -417,9 +429,11 @@ namespace AffixApi.Api.Api
         /// Retrieve Timesheets 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;TimesheetResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<TimesheetResponse>> XhrTimesheets20230301Async(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<TimesheetResponse>> XhrTimesheets20230301Async(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Timesheets
@@ -428,9 +442,11 @@ namespace AffixApi.Api.Api
         /// Retrieve Timesheets 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;TimesheetResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TimesheetResponse>>> XhrTimesheets20230301WithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<TimesheetResponse>>> XhrTimesheets20230301WithHttpInfoAsync(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Work locations
         /// </summary>
@@ -1391,10 +1407,12 @@ namespace AffixApi.Api.Api
         /// Time off entries Retrieve time off / absence entries 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>List&lt;TimeOffEntryResponse&gt;</returns>
-        public List<TimeOffEntryResponse> XhrTimeOffEntries20230301()
+        public List<TimeOffEntryResponse> XhrTimeOffEntries20230301(DateTime startDate, DateTime endDate)
         {
-            AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>> localVarResponse = XhrTimeOffEntries20230301WithHttpInfo();
+            AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>> localVarResponse = XhrTimeOffEntries20230301WithHttpInfo(startDate, endDate);
             return localVarResponse.Data;
         }
 
@@ -1402,8 +1420,10 @@ namespace AffixApi.Api.Api
         /// Time off entries Retrieve time off / absence entries 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>ApiResponse of List&lt;TimeOffEntryResponse&gt;</returns>
-        public AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301WithHttpInfo()
+        public AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301WithHttpInfo(DateTime startDate, DateTime endDate)
         {
             AffixApi.Api.Client.RequestOptions localVarRequestOptions = new AffixApi.Api.Client.RequestOptions();
 
@@ -1421,6 +1441,8 @@ namespace AffixApi.Api.Api
             var localVarAccept = AffixApi.Api.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "start_date", startDate));
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "end_date", endDate));
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1444,11 +1466,13 @@ namespace AffixApi.Api.Api
         /// Time off entries Retrieve time off / absence entries 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;TimeOffEntryResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301Async(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<TimeOffEntryResponse>> XhrTimeOffEntries20230301Async(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>> localVarResponse = await XhrTimeOffEntries20230301WithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
+            AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>> localVarResponse = await XhrTimeOffEntries20230301WithHttpInfoAsync(startDate, endDate, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1456,9 +1480,11 @@ namespace AffixApi.Api.Api
         /// Time off entries Retrieve time off / absence entries 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;TimeOffEntryResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>>> XhrTimeOffEntries20230301WithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffixApi.Api.Client.ApiResponse<List<TimeOffEntryResponse>>> XhrTimeOffEntries20230301WithHttpInfoAsync(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             AffixApi.Api.Client.RequestOptions localVarRequestOptions = new AffixApi.Api.Client.RequestOptions();
@@ -1478,6 +1504,8 @@ namespace AffixApi.Api.Api
             var localVarAccept = AffixApi.Api.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "start_date", startDate));
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "end_date", endDate));
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1502,10 +1530,12 @@ namespace AffixApi.Api.Api
         /// Timesheets Retrieve Timesheets 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>List&lt;TimesheetResponse&gt;</returns>
-        public List<TimesheetResponse> XhrTimesheets20230301()
+        public List<TimesheetResponse> XhrTimesheets20230301(DateTime startDate, DateTime endDate)
         {
-            AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>> localVarResponse = XhrTimesheets20230301WithHttpInfo();
+            AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>> localVarResponse = XhrTimesheets20230301WithHttpInfo(startDate, endDate);
             return localVarResponse.Data;
         }
 
@@ -1513,8 +1543,10 @@ namespace AffixApi.Api.Api
         /// Timesheets Retrieve Timesheets 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <returns>ApiResponse of List&lt;TimesheetResponse&gt;</returns>
-        public AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>> XhrTimesheets20230301WithHttpInfo()
+        public AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>> XhrTimesheets20230301WithHttpInfo(DateTime startDate, DateTime endDate)
         {
             AffixApi.Api.Client.RequestOptions localVarRequestOptions = new AffixApi.Api.Client.RequestOptions();
 
@@ -1532,6 +1564,8 @@ namespace AffixApi.Api.Api
             var localVarAccept = AffixApi.Api.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "start_date", startDate));
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "end_date", endDate));
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1555,11 +1589,13 @@ namespace AffixApi.Api.Api
         /// Timesheets Retrieve Timesheets 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;TimesheetResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TimesheetResponse>> XhrTimesheets20230301Async(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<TimesheetResponse>> XhrTimesheets20230301Async(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>> localVarResponse = await XhrTimesheets20230301WithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
+            AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>> localVarResponse = await XhrTimesheets20230301WithHttpInfoAsync(startDate, endDate, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1567,9 +1603,11 @@ namespace AffixApi.Api.Api
         /// Timesheets Retrieve Timesheets 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date of the search period</param>
+        /// <param name="endDate">The end date of the search period</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;TimesheetResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>>> XhrTimesheets20230301WithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AffixApi.Api.Client.ApiResponse<List<TimesheetResponse>>> XhrTimesheets20230301WithHttpInfoAsync(DateTime startDate, DateTime endDate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             AffixApi.Api.Client.RequestOptions localVarRequestOptions = new AffixApi.Api.Client.RequestOptions();
@@ -1589,6 +1627,8 @@ namespace AffixApi.Api.Api
             var localVarAccept = AffixApi.Api.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "start_date", startDate));
+            localVarRequestOptions.QueryParameters.Add(AffixApi.Api.Client.ClientUtils.ParameterToMultiMap("", "end_date", endDate));
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
