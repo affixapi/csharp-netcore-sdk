@@ -97,19 +97,19 @@ namespace AffixApi.Api.Model
         /// Initializes a new instance of the <see cref="TimeOffBalanceResponse" /> class.
         /// </summary>
         /// <param name="employeeId">The Affix-assigned id of the individual (required).</param>
-        /// <param name="remoteId">the remote system-assigned id of the individual (required).</param>
+        /// <param name="remoteEmployeeId">the remote system-assigned id of the individual (required).</param>
         /// <param name="balance">balance (required).</param>
         /// <param name="used">used (required).</param>
         /// <param name="policyName">The name of the policy, as assigned by the remote system (required).</param>
         /// <param name="policyType">policyType (required).</param>
         /// <param name="remoteCreatedAt">remoteCreatedAt (required).</param>
         /// <param name="remoteModifiedAt">remoteModifiedAt (required).</param>
-        public TimeOffBalanceResponse(string employeeId = default(string), string remoteId = default(string), decimal? balance = default(decimal?), decimal? used = default(decimal?), string policyName = default(string), PolicyTypeEnum policyType = default(PolicyTypeEnum), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
+        public TimeOffBalanceResponse(string employeeId = default(string), string remoteEmployeeId = default(string), decimal? balance = default(decimal?), decimal? used = default(decimal?), string policyName = default(string), PolicyTypeEnum policyType = default(PolicyTypeEnum), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
         {
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for TimeOffBalanceResponse and cannot be null");
-            // to ensure "remoteId" is required (not null)
-            this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for TimeOffBalanceResponse and cannot be null");
+            // to ensure "remoteEmployeeId" is required (not null)
+            this.RemoteEmployeeId = remoteEmployeeId ?? throw new ArgumentNullException("remoteEmployeeId is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "balance" is required (not null)
             this.Balance = balance ?? throw new ArgumentNullException("balance is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "used" is required (not null)
@@ -134,8 +134,8 @@ namespace AffixApi.Api.Model
         /// the remote system-assigned id of the individual
         /// </summary>
         /// <value>the remote system-assigned id of the individual</value>
-        [DataMember(Name = "remote_id", IsRequired = true, EmitDefaultValue = false)]
-        public string RemoteId { get; set; }
+        [DataMember(Name = "remote_employee_id", IsRequired = true, EmitDefaultValue = false)]
+        public string RemoteEmployeeId { get; set; }
 
         /// <summary>
         /// Gets or Sets Balance
@@ -179,7 +179,7 @@ namespace AffixApi.Api.Model
             var sb = new StringBuilder();
             sb.Append("class TimeOffBalanceResponse {\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
-            sb.Append("  RemoteId: ").Append(RemoteId).Append("\n");
+            sb.Append("  RemoteEmployeeId: ").Append(RemoteEmployeeId).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Used: ").Append(Used).Append("\n");
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
@@ -226,9 +226,9 @@ namespace AffixApi.Api.Model
                     this.EmployeeId.Equals(input.EmployeeId))
                 ) && 
                 (
-                    this.RemoteId == input.RemoteId ||
-                    (this.RemoteId != null &&
-                    this.RemoteId.Equals(input.RemoteId))
+                    this.RemoteEmployeeId == input.RemoteEmployeeId ||
+                    (this.RemoteEmployeeId != null &&
+                    this.RemoteEmployeeId.Equals(input.RemoteEmployeeId))
                 ) && 
                 (
                     this.Balance == input.Balance ||
@@ -272,8 +272,8 @@ namespace AffixApi.Api.Model
                 int hashCode = 41;
                 if (this.EmployeeId != null)
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
-                if (this.RemoteId != null)
-                    hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
+                if (this.RemoteEmployeeId != null)
+                    hashCode = hashCode * 59 + this.RemoteEmployeeId.GetHashCode();
                 if (this.Balance != null)
                     hashCode = hashCode * 59 + this.Balance.GetHashCode();
                 if (this.Used != null)

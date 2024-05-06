@@ -119,6 +119,7 @@ namespace AffixApi.Api.Model
         /// <param name="id">The Affix-assigned id of the time off entry (required).</param>
         /// <param name="remoteId">the remote system-assigned id of the time off entry (required).</param>
         /// <param name="employeeId">the Affix-assigned id of the individual (required).</param>
+        /// <param name="remoteEmployeeId">the remote system-assigned id of the individual (required).</param>
         /// <param name="startDate">startDate (required).</param>
         /// <param name="endDate">endDate (required).</param>
         /// <param name="amount">amount (required).</param>
@@ -128,7 +129,7 @@ namespace AffixApi.Api.Model
         /// <param name="requestType">requestType (required).</param>
         /// <param name="remoteCreatedAt">remoteCreatedAt (required).</param>
         /// <param name="remoteModifiedAt">remoteModifiedAt (required).</param>
-        public TimeOffEntryResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), decimal amount = default(decimal), UnitEnum unit = default(UnitEnum), StatusEnum status = default(StatusEnum), string employeeNote = default(string), string requestType = default(string), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
+        public TimeOffEntryResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string remoteEmployeeId = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), decimal amount = default(decimal), UnitEnum unit = default(UnitEnum), StatusEnum status = default(StatusEnum), string employeeNote = default(string), string requestType = default(string), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for TimeOffEntryResponse and cannot be null");
@@ -136,6 +137,8 @@ namespace AffixApi.Api.Model
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for TimeOffEntryResponse and cannot be null");
+            // to ensure "remoteEmployeeId" is required (not null)
+            this.RemoteEmployeeId = remoteEmployeeId ?? throw new ArgumentNullException("remoteEmployeeId is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "startDate" is required (not null)
             this.StartDate = startDate ?? throw new ArgumentNullException("startDate is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "endDate" is required (not null)
@@ -173,6 +176,13 @@ namespace AffixApi.Api.Model
         /// <value>the Affix-assigned id of the individual</value>
         [DataMember(Name = "employee_id", IsRequired = true, EmitDefaultValue = false)]
         public string EmployeeId { get; set; }
+
+        /// <summary>
+        /// the remote system-assigned id of the individual
+        /// </summary>
+        /// <value>the remote system-assigned id of the individual</value>
+        [DataMember(Name = "remote_employee_id", IsRequired = true, EmitDefaultValue = false)]
+        public string RemoteEmployeeId { get; set; }
 
         /// <summary>
         /// Gets or Sets StartDate
@@ -231,6 +241,7 @@ namespace AffixApi.Api.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RemoteId: ").Append(RemoteId).Append("\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
+            sb.Append("  RemoteEmployeeId: ").Append(RemoteEmployeeId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
@@ -288,6 +299,11 @@ namespace AffixApi.Api.Model
                     this.EmployeeId == input.EmployeeId ||
                     (this.EmployeeId != null &&
                     this.EmployeeId.Equals(input.EmployeeId))
+                ) && 
+                (
+                    this.RemoteEmployeeId == input.RemoteEmployeeId ||
+                    (this.RemoteEmployeeId != null &&
+                    this.RemoteEmployeeId.Equals(input.RemoteEmployeeId))
                 ) && 
                 (
                     this.StartDate == input.StartDate ||
@@ -348,6 +364,8 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
                 if (this.EmployeeId != null)
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
+                if (this.RemoteEmployeeId != null)
+                    hashCode = hashCode * 59 + this.RemoteEmployeeId.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)

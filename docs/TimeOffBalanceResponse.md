@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EmployeeId** | **string** | The Affix-assigned id of the individual | 
-**RemoteId** | **string** | the remote system-assigned id of the individual | 
+**RemoteEmployeeId** | **string** | the remote system-assigned id of the individual | 
 **Balance** | **decimal?** |  | 
 **Used** | **decimal?** |  | 
 **PolicyName** | **string** | The name of the policy, as assigned by the remote system | 

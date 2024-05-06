@@ -66,12 +66,12 @@ namespace AffixApi.Api.Test.Model
             // TODO unit test for the property 'EmployeeId'
         }
         /// <summary>
-        /// Test the property 'RemoteId'
+        /// Test the property 'RemoteEmployeeId'
         /// </summary>
         [Fact]
-        public void RemoteIdTest()
+        public void RemoteEmployeeIdTest()
         {
-            // TODO unit test for the property 'RemoteId'
+            // TODO unit test for the property 'RemoteEmployeeId'
         }
         /// <summary>
         /// Test the property 'Balance'

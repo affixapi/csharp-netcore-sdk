@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Id** | **string** | The Affix-assigned id of the time off entry | 
 **RemoteId** | **string** | the remote system-assigned id of the time off entry | 
 **EmployeeId** | **string** | the Affix-assigned id of the individual | 
+**RemoteEmployeeId** | **string** | the remote system-assigned id of the individual | 
 **StartTime** | **DateTime?** |  | 
 **EndTime** | **DateTime?** |  | 
 **HoursWorked** | **decimal** |  | 

@@ -43,12 +43,13 @@ namespace AffixApi.Api.Model
         /// <param name="id">The Affix-assigned id of the time off entry (required).</param>
         /// <param name="remoteId">the remote system-assigned id of the time off entry (required).</param>
         /// <param name="employeeId">the Affix-assigned id of the individual (required).</param>
+        /// <param name="remoteEmployeeId">the remote system-assigned id of the individual (required).</param>
         /// <param name="startTime">startTime (required).</param>
         /// <param name="endTime">endTime (required).</param>
         /// <param name="hoursWorked">hoursWorked (required).</param>
         /// <param name="remoteCreatedAt">remoteCreatedAt (required).</param>
         /// <param name="remoteModifiedAt">remoteModifiedAt (required).</param>
-        public TimesheetResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?), decimal hoursWorked = default(decimal), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
+        public TimesheetResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string remoteEmployeeId = default(string), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?), decimal hoursWorked = default(decimal), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for TimesheetResponse and cannot be null");
@@ -56,6 +57,8 @@ namespace AffixApi.Api.Model
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for TimesheetResponse and cannot be null");
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for TimesheetResponse and cannot be null");
+            // to ensure "remoteEmployeeId" is required (not null)
+            this.RemoteEmployeeId = remoteEmployeeId ?? throw new ArgumentNullException("remoteEmployeeId is a required property for TimesheetResponse and cannot be null");
             // to ensure "startTime" is required (not null)
             this.StartTime = startTime ?? throw new ArgumentNullException("startTime is a required property for TimesheetResponse and cannot be null");
             // to ensure "endTime" is required (not null)
@@ -87,6 +90,13 @@ namespace AffixApi.Api.Model
         /// <value>the Affix-assigned id of the individual</value>
         [DataMember(Name = "employee_id", IsRequired = true, EmitDefaultValue = false)]
         public string EmployeeId { get; set; }
+
+        /// <summary>
+        /// the remote system-assigned id of the individual
+        /// </summary>
+        /// <value>the remote system-assigned id of the individual</value>
+        [DataMember(Name = "remote_employee_id", IsRequired = true, EmitDefaultValue = false)]
+        public string RemoteEmployeeId { get; set; }
 
         /// <summary>
         /// Gets or Sets StartTime
@@ -131,6 +141,7 @@ namespace AffixApi.Api.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RemoteId: ").Append(RemoteId).Append("\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
+            sb.Append("  RemoteEmployeeId: ").Append(RemoteEmployeeId).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  HoursWorked: ").Append(HoursWorked).Append("\n");
@@ -186,6 +197,11 @@ namespace AffixApi.Api.Model
                     this.EmployeeId.Equals(input.EmployeeId))
                 ) && 
                 (
+                    this.RemoteEmployeeId == input.RemoteEmployeeId ||
+                    (this.RemoteEmployeeId != null &&
+                    this.RemoteEmployeeId.Equals(input.RemoteEmployeeId))
+                ) && 
+                (
                     this.StartTime == input.StartTime ||
                     (this.StartTime != null &&
                     this.StartTime.Equals(input.StartTime))
@@ -226,6 +242,8 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
                 if (this.EmployeeId != null)
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
+                if (this.RemoteEmployeeId != null)
+                    hashCode = hashCode * 59 + this.RemoteEmployeeId.GetHashCode();
                 if (this.StartTime != null)
                     hashCode = hashCode * 59 + this.StartTime.GetHashCode();
                 if (this.EndTime != null)
