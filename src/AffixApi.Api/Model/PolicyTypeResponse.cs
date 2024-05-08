@@ -45,34 +45,40 @@ namespace AffixApi.Api.Model
         Vacation = 2,
 
         /// <summary>
+        /// Enum Holiday for value: holiday
+        /// </summary>
+        [EnumMember(Value = "holiday")]
+        Holiday = 3,
+
+        /// <summary>
         /// Enum Sick for value: sick
         /// </summary>
         [EnumMember(Value = "sick")]
-        Sick = 3,
+        Sick = 4,
 
         /// <summary>
         /// Enum Personal for value: personal
         /// </summary>
         [EnumMember(Value = "personal")]
-        Personal = 4,
+        Personal = 5,
 
         /// <summary>
         /// Enum JuryDuty for value: jury_duty
         /// </summary>
         [EnumMember(Value = "jury_duty")]
-        JuryDuty = 5,
+        JuryDuty = 6,
 
         /// <summary>
         /// Enum Volunteer for value: volunteer
         /// </summary>
         [EnumMember(Value = "volunteer")]
-        Volunteer = 6,
+        Volunteer = 7,
 
         /// <summary>
         /// Enum Bereavement for value: bereavement
         /// </summary>
         [EnumMember(Value = "bereavement")]
-        Bereavement = 7
+        Bereavement = 8
 
     }
 
