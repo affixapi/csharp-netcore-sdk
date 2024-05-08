@@ -66,12 +66,12 @@ namespace AffixApi.Api.Test.Model
             // TODO unit test for the property 'EmployeeId'
         }
         /// <summary>
-        /// Test the property 'RemoteEmployeeId'
+        /// Test the property 'EmployeeRemoteId'
         /// </summary>
         [Fact]
-        public void RemoteEmployeeIdTest()
+        public void EmployeeRemoteIdTest()
         {
-            // TODO unit test for the property 'RemoteEmployeeId'
+            // TODO unit test for the property 'EmployeeRemoteId'
         }
         /// <summary>
         /// Test the property 'Balance'
@@ -88,6 +88,22 @@ namespace AffixApi.Api.Test.Model
         public void UsedTest()
         {
             // TODO unit test for the property 'Used'
+        }
+        /// <summary>
+        /// Test the property 'PolicyId'
+        /// </summary>
+        [Fact]
+        public void PolicyIdTest()
+        {
+            // TODO unit test for the property 'PolicyId'
+        }
+        /// <summary>
+        /// Test the property 'PolicyRemoteId'
+        /// </summary>
+        [Fact]
+        public void PolicyRemoteIdTest()
+        {
+            // TODO unit test for the property 'PolicyRemoteId'
         }
         /// <summary>
         /// Test the property 'PolicyName'

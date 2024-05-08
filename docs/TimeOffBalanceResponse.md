@@ -5,11 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EmployeeId** | **string** | The Affix-assigned id of the individual | 
-**RemoteEmployeeId** | **string** | the remote system-assigned id of the individual | 
+**EmployeeRemoteId** | **string** | the remote system-assigned id of the individual | 
 **Balance** | **decimal?** |  | 
 **Used** | **decimal?** |  | 
+**PolicyId** | **string** | The Affix-assigned id of the policy | 
+**PolicyRemoteId** | **string** | The remote system-assigned id of the policy | 
 **PolicyName** | **string** | The name of the policy, as assigned by the remote system | 
-**PolicyType** | **string** |  | 
+**PolicyType** | [**PolicyTypeResponse**](PolicyTypeResponse.md) |  | 
 **RemoteCreatedAt** | **DateTime?** |  | 
 **RemoteModifiedAt** | **DateTime?** |  | 
 

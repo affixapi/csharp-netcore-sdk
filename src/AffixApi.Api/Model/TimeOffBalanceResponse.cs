@@ -33,62 +33,6 @@ namespace AffixApi.Api.Model
     public partial class TimeOffBalanceResponse : IEquatable<TimeOffBalanceResponse>, IValidatableObject
     {
         /// <summary>
-        /// Defines PolicyType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum PolicyTypeEnum
-        {
-            /// <summary>
-            /// Enum Null for value: null
-            /// </summary>
-            [EnumMember(Value = "null")]
-            Null = 1,
-
-            /// <summary>
-            /// Enum Vacation for value: vacation
-            /// </summary>
-            [EnumMember(Value = "vacation")]
-            Vacation = 2,
-
-            /// <summary>
-            /// Enum Sick for value: sick
-            /// </summary>
-            [EnumMember(Value = "sick")]
-            Sick = 3,
-
-            /// <summary>
-            /// Enum Personal for value: personal
-            /// </summary>
-            [EnumMember(Value = "personal")]
-            Personal = 4,
-
-            /// <summary>
-            /// Enum JuryDuty for value: jury_duty
-            /// </summary>
-            [EnumMember(Value = "jury_duty")]
-            JuryDuty = 5,
-
-            /// <summary>
-            /// Enum Volunteer for value: volunteer
-            /// </summary>
-            [EnumMember(Value = "volunteer")]
-            Volunteer = 6,
-
-            /// <summary>
-            /// Enum Bereavement for value: bereavement
-            /// </summary>
-            [EnumMember(Value = "bereavement")]
-            Bereavement = 7
-
-        }
-
-
-        /// <summary>
-        /// Gets or Sets PolicyType
-        /// </summary>
-        [DataMember(Name = "policy_type", IsRequired = true, EmitDefaultValue = true)]
-        public PolicyTypeEnum PolicyType { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffBalanceResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -97,26 +41,33 @@ namespace AffixApi.Api.Model
         /// Initializes a new instance of the <see cref="TimeOffBalanceResponse" /> class.
         /// </summary>
         /// <param name="employeeId">The Affix-assigned id of the individual (required).</param>
-        /// <param name="remoteEmployeeId">the remote system-assigned id of the individual (required).</param>
+        /// <param name="employeeRemoteId">the remote system-assigned id of the individual (required).</param>
         /// <param name="balance">balance (required).</param>
         /// <param name="used">used (required).</param>
+        /// <param name="policyId">The Affix-assigned id of the policy (required).</param>
+        /// <param name="policyRemoteId">The remote system-assigned id of the policy (required).</param>
         /// <param name="policyName">The name of the policy, as assigned by the remote system (required).</param>
         /// <param name="policyType">policyType (required).</param>
         /// <param name="remoteCreatedAt">remoteCreatedAt (required).</param>
         /// <param name="remoteModifiedAt">remoteModifiedAt (required).</param>
-        public TimeOffBalanceResponse(string employeeId = default(string), string remoteEmployeeId = default(string), decimal? balance = default(decimal?), decimal? used = default(decimal?), string policyName = default(string), PolicyTypeEnum policyType = default(PolicyTypeEnum), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
+        public TimeOffBalanceResponse(string employeeId = default(string), string employeeRemoteId = default(string), decimal? balance = default(decimal?), decimal? used = default(decimal?), string policyId = default(string), string policyRemoteId = default(string), string policyName = default(string), PolicyTypeResponse policyType = default(PolicyTypeResponse), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
         {
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for TimeOffBalanceResponse and cannot be null");
-            // to ensure "remoteEmployeeId" is required (not null)
-            this.RemoteEmployeeId = remoteEmployeeId ?? throw new ArgumentNullException("remoteEmployeeId is a required property for TimeOffBalanceResponse and cannot be null");
+            // to ensure "employeeRemoteId" is required (not null)
+            this.EmployeeRemoteId = employeeRemoteId ?? throw new ArgumentNullException("employeeRemoteId is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "balance" is required (not null)
             this.Balance = balance ?? throw new ArgumentNullException("balance is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "used" is required (not null)
             this.Used = used ?? throw new ArgumentNullException("used is a required property for TimeOffBalanceResponse and cannot be null");
+            // to ensure "policyId" is required (not null)
+            this.PolicyId = policyId ?? throw new ArgumentNullException("policyId is a required property for TimeOffBalanceResponse and cannot be null");
+            // to ensure "policyRemoteId" is required (not null)
+            this.PolicyRemoteId = policyRemoteId ?? throw new ArgumentNullException("policyRemoteId is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "policyName" is required (not null)
             this.PolicyName = policyName ?? throw new ArgumentNullException("policyName is a required property for TimeOffBalanceResponse and cannot be null");
-            this.PolicyType = policyType;
+            // to ensure "policyType" is required (not null)
+            this.PolicyType = policyType ?? throw new ArgumentNullException("policyType is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "remoteCreatedAt" is required (not null)
             this.RemoteCreatedAt = remoteCreatedAt ?? throw new ArgumentNullException("remoteCreatedAt is a required property for TimeOffBalanceResponse and cannot be null");
             // to ensure "remoteModifiedAt" is required (not null)
@@ -134,8 +85,8 @@ namespace AffixApi.Api.Model
         /// the remote system-assigned id of the individual
         /// </summary>
         /// <value>the remote system-assigned id of the individual</value>
-        [DataMember(Name = "remote_employee_id", IsRequired = true, EmitDefaultValue = false)]
-        public string RemoteEmployeeId { get; set; }
+        [DataMember(Name = "employee_remote_id", IsRequired = true, EmitDefaultValue = false)]
+        public string EmployeeRemoteId { get; set; }
 
         /// <summary>
         /// Gets or Sets Balance
@@ -150,11 +101,31 @@ namespace AffixApi.Api.Model
         public decimal? Used { get; set; }
 
         /// <summary>
+        /// The Affix-assigned id of the policy
+        /// </summary>
+        /// <value>The Affix-assigned id of the policy</value>
+        [DataMember(Name = "policy_id", IsRequired = true, EmitDefaultValue = true)]
+        public string PolicyId { get; set; }
+
+        /// <summary>
+        /// The remote system-assigned id of the policy
+        /// </summary>
+        /// <value>The remote system-assigned id of the policy</value>
+        [DataMember(Name = "policy_remote_id", IsRequired = true, EmitDefaultValue = true)]
+        public string PolicyRemoteId { get; set; }
+
+        /// <summary>
         /// The name of the policy, as assigned by the remote system
         /// </summary>
         /// <value>The name of the policy, as assigned by the remote system</value>
         [DataMember(Name = "policy_name", IsRequired = true, EmitDefaultValue = true)]
         public string PolicyName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PolicyType
+        /// </summary>
+        [DataMember(Name = "policy_type", IsRequired = true, EmitDefaultValue = true)]
+        public PolicyTypeResponse PolicyType { get; set; }
 
         /// <summary>
         /// Gets or Sets RemoteCreatedAt
@@ -179,9 +150,11 @@ namespace AffixApi.Api.Model
             var sb = new StringBuilder();
             sb.Append("class TimeOffBalanceResponse {\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
-            sb.Append("  RemoteEmployeeId: ").Append(RemoteEmployeeId).Append("\n");
+            sb.Append("  EmployeeRemoteId: ").Append(EmployeeRemoteId).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  Used: ").Append(Used).Append("\n");
+            sb.Append("  PolicyId: ").Append(PolicyId).Append("\n");
+            sb.Append("  PolicyRemoteId: ").Append(PolicyRemoteId).Append("\n");
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
             sb.Append("  PolicyType: ").Append(PolicyType).Append("\n");
             sb.Append("  RemoteCreatedAt: ").Append(RemoteCreatedAt).Append("\n");
@@ -226,9 +199,9 @@ namespace AffixApi.Api.Model
                     this.EmployeeId.Equals(input.EmployeeId))
                 ) && 
                 (
-                    this.RemoteEmployeeId == input.RemoteEmployeeId ||
-                    (this.RemoteEmployeeId != null &&
-                    this.RemoteEmployeeId.Equals(input.RemoteEmployeeId))
+                    this.EmployeeRemoteId == input.EmployeeRemoteId ||
+                    (this.EmployeeRemoteId != null &&
+                    this.EmployeeRemoteId.Equals(input.EmployeeRemoteId))
                 ) && 
                 (
                     this.Balance == input.Balance ||
@@ -241,13 +214,24 @@ namespace AffixApi.Api.Model
                     this.Used.Equals(input.Used))
                 ) && 
                 (
+                    this.PolicyId == input.PolicyId ||
+                    (this.PolicyId != null &&
+                    this.PolicyId.Equals(input.PolicyId))
+                ) && 
+                (
+                    this.PolicyRemoteId == input.PolicyRemoteId ||
+                    (this.PolicyRemoteId != null &&
+                    this.PolicyRemoteId.Equals(input.PolicyRemoteId))
+                ) && 
+                (
                     this.PolicyName == input.PolicyName ||
                     (this.PolicyName != null &&
                     this.PolicyName.Equals(input.PolicyName))
                 ) && 
                 (
                     this.PolicyType == input.PolicyType ||
-                    this.PolicyType.Equals(input.PolicyType)
+                    (this.PolicyType != null &&
+                    this.PolicyType.Equals(input.PolicyType))
                 ) && 
                 (
                     this.RemoteCreatedAt == input.RemoteCreatedAt ||
@@ -272,15 +256,20 @@ namespace AffixApi.Api.Model
                 int hashCode = 41;
                 if (this.EmployeeId != null)
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
-                if (this.RemoteEmployeeId != null)
-                    hashCode = hashCode * 59 + this.RemoteEmployeeId.GetHashCode();
+                if (this.EmployeeRemoteId != null)
+                    hashCode = hashCode * 59 + this.EmployeeRemoteId.GetHashCode();
                 if (this.Balance != null)
                     hashCode = hashCode * 59 + this.Balance.GetHashCode();
                 if (this.Used != null)
                     hashCode = hashCode * 59 + this.Used.GetHashCode();
+                if (this.PolicyId != null)
+                    hashCode = hashCode * 59 + this.PolicyId.GetHashCode();
+                if (this.PolicyRemoteId != null)
+                    hashCode = hashCode * 59 + this.PolicyRemoteId.GetHashCode();
                 if (this.PolicyName != null)
                     hashCode = hashCode * 59 + this.PolicyName.GetHashCode();
-                hashCode = hashCode * 59 + this.PolicyType.GetHashCode();
+                if (this.PolicyType != null)
+                    hashCode = hashCode * 59 + this.PolicyType.GetHashCode();
                 if (this.RemoteCreatedAt != null)
                     hashCode = hashCode * 59 + this.RemoteCreatedAt.GetHashCode();
                 if (this.RemoteModifiedAt != null)

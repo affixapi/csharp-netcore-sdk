@@ -45,6 +45,7 @@ docs/PayslipResponseContributions.md
 docs/PayslipResponseDeductions.md
 docs/PayslipResponseEarnings.md
 docs/PayslipResponseTaxes.md
+docs/PolicyTypeResponse.md
 docs/ProviderRequest.md
 docs/ProviderResponse.md
 docs/ScopesRequest.md
@@ -100,6 +101,7 @@ src/AffixApi.Api.Test/Model/PayslipResponseDeductionsTests.cs
 src/AffixApi.Api.Test/Model/PayslipResponseEarningsTests.cs
 src/AffixApi.Api.Test/Model/PayslipResponseTaxesTests.cs
 src/AffixApi.Api.Test/Model/PayslipResponseTests.cs
+src/AffixApi.Api.Test/Model/PolicyTypeResponseTests.cs
 src/AffixApi.Api.Test/Model/ProviderRequestTests.cs
 src/AffixApi.Api.Test/Model/ProviderResponseTests.cs
 src/AffixApi.Api.Test/Model/ScopesRequestTests.cs
@@ -170,6 +172,7 @@ src/AffixApi.Api/Model/PayslipResponseContributions.cs
 src/AffixApi.Api/Model/PayslipResponseDeductions.cs
 src/AffixApi.Api/Model/PayslipResponseEarnings.cs
 src/AffixApi.Api/Model/PayslipResponseTaxes.cs
+src/AffixApi.Api/Model/PolicyTypeResponse.cs
 src/AffixApi.Api/Model/ProviderRequest.cs
 src/AffixApi.Api/Model/ProviderResponse.cs
 src/AffixApi.Api/Model/ScopesRequest.cs

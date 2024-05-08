@@ -119,17 +119,20 @@ namespace AffixApi.Api.Model
         /// <param name="id">The Affix-assigned id of the time off entry (required).</param>
         /// <param name="remoteId">the remote system-assigned id of the time off entry (required).</param>
         /// <param name="employeeId">the Affix-assigned id of the individual (required).</param>
-        /// <param name="remoteEmployeeId">the remote system-assigned id of the individual (required).</param>
+        /// <param name="employeeRemoteId">the remote system-assigned id of the individual (required).</param>
         /// <param name="startDate">startDate (required).</param>
         /// <param name="endDate">endDate (required).</param>
         /// <param name="amount">amount (required).</param>
         /// <param name="unit">unit (required).</param>
         /// <param name="status">status (required).</param>
         /// <param name="employeeNote">employeeNote (required).</param>
-        /// <param name="requestType">requestType (required).</param>
+        /// <param name="policyId">The Affix-assigned id of the policy (required).</param>
+        /// <param name="policyRemoteId">The remote system-assigned id of the policy (required).</param>
+        /// <param name="policyName">The name of the policy, as assigned by the remote system (required).</param>
+        /// <param name="policyType">policyType (required).</param>
         /// <param name="remoteCreatedAt">remoteCreatedAt (required).</param>
         /// <param name="remoteModifiedAt">remoteModifiedAt (required).</param>
-        public TimeOffEntryResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string remoteEmployeeId = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), decimal amount = default(decimal), UnitEnum unit = default(UnitEnum), StatusEnum status = default(StatusEnum), string employeeNote = default(string), string requestType = default(string), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
+        public TimeOffEntryResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string employeeRemoteId = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), decimal amount = default(decimal), UnitEnum unit = default(UnitEnum), StatusEnum status = default(StatusEnum), string employeeNote = default(string), string policyId = default(string), string policyRemoteId = default(string), string policyName = default(string), PolicyTypeResponse policyType = default(PolicyTypeResponse), DateTime? remoteCreatedAt = default(DateTime?), DateTime? remoteModifiedAt = default(DateTime?))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for TimeOffEntryResponse and cannot be null");
@@ -137,8 +140,8 @@ namespace AffixApi.Api.Model
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for TimeOffEntryResponse and cannot be null");
-            // to ensure "remoteEmployeeId" is required (not null)
-            this.RemoteEmployeeId = remoteEmployeeId ?? throw new ArgumentNullException("remoteEmployeeId is a required property for TimeOffEntryResponse and cannot be null");
+            // to ensure "employeeRemoteId" is required (not null)
+            this.EmployeeRemoteId = employeeRemoteId ?? throw new ArgumentNullException("employeeRemoteId is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "startDate" is required (not null)
             this.StartDate = startDate ?? throw new ArgumentNullException("startDate is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "endDate" is required (not null)
@@ -148,8 +151,14 @@ namespace AffixApi.Api.Model
             this.Status = status;
             // to ensure "employeeNote" is required (not null)
             this.EmployeeNote = employeeNote ?? throw new ArgumentNullException("employeeNote is a required property for TimeOffEntryResponse and cannot be null");
-            // to ensure "requestType" is required (not null)
-            this.RequestType = requestType ?? throw new ArgumentNullException("requestType is a required property for TimeOffEntryResponse and cannot be null");
+            // to ensure "policyId" is required (not null)
+            this.PolicyId = policyId ?? throw new ArgumentNullException("policyId is a required property for TimeOffEntryResponse and cannot be null");
+            // to ensure "policyRemoteId" is required (not null)
+            this.PolicyRemoteId = policyRemoteId ?? throw new ArgumentNullException("policyRemoteId is a required property for TimeOffEntryResponse and cannot be null");
+            // to ensure "policyName" is required (not null)
+            this.PolicyName = policyName ?? throw new ArgumentNullException("policyName is a required property for TimeOffEntryResponse and cannot be null");
+            // to ensure "policyType" is required (not null)
+            this.PolicyType = policyType ?? throw new ArgumentNullException("policyType is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "remoteCreatedAt" is required (not null)
             this.RemoteCreatedAt = remoteCreatedAt ?? throw new ArgumentNullException("remoteCreatedAt is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "remoteModifiedAt" is required (not null)
@@ -181,8 +190,8 @@ namespace AffixApi.Api.Model
         /// the remote system-assigned id of the individual
         /// </summary>
         /// <value>the remote system-assigned id of the individual</value>
-        [DataMember(Name = "remote_employee_id", IsRequired = true, EmitDefaultValue = false)]
-        public string RemoteEmployeeId { get; set; }
+        [DataMember(Name = "employee_remote_id", IsRequired = true, EmitDefaultValue = false)]
+        public string EmployeeRemoteId { get; set; }
 
         /// <summary>
         /// Gets or Sets StartDate
@@ -211,10 +220,31 @@ namespace AffixApi.Api.Model
         public string EmployeeNote { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestType
+        /// The Affix-assigned id of the policy
         /// </summary>
-        [DataMember(Name = "request_type", IsRequired = true, EmitDefaultValue = true)]
-        public string RequestType { get; set; }
+        /// <value>The Affix-assigned id of the policy</value>
+        [DataMember(Name = "policy_id", IsRequired = true, EmitDefaultValue = true)]
+        public string PolicyId { get; set; }
+
+        /// <summary>
+        /// The remote system-assigned id of the policy
+        /// </summary>
+        /// <value>The remote system-assigned id of the policy</value>
+        [DataMember(Name = "policy_remote_id", IsRequired = true, EmitDefaultValue = true)]
+        public string PolicyRemoteId { get; set; }
+
+        /// <summary>
+        /// The name of the policy, as assigned by the remote system
+        /// </summary>
+        /// <value>The name of the policy, as assigned by the remote system</value>
+        [DataMember(Name = "policy_name", IsRequired = true, EmitDefaultValue = true)]
+        public string PolicyName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PolicyType
+        /// </summary>
+        [DataMember(Name = "policy_type", IsRequired = true, EmitDefaultValue = true)]
+        public PolicyTypeResponse PolicyType { get; set; }
 
         /// <summary>
         /// Gets or Sets RemoteCreatedAt
@@ -241,14 +271,17 @@ namespace AffixApi.Api.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RemoteId: ").Append(RemoteId).Append("\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
-            sb.Append("  RemoteEmployeeId: ").Append(RemoteEmployeeId).Append("\n");
+            sb.Append("  EmployeeRemoteId: ").Append(EmployeeRemoteId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Unit: ").Append(Unit).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  EmployeeNote: ").Append(EmployeeNote).Append("\n");
-            sb.Append("  RequestType: ").Append(RequestType).Append("\n");
+            sb.Append("  PolicyId: ").Append(PolicyId).Append("\n");
+            sb.Append("  PolicyRemoteId: ").Append(PolicyRemoteId).Append("\n");
+            sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
+            sb.Append("  PolicyType: ").Append(PolicyType).Append("\n");
             sb.Append("  RemoteCreatedAt: ").Append(RemoteCreatedAt).Append("\n");
             sb.Append("  RemoteModifiedAt: ").Append(RemoteModifiedAt).Append("\n");
             sb.Append("}\n");
@@ -301,9 +334,9 @@ namespace AffixApi.Api.Model
                     this.EmployeeId.Equals(input.EmployeeId))
                 ) && 
                 (
-                    this.RemoteEmployeeId == input.RemoteEmployeeId ||
-                    (this.RemoteEmployeeId != null &&
-                    this.RemoteEmployeeId.Equals(input.RemoteEmployeeId))
+                    this.EmployeeRemoteId == input.EmployeeRemoteId ||
+                    (this.EmployeeRemoteId != null &&
+                    this.EmployeeRemoteId.Equals(input.EmployeeRemoteId))
                 ) && 
                 (
                     this.StartDate == input.StartDate ||
@@ -333,9 +366,24 @@ namespace AffixApi.Api.Model
                     this.EmployeeNote.Equals(input.EmployeeNote))
                 ) && 
                 (
-                    this.RequestType == input.RequestType ||
-                    (this.RequestType != null &&
-                    this.RequestType.Equals(input.RequestType))
+                    this.PolicyId == input.PolicyId ||
+                    (this.PolicyId != null &&
+                    this.PolicyId.Equals(input.PolicyId))
+                ) && 
+                (
+                    this.PolicyRemoteId == input.PolicyRemoteId ||
+                    (this.PolicyRemoteId != null &&
+                    this.PolicyRemoteId.Equals(input.PolicyRemoteId))
+                ) && 
+                (
+                    this.PolicyName == input.PolicyName ||
+                    (this.PolicyName != null &&
+                    this.PolicyName.Equals(input.PolicyName))
+                ) && 
+                (
+                    this.PolicyType == input.PolicyType ||
+                    (this.PolicyType != null &&
+                    this.PolicyType.Equals(input.PolicyType))
                 ) && 
                 (
                     this.RemoteCreatedAt == input.RemoteCreatedAt ||
@@ -364,8 +412,8 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
                 if (this.EmployeeId != null)
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
-                if (this.RemoteEmployeeId != null)
-                    hashCode = hashCode * 59 + this.RemoteEmployeeId.GetHashCode();
+                if (this.EmployeeRemoteId != null)
+                    hashCode = hashCode * 59 + this.EmployeeRemoteId.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)
@@ -375,8 +423,14 @@ namespace AffixApi.Api.Model
                 hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.EmployeeNote != null)
                     hashCode = hashCode * 59 + this.EmployeeNote.GetHashCode();
-                if (this.RequestType != null)
-                    hashCode = hashCode * 59 + this.RequestType.GetHashCode();
+                if (this.PolicyId != null)
+                    hashCode = hashCode * 59 + this.PolicyId.GetHashCode();
+                if (this.PolicyRemoteId != null)
+                    hashCode = hashCode * 59 + this.PolicyRemoteId.GetHashCode();
+                if (this.PolicyName != null)
+                    hashCode = hashCode * 59 + this.PolicyName.GetHashCode();
+                if (this.PolicyType != null)
+                    hashCode = hashCode * 59 + this.PolicyType.GetHashCode();
                 if (this.RemoteCreatedAt != null)
                     hashCode = hashCode * 59 + this.RemoteCreatedAt.GetHashCode();
                 if (this.RemoteModifiedAt != null)
