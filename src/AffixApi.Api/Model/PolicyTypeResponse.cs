@@ -39,10 +39,10 @@ namespace AffixApi.Api.Model
         Null = 1,
 
         /// <summary>
-        /// Enum Vacation for value: vacation
+        /// Enum Bereavement for value: bereavement
         /// </summary>
-        [EnumMember(Value = "vacation")]
-        Vacation = 2,
+        [EnumMember(Value = "bereavement")]
+        Bereavement = 2,
 
         /// <summary>
         /// Enum Holiday for value: holiday
@@ -51,10 +51,10 @@ namespace AffixApi.Api.Model
         Holiday = 3,
 
         /// <summary>
-        /// Enum Sick for value: sick
+        /// Enum JuryDuty for value: jury_duty
         /// </summary>
-        [EnumMember(Value = "sick")]
-        Sick = 4,
+        [EnumMember(Value = "jury_duty")]
+        JuryDuty = 4,
 
         /// <summary>
         /// Enum Personal for value: personal
@@ -63,22 +63,22 @@ namespace AffixApi.Api.Model
         Personal = 5,
 
         /// <summary>
-        /// Enum JuryDuty for value: jury_duty
+        /// Enum Sick for value: sick
         /// </summary>
-        [EnumMember(Value = "jury_duty")]
-        JuryDuty = 6,
+        [EnumMember(Value = "sick")]
+        Sick = 6,
+
+        /// <summary>
+        /// Enum Vacation for value: vacation
+        /// </summary>
+        [EnumMember(Value = "vacation")]
+        Vacation = 7,
 
         /// <summary>
         /// Enum Volunteer for value: volunteer
         /// </summary>
         [EnumMember(Value = "volunteer")]
-        Volunteer = 7,
-
-        /// <summary>
-        /// Enum Bereavement for value: bereavement
-        /// </summary>
-        [EnumMember(Value = "bereavement")]
-        Bereavement = 8
+        Volunteer = 8
 
     }
 
