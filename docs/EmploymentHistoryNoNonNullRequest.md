@@ -1,16 +1,14 @@
-# AffixApi.Api.Model.EmploymentNoNullEnumRequest
+# AffixApi.Api.Model.EmploymentHistoryNoNonNullRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **JobTitle** | **string** |  | 
-**PayRate** | **decimal?** |  | 
-**PayPeriod** | **string** |  | 
-**PayFrequency** | **string** |  | 
-**EmploymentType** | **string** |  | 
-**Currency** | [**CurrencyNotNullRequest**](CurrencyNotNullRequest.md) |  | 
-**EffectiveDate** | **DateTime?** |  | 
+**EffectiveDate** | **DateTime** |  | 
+**GroupId** | **string** |  | 
+**GroupRemoteId** | **string** |  | 
+**GroupName** | **string** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

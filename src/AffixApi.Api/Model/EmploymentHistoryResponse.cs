@@ -27,139 +27,36 @@ using OpenAPIDateConverter = AffixApi.Api.Client.OpenAPIDateConverter;
 namespace AffixApi.Api.Model
 {
     /// <summary>
-    /// EmploymentResponse
+    /// EmploymentHistoryResponse
     /// </summary>
-    [DataContract(Name = "employmentResponse")]
-    public partial class EmploymentResponse : IEquatable<EmploymentResponse>, IValidatableObject
+    [DataContract(Name = "employment-historyResponse")]
+    public partial class EmploymentHistoryResponse : IEquatable<EmploymentHistoryResponse>, IValidatableObject
     {
         /// <summary>
-        /// Defines PayFrequency
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum PayFrequencyEnum
-        {
-            /// <summary>
-            /// Enum Weekly for value: weekly
-            /// </summary>
-            [EnumMember(Value = "weekly")]
-            Weekly = 1,
-
-            /// <summary>
-            /// Enum Biweekly for value: biweekly
-            /// </summary>
-            [EnumMember(Value = "biweekly")]
-            Biweekly = 2,
-
-            /// <summary>
-            /// Enum Semimonthly for value: semimonthly
-            /// </summary>
-            [EnumMember(Value = "semimonthly")]
-            Semimonthly = 3,
-
-            /// <summary>
-            /// Enum Monthly for value: monthly
-            /// </summary>
-            [EnumMember(Value = "monthly")]
-            Monthly = 4,
-
-            /// <summary>
-            /// Enum Other for value: other
-            /// </summary>
-            [EnumMember(Value = "other")]
-            Other = 5,
-
-            /// <summary>
-            /// Enum Null for value: null
-            /// </summary>
-            [EnumMember(Value = "null")]
-            Null = 6
-
-        }
-
-
-        /// <summary>
-        /// Gets or Sets PayFrequency
-        /// </summary>
-        [DataMember(Name = "pay_frequency", IsRequired = true, EmitDefaultValue = true)]
-        public PayFrequencyEnum PayFrequency { get; set; }
-        /// <summary>
-        /// Defines EmploymentType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EmploymentTypeEnum
-        {
-            /// <summary>
-            /// Enum FullTime for value: full_time
-            /// </summary>
-            [EnumMember(Value = "full_time")]
-            FullTime = 1,
-
-            /// <summary>
-            /// Enum PartTime for value: part_time
-            /// </summary>
-            [EnumMember(Value = "part_time")]
-            PartTime = 2,
-
-            /// <summary>
-            /// Enum Contractor for value: contractor
-            /// </summary>
-            [EnumMember(Value = "contractor")]
-            Contractor = 3,
-
-            /// <summary>
-            /// Enum Other for value: other
-            /// </summary>
-            [EnumMember(Value = "other")]
-            Other = 4,
-
-            /// <summary>
-            /// Enum Null for value: null
-            /// </summary>
-            [EnumMember(Value = "null")]
-            Null = 5
-
-        }
-
-
-        /// <summary>
-        /// Gets or Sets EmploymentType
-        /// </summary>
-        [DataMember(Name = "employment_type", IsRequired = true, EmitDefaultValue = true)]
-        public EmploymentTypeEnum EmploymentType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Currency
-        /// </summary>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
-        public CurrencyResponse Currency { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EmploymentResponse" /> class.
+        /// Initializes a new instance of the <see cref="EmploymentHistoryResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EmploymentResponse() { }
+        protected EmploymentHistoryResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmploymentResponse" /> class.
+        /// Initializes a new instance of the <see cref="EmploymentHistoryResponse" /> class.
         /// </summary>
         /// <param name="jobTitle">jobTitle (required).</param>
-        /// <param name="payRate">payRate (required).</param>
-        /// <param name="payPeriod">payPeriod (required).</param>
-        /// <param name="payFrequency">payFrequency (required).</param>
-        /// <param name="employmentType">employmentType (required).</param>
-        /// <param name="currency">currency (required).</param>
         /// <param name="effectiveDate">effectiveDate (required).</param>
-        public EmploymentResponse(string jobTitle = default(string), decimal? payRate = default(decimal?), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyResponse currency = default(CurrencyResponse), DateTime? effectiveDate = default(DateTime?))
+        /// <param name="groupId">groupId (required).</param>
+        /// <param name="groupRemoteId">groupRemoteId (required).</param>
+        /// <param name="groupName">groupName (required).</param>
+        public EmploymentHistoryResponse(string jobTitle = default(string), DateTime? effectiveDate = default(DateTime?), string groupId = default(string), string groupRemoteId = default(string), string groupName = default(string))
         {
             // to ensure "jobTitle" is required (not null)
-            this.JobTitle = jobTitle ?? throw new ArgumentNullException("jobTitle is a required property for EmploymentResponse and cannot be null");
-            // to ensure "payRate" is required (not null)
-            this.PayRate = payRate ?? throw new ArgumentNullException("payRate is a required property for EmploymentResponse and cannot be null");
-            // to ensure "payPeriod" is required (not null)
-            this.PayPeriod = payPeriod ?? throw new ArgumentNullException("payPeriod is a required property for EmploymentResponse and cannot be null");
-            this.PayFrequency = payFrequency;
-            this.EmploymentType = employmentType;
-            this.Currency = currency;
+            this.JobTitle = jobTitle ?? throw new ArgumentNullException("jobTitle is a required property for EmploymentHistoryResponse and cannot be null");
             // to ensure "effectiveDate" is required (not null)
-            this.EffectiveDate = effectiveDate ?? throw new ArgumentNullException("effectiveDate is a required property for EmploymentResponse and cannot be null");
+            this.EffectiveDate = effectiveDate ?? throw new ArgumentNullException("effectiveDate is a required property for EmploymentHistoryResponse and cannot be null");
+            // to ensure "groupId" is required (not null)
+            this.GroupId = groupId ?? throw new ArgumentNullException("groupId is a required property for EmploymentHistoryResponse and cannot be null");
+            // to ensure "groupRemoteId" is required (not null)
+            this.GroupRemoteId = groupRemoteId ?? throw new ArgumentNullException("groupRemoteId is a required property for EmploymentHistoryResponse and cannot be null");
+            // to ensure "groupName" is required (not null)
+            this.GroupName = groupName ?? throw new ArgumentNullException("groupName is a required property for EmploymentHistoryResponse and cannot be null");
         }
 
         /// <summary>
@@ -169,23 +66,29 @@ namespace AffixApi.Api.Model
         public string JobTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayRate
-        /// </summary>
-        [DataMember(Name = "pay_rate", IsRequired = true, EmitDefaultValue = true)]
-        public decimal? PayRate { get; set; }
-
-        /// <summary>
-        /// Gets or Sets PayPeriod
-        /// </summary>
-        [DataMember(Name = "pay_period", IsRequired = true, EmitDefaultValue = true)]
-        public string PayPeriod { get; set; }
-
-        /// <summary>
         /// Gets or Sets EffectiveDate
         /// </summary>
         [DataMember(Name = "effective_date", IsRequired = true, EmitDefaultValue = true)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateTime? EffectiveDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GroupId
+        /// </summary>
+        [DataMember(Name = "group_id", IsRequired = true, EmitDefaultValue = true)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GroupRemoteId
+        /// </summary>
+        [DataMember(Name = "group_remote_id", IsRequired = true, EmitDefaultValue = true)]
+        public string GroupRemoteId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GroupName
+        /// </summary>
+        [DataMember(Name = "group_name", IsRequired = true, EmitDefaultValue = true)]
+        public string GroupName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -194,14 +97,12 @@ namespace AffixApi.Api.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EmploymentResponse {\n");
+            sb.Append("class EmploymentHistoryResponse {\n");
             sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
-            sb.Append("  PayRate: ").Append(PayRate).Append("\n");
-            sb.Append("  PayPeriod: ").Append(PayPeriod).Append("\n");
-            sb.Append("  PayFrequency: ").Append(PayFrequency).Append("\n");
-            sb.Append("  EmploymentType: ").Append(EmploymentType).Append("\n");
-            sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
+            sb.Append("  GroupId: ").Append(GroupId).Append("\n");
+            sb.Append("  GroupRemoteId: ").Append(GroupRemoteId).Append("\n");
+            sb.Append("  GroupName: ").Append(GroupName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,15 +123,15 @@ namespace AffixApi.Api.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EmploymentResponse);
+            return this.Equals(input as EmploymentHistoryResponse);
         }
 
         /// <summary>
-        /// Returns true if EmploymentResponse instances are equal
+        /// Returns true if EmploymentHistoryResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of EmploymentResponse to be compared</param>
+        /// <param name="input">Instance of EmploymentHistoryResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmploymentResponse input)
+        public bool Equals(EmploymentHistoryResponse input)
         {
             if (input == null)
                 return false;
@@ -242,31 +143,24 @@ namespace AffixApi.Api.Model
                     this.JobTitle.Equals(input.JobTitle))
                 ) && 
                 (
-                    this.PayRate == input.PayRate ||
-                    (this.PayRate != null &&
-                    this.PayRate.Equals(input.PayRate))
-                ) && 
-                (
-                    this.PayPeriod == input.PayPeriod ||
-                    (this.PayPeriod != null &&
-                    this.PayPeriod.Equals(input.PayPeriod))
-                ) && 
-                (
-                    this.PayFrequency == input.PayFrequency ||
-                    this.PayFrequency.Equals(input.PayFrequency)
-                ) && 
-                (
-                    this.EmploymentType == input.EmploymentType ||
-                    this.EmploymentType.Equals(input.EmploymentType)
-                ) && 
-                (
-                    this.Currency == input.Currency ||
-                    this.Currency.Equals(input.Currency)
-                ) && 
-                (
                     this.EffectiveDate == input.EffectiveDate ||
                     (this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(input.EffectiveDate))
+                ) && 
+                (
+                    this.GroupId == input.GroupId ||
+                    (this.GroupId != null &&
+                    this.GroupId.Equals(input.GroupId))
+                ) && 
+                (
+                    this.GroupRemoteId == input.GroupRemoteId ||
+                    (this.GroupRemoteId != null &&
+                    this.GroupRemoteId.Equals(input.GroupRemoteId))
+                ) && 
+                (
+                    this.GroupName == input.GroupName ||
+                    (this.GroupName != null &&
+                    this.GroupName.Equals(input.GroupName))
                 );
         }
 
@@ -281,15 +175,14 @@ namespace AffixApi.Api.Model
                 int hashCode = 41;
                 if (this.JobTitle != null)
                     hashCode = hashCode * 59 + this.JobTitle.GetHashCode();
-                if (this.PayRate != null)
-                    hashCode = hashCode * 59 + this.PayRate.GetHashCode();
-                if (this.PayPeriod != null)
-                    hashCode = hashCode * 59 + this.PayPeriod.GetHashCode();
-                hashCode = hashCode * 59 + this.PayFrequency.GetHashCode();
-                hashCode = hashCode * 59 + this.EmploymentType.GetHashCode();
-                hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.EffectiveDate != null)
                     hashCode = hashCode * 59 + this.EffectiveDate.GetHashCode();
+                if (this.GroupId != null)
+                    hashCode = hashCode * 59 + this.GroupId.GetHashCode();
+                if (this.GroupRemoteId != null)
+                    hashCode = hashCode * 59 + this.GroupRemoteId.GetHashCode();
+                if (this.GroupName != null)
+                    hashCode = hashCode * 59 + this.GroupName.GetHashCode();
                 return hashCode;
             }
         }

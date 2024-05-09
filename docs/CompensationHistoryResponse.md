@@ -1,10 +1,9 @@
-# AffixApi.Api.Model.EmploymentResponse
+# AffixApi.Api.Model.CompensationHistoryResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**JobTitle** | **string** |  | 
 **PayRate** | **decimal?** |  | 
 **PayPeriod** | **string** |  | 
 **PayFrequency** | **string** |  | 

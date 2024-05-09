@@ -242,12 +242,20 @@ namespace AffixApi.Api.Test.Model
             // TODO unit test for the property 'BankAccount'
         }
         /// <summary>
-        /// Test the property 'Employments'
+        /// Test the property 'EmploymentHistory'
         /// </summary>
         [Fact]
-        public void EmploymentsTest()
+        public void EmploymentHistoryTest()
         {
-            // TODO unit test for the property 'Employments'
+            // TODO unit test for the property 'EmploymentHistory'
+        }
+        /// <summary>
+        /// Test the property 'CompensationHistory'
+        /// </summary>
+        [Fact]
+        public void CompensationHistoryTest()
+        {
+            // TODO unit test for the property 'CompensationHistory'
         }
         /// <summary>
         /// Test the property 'CustomFields'

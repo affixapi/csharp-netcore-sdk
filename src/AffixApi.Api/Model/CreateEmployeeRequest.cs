@@ -221,12 +221,13 @@ namespace AffixApi.Api.Model
         /// <param name="workLocation">workLocation.</param>
         /// <param name="manager">manager.</param>
         /// <param name="bankAccount">bankAccount.</param>
-        /// <param name="employments">employments.</param>
+        /// <param name="employmentHistory">employmentHistory.</param>
+        /// <param name="compensationHistory">compensationHistory.</param>
         /// <param name="customFields">customFields.</param>
         /// <param name="groups">groups.</param>
         /// <param name="dependents">dependents.</param>
         /// <param name="emergencyContacts">emergencyContacts.</param>
-        public CreateEmployeeRequest(string employeeNumber = default(string), string firstName = default(string), string lastName = default(string), string displayFullName = default(string), string nationality = default(string), string jobTitle = default(string), string workEmail = default(string), string personalEmail = default(string), string mobilePhoneNumber = default(string), string taxId = default(string), GenderEnum? gender = default(GenderEnum?), EthnicityEnum? ethnicity = default(EthnicityEnum?), MaritalStatusEnum? maritalStatus = default(MaritalStatusEnum?), DateTime? dateOfBirth = default(DateTime?), EmploymentStatusNotNullRequest employmentStatus = default(EmploymentStatusNotNullRequest), EmploymentTypeEnum? employmentType = default(EmploymentTypeEnum?), DateTime? startDate = default(DateTime?), DateTime? terminationDate = default(DateTime?), string avatar = default(string), AddressNoNonNullRequest homeLocation = default(AddressNoNonNullRequest), LocationNoNonNullRequest workLocation = default(LocationNoNonNullRequest), CreateEmployeeRequestManager manager = default(CreateEmployeeRequestManager), CreateEmployeeRequestBankAccount bankAccount = default(CreateEmployeeRequestBankAccount), List<EmploymentNoNullEnumRequest> employments = default(List<EmploymentNoNullEnumRequest>), Object customFields = default(Object), List<GroupNoNullEnumRequest> groups = default(List<GroupNoNullEnumRequest>), List<CreateEmployeeRequestDependents> dependents = default(List<CreateEmployeeRequestDependents>), List<CreateEmployeeRequestEmergencyContacts> emergencyContacts = default(List<CreateEmployeeRequestEmergencyContacts>))
+        public CreateEmployeeRequest(string employeeNumber = default(string), string firstName = default(string), string lastName = default(string), string displayFullName = default(string), string nationality = default(string), string jobTitle = default(string), string workEmail = default(string), string personalEmail = default(string), string mobilePhoneNumber = default(string), string taxId = default(string), GenderEnum? gender = default(GenderEnum?), EthnicityEnum? ethnicity = default(EthnicityEnum?), MaritalStatusEnum? maritalStatus = default(MaritalStatusEnum?), DateTime? dateOfBirth = default(DateTime?), EmploymentStatusNotNullRequest employmentStatus = default(EmploymentStatusNotNullRequest), EmploymentTypeEnum? employmentType = default(EmploymentTypeEnum?), DateTime? startDate = default(DateTime?), DateTime? terminationDate = default(DateTime?), string avatar = default(string), AddressNoNonNullRequest homeLocation = default(AddressNoNonNullRequest), LocationNoNonNullRequest workLocation = default(LocationNoNonNullRequest), CreateEmployeeRequestManager manager = default(CreateEmployeeRequestManager), CreateEmployeeRequestBankAccount bankAccount = default(CreateEmployeeRequestBankAccount), List<EmploymentHistoryNoNonNullRequest> employmentHistory = default(List<EmploymentHistoryNoNonNullRequest>), List<CompensationHistoryNoNonNullRequest> compensationHistory = default(List<CompensationHistoryNoNonNullRequest>), Object customFields = default(Object), List<GroupNoNullEnumRequest> groups = default(List<GroupNoNullEnumRequest>), List<CreateEmployeeRequestDependents> dependents = default(List<CreateEmployeeRequestDependents>), List<CreateEmployeeRequestEmergencyContacts> emergencyContacts = default(List<CreateEmployeeRequestEmergencyContacts>))
         {
             // to ensure "firstName" is required (not null)
             this.FirstName = firstName ?? throw new ArgumentNullException("firstName is a required property for CreateEmployeeRequest and cannot be null");
@@ -253,7 +254,8 @@ namespace AffixApi.Api.Model
             this.WorkLocation = workLocation;
             this.Manager = manager;
             this.BankAccount = bankAccount;
-            this.Employments = employments;
+            this.EmploymentHistory = employmentHistory;
+            this.CompensationHistory = compensationHistory;
             this.CustomFields = customFields;
             this.Groups = groups;
             this.Dependents = dependents;
@@ -383,10 +385,16 @@ namespace AffixApi.Api.Model
         public CreateEmployeeRequestBankAccount BankAccount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Employments
+        /// Gets or Sets EmploymentHistory
         /// </summary>
-        [DataMember(Name = "employments", EmitDefaultValue = true)]
-        public List<EmploymentNoNullEnumRequest> Employments { get; set; }
+        [DataMember(Name = "employment_history", EmitDefaultValue = true)]
+        public List<EmploymentHistoryNoNonNullRequest> EmploymentHistory { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CompensationHistory
+        /// </summary>
+        [DataMember(Name = "compensation_history", EmitDefaultValue = true)]
+        public List<CompensationHistoryNoNonNullRequest> CompensationHistory { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFields
@@ -443,7 +451,8 @@ namespace AffixApi.Api.Model
             sb.Append("  WorkLocation: ").Append(WorkLocation).Append("\n");
             sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("  BankAccount: ").Append(BankAccount).Append("\n");
-            sb.Append("  Employments: ").Append(Employments).Append("\n");
+            sb.Append("  EmploymentHistory: ").Append(EmploymentHistory).Append("\n");
+            sb.Append("  CompensationHistory: ").Append(CompensationHistory).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Dependents: ").Append(Dependents).Append("\n");
@@ -594,10 +603,16 @@ namespace AffixApi.Api.Model
                     this.BankAccount.Equals(input.BankAccount))
                 ) && 
                 (
-                    this.Employments == input.Employments ||
-                    this.Employments != null &&
-                    input.Employments != null &&
-                    this.Employments.SequenceEqual(input.Employments)
+                    this.EmploymentHistory == input.EmploymentHistory ||
+                    this.EmploymentHistory != null &&
+                    input.EmploymentHistory != null &&
+                    this.EmploymentHistory.SequenceEqual(input.EmploymentHistory)
+                ) && 
+                (
+                    this.CompensationHistory == input.CompensationHistory ||
+                    this.CompensationHistory != null &&
+                    input.CompensationHistory != null &&
+                    this.CompensationHistory.SequenceEqual(input.CompensationHistory)
                 ) && 
                 (
                     this.CustomFields == input.CustomFields ||
@@ -675,8 +690,10 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.Manager.GetHashCode();
                 if (this.BankAccount != null)
                     hashCode = hashCode * 59 + this.BankAccount.GetHashCode();
-                if (this.Employments != null)
-                    hashCode = hashCode * 59 + this.Employments.GetHashCode();
+                if (this.EmploymentHistory != null)
+                    hashCode = hashCode * 59 + this.EmploymentHistory.GetHashCode();
+                if (this.CompensationHistory != null)
+                    hashCode = hashCode * 59 + this.CompensationHistory.GetHashCode();
                 if (this.CustomFields != null)
                     hashCode = hashCode * 59 + this.CustomFields.GetHashCode();
                 if (this.Groups != null)
