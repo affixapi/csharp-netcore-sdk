@@ -1,4 +1,4 @@
-# AffixApi.Api.Model.CurrencyRequest
+# AffixApi.Api.Model.CurrencyNotNullRequest
 
 ## Properties
 

@@ -120,12 +120,6 @@ namespace AffixApi.Api.Model
         /// </summary>
         [DataMember(Name = "employment_type", IsRequired = true, EmitDefaultValue = false)]
         public EmploymentTypeEnum EmploymentType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Currency
-        /// </summary>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
-        public CurrencyRequest Currency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CompensationHistoryNoNonNullRequest" /> class.
         /// </summary>
@@ -140,14 +134,15 @@ namespace AffixApi.Api.Model
         /// <param name="employmentType">employmentType (required).</param>
         /// <param name="currency">currency (required).</param>
         /// <param name="effectiveDate">effectiveDate (required).</param>
-        public CompensationHistoryNoNonNullRequest(decimal payRate = default(decimal), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyRequest currency = default(CurrencyRequest), DateTime effectiveDate = default(DateTime))
+        public CompensationHistoryNoNonNullRequest(decimal payRate = default(decimal), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyNotNullRequest currency = default(CurrencyNotNullRequest), DateTime effectiveDate = default(DateTime))
         {
             this.PayRate = payRate;
             // to ensure "payPeriod" is required (not null)
             this.PayPeriod = payPeriod ?? throw new ArgumentNullException("payPeriod is a required property for CompensationHistoryNoNonNullRequest and cannot be null");
             this.PayFrequency = payFrequency;
             this.EmploymentType = employmentType;
-            this.Currency = currency;
+            // to ensure "currency" is required (not null)
+            this.Currency = currency ?? throw new ArgumentNullException("currency is a required property for CompensationHistoryNoNonNullRequest and cannot be null");
             this.EffectiveDate = effectiveDate;
         }
 
@@ -162,6 +157,12 @@ namespace AffixApi.Api.Model
         /// </summary>
         [DataMember(Name = "pay_period", IsRequired = true, EmitDefaultValue = false)]
         public string PayPeriod { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Currency
+        /// </summary>
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
+        public CurrencyNotNullRequest Currency { get; set; }
 
         /// <summary>
         /// Gets or Sets EffectiveDate
@@ -237,7 +238,8 @@ namespace AffixApi.Api.Model
                 ) && 
                 (
                     this.Currency == input.Currency ||
-                    this.Currency.Equals(input.Currency)
+                    (this.Currency != null &&
+                    this.Currency.Equals(input.Currency))
                 ) && 
                 (
                     this.EffectiveDate == input.EffectiveDate ||
@@ -260,7 +262,8 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.PayPeriod.GetHashCode();
                 hashCode = hashCode * 59 + this.PayFrequency.GetHashCode();
                 hashCode = hashCode * 59 + this.EmploymentType.GetHashCode();
-                hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.Currency != null)
+                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.EffectiveDate != null)
                     hashCode = hashCode * 59 + this.EffectiveDate.GetHashCode();
                 return hashCode;
