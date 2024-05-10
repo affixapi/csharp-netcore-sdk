@@ -39,34 +39,40 @@ namespace AffixApi.Api.Model
         public enum PayFrequencyEnum
         {
             /// <summary>
+            /// Enum Year for value: year
+            /// </summary>
+            [EnumMember(Value = "year")]
+            Year = 1,
+
+            /// <summary>
             /// Enum Weekly for value: weekly
             /// </summary>
             [EnumMember(Value = "weekly")]
-            Weekly = 1,
+            Weekly = 2,
 
             /// <summary>
             /// Enum Biweekly for value: biweekly
             /// </summary>
             [EnumMember(Value = "biweekly")]
-            Biweekly = 2,
+            Biweekly = 3,
 
             /// <summary>
             /// Enum Semimonthly for value: semimonthly
             /// </summary>
             [EnumMember(Value = "semimonthly")]
-            Semimonthly = 3,
+            Semimonthly = 4,
 
             /// <summary>
             /// Enum Monthly for value: monthly
             /// </summary>
             [EnumMember(Value = "monthly")]
-            Monthly = 4,
+            Monthly = 5,
 
             /// <summary>
             /// Enum Other for value: other
             /// </summary>
             [EnumMember(Value = "other")]
-            Other = 5
+            Other = 6
 
         }
 
