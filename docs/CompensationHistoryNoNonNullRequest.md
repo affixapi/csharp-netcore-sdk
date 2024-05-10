@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **EmploymentType** | **string** |  | 
 **Currency** | [**CurrencyNotNullRequest**](CurrencyNotNullRequest.md) |  | 
 **EffectiveDate** | **DateTime** |  | 
+**Notes** | **string** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

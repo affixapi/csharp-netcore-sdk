@@ -152,7 +152,8 @@ namespace AffixApi.Api.Model
         /// <param name="employmentType">employmentType (required).</param>
         /// <param name="currency">currency (required).</param>
         /// <param name="effectiveDate">effectiveDate (required).</param>
-        public CompensationHistoryResponse(decimal? payRate = default(decimal?), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyResponse currency = default(CurrencyResponse), DateTime? effectiveDate = default(DateTime?))
+        /// <param name="notes">notes (required).</param>
+        public CompensationHistoryResponse(decimal? payRate = default(decimal?), string payPeriod = default(string), PayFrequencyEnum payFrequency = default(PayFrequencyEnum), EmploymentTypeEnum employmentType = default(EmploymentTypeEnum), CurrencyResponse currency = default(CurrencyResponse), DateTime? effectiveDate = default(DateTime?), string notes = default(string))
         {
             // to ensure "payRate" is required (not null)
             this.PayRate = payRate ?? throw new ArgumentNullException("payRate is a required property for CompensationHistoryResponse and cannot be null");
@@ -163,6 +164,8 @@ namespace AffixApi.Api.Model
             this.Currency = currency;
             // to ensure "effectiveDate" is required (not null)
             this.EffectiveDate = effectiveDate ?? throw new ArgumentNullException("effectiveDate is a required property for CompensationHistoryResponse and cannot be null");
+            // to ensure "notes" is required (not null)
+            this.Notes = notes ?? throw new ArgumentNullException("notes is a required property for CompensationHistoryResponse and cannot be null");
         }
 
         /// <summary>
@@ -185,6 +188,12 @@ namespace AffixApi.Api.Model
         public DateTime? EffectiveDate { get; set; }
 
         /// <summary>
+        /// Gets or Sets Notes
+        /// </summary>
+        [DataMember(Name = "notes", IsRequired = true, EmitDefaultValue = true)]
+        public string Notes { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -198,6 +207,7 @@ namespace AffixApi.Api.Model
             sb.Append("  EmploymentType: ").Append(EmploymentType).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -258,6 +268,11 @@ namespace AffixApi.Api.Model
                     this.EffectiveDate == input.EffectiveDate ||
                     (this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(input.EffectiveDate))
+                ) && 
+                (
+                    this.Notes == input.Notes ||
+                    (this.Notes != null &&
+                    this.Notes.Equals(input.Notes))
                 );
         }
 
@@ -279,6 +294,8 @@ namespace AffixApi.Api.Model
                 hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.EffectiveDate != null)
                     hashCode = hashCode * 59 + this.EffectiveDate.GetHashCode();
+                if (this.Notes != null)
+                    hashCode = hashCode * 59 + this.Notes.GetHashCode();
                 return hashCode;
             }
         }

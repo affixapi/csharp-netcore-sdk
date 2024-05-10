@@ -97,6 +97,22 @@ namespace AffixApi.Api.Test.Model
         {
             // TODO unit test for the property 'GroupName'
         }
+        /// <summary>
+        /// Test the property 'ManagerId'
+        /// </summary>
+        [Fact]
+        public void ManagerIdTest()
+        {
+            // TODO unit test for the property 'ManagerId'
+        }
+        /// <summary>
+        /// Test the property 'ManagerRemoteId'
+        /// </summary>
+        [Fact]
+        public void ManagerRemoteIdTest()
+        {
+            // TODO unit test for the property 'ManagerRemoteId'
+        }
 
     }
 

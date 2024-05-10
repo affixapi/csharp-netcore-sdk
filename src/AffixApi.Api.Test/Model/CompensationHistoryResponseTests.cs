@@ -105,6 +105,14 @@ namespace AffixApi.Api.Test.Model
         {
             // TODO unit test for the property 'EffectiveDate'
         }
+        /// <summary>
+        /// Test the property 'Notes'
+        /// </summary>
+        [Fact]
+        public void NotesTest()
+        {
+            // TODO unit test for the property 'Notes'
+        }
 
     }
 

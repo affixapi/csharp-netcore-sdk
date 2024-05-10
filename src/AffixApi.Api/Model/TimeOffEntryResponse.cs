@@ -158,7 +158,7 @@ namespace AffixApi.Api.Model
             // to ensure "policyName" is required (not null)
             this.PolicyName = policyName ?? throw new ArgumentNullException("policyName is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "policyType" is required (not null)
-            this.PolicyType = policyType ?? throw new ArgumentNullException("policyType is a required property for TimeOffEntryResponse and cannot be null");
+            this.PolicyType = policyType;
             // to ensure "remoteCreatedAt" is required (not null)
             this.RemoteCreatedAt = remoteCreatedAt ?? throw new ArgumentNullException("remoteCreatedAt is a required property for TimeOffEntryResponse and cannot be null");
             // to ensure "remoteModifiedAt" is required (not null)

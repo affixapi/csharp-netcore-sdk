@@ -45,7 +45,9 @@ namespace AffixApi.Api.Model
         /// <param name="groupId">groupId (required).</param>
         /// <param name="groupRemoteId">groupRemoteId (required).</param>
         /// <param name="groupName">groupName (required).</param>
-        public EmploymentHistoryNoNonNullRequest(string jobTitle = default(string), DateTime effectiveDate = default(DateTime), string groupId = default(string), string groupRemoteId = default(string), string groupName = default(string))
+        /// <param name="managerId">managerId (required).</param>
+        /// <param name="managerRemoteId">managerRemoteId (required).</param>
+        public EmploymentHistoryNoNonNullRequest(string jobTitle = default(string), DateTime effectiveDate = default(DateTime), string groupId = default(string), string groupRemoteId = default(string), string groupName = default(string), string managerId = default(string), string managerRemoteId = default(string))
         {
             // to ensure "jobTitle" is required (not null)
             this.JobTitle = jobTitle ?? throw new ArgumentNullException("jobTitle is a required property for EmploymentHistoryNoNonNullRequest and cannot be null");
@@ -56,6 +58,10 @@ namespace AffixApi.Api.Model
             this.GroupRemoteId = groupRemoteId ?? throw new ArgumentNullException("groupRemoteId is a required property for EmploymentHistoryNoNonNullRequest and cannot be null");
             // to ensure "groupName" is required (not null)
             this.GroupName = groupName ?? throw new ArgumentNullException("groupName is a required property for EmploymentHistoryNoNonNullRequest and cannot be null");
+            // to ensure "managerId" is required (not null)
+            this.ManagerId = managerId ?? throw new ArgumentNullException("managerId is a required property for EmploymentHistoryNoNonNullRequest and cannot be null");
+            // to ensure "managerRemoteId" is required (not null)
+            this.ManagerRemoteId = managerRemoteId ?? throw new ArgumentNullException("managerRemoteId is a required property for EmploymentHistoryNoNonNullRequest and cannot be null");
         }
 
         /// <summary>
@@ -90,6 +96,18 @@ namespace AffixApi.Api.Model
         public string GroupName { get; set; }
 
         /// <summary>
+        /// Gets or Sets ManagerId
+        /// </summary>
+        [DataMember(Name = "manager_id", IsRequired = true, EmitDefaultValue = true)]
+        public string ManagerId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ManagerRemoteId
+        /// </summary>
+        [DataMember(Name = "manager_remote_id", IsRequired = true, EmitDefaultValue = true)]
+        public string ManagerRemoteId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -102,6 +120,8 @@ namespace AffixApi.Api.Model
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  GroupRemoteId: ").Append(GroupRemoteId).Append("\n");
             sb.Append("  GroupName: ").Append(GroupName).Append("\n");
+            sb.Append("  ManagerId: ").Append(ManagerId).Append("\n");
+            sb.Append("  ManagerRemoteId: ").Append(ManagerRemoteId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +180,16 @@ namespace AffixApi.Api.Model
                     this.GroupName == input.GroupName ||
                     (this.GroupName != null &&
                     this.GroupName.Equals(input.GroupName))
+                ) && 
+                (
+                    this.ManagerId == input.ManagerId ||
+                    (this.ManagerId != null &&
+                    this.ManagerId.Equals(input.ManagerId))
+                ) && 
+                (
+                    this.ManagerRemoteId == input.ManagerRemoteId ||
+                    (this.ManagerRemoteId != null &&
+                    this.ManagerRemoteId.Equals(input.ManagerRemoteId))
                 );
         }
 
@@ -182,6 +212,10 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.GroupRemoteId.GetHashCode();
                 if (this.GroupName != null)
                     hashCode = hashCode * 59 + this.GroupName.GetHashCode();
+                if (this.ManagerId != null)
+                    hashCode = hashCode * 59 + this.ManagerId.GetHashCode();
+                if (this.ManagerRemoteId != null)
+                    hashCode = hashCode * 59 + this.ManagerRemoteId.GetHashCode();
                 return hashCode;
             }
         }
