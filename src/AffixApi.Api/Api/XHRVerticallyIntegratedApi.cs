@@ -132,7 +132,7 @@ namespace AffixApi.Api.Api
         /// Payslips
         /// </summary>
         /// <remarks>
-        /// Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -143,7 +143,7 @@ namespace AffixApi.Api.Api
         /// Payslips
         /// </summary>
         /// <remarks>
-        /// Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -357,7 +357,7 @@ namespace AffixApi.Api.Api
         /// Payslips
         /// </summary>
         /// <remarks>
-        /// Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -369,7 +369,7 @@ namespace AffixApi.Api.Api
         /// Payslips
         /// </summary>
         /// <remarks>
-        /// Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </remarks>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -1168,7 +1168,7 @@ namespace AffixApi.Api.Api
         }
 
         /// <summary>
-        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -1180,7 +1180,7 @@ namespace AffixApi.Api.Api
         }
 
         /// <summary>
-        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -1228,7 +1228,7 @@ namespace AffixApi.Api.Api
         }
 
         /// <summary>
-        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
@@ -1241,7 +1241,7 @@ namespace AffixApi.Api.Api
         }
 
         /// <summary>
-        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+        /// Payslips Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
         /// </summary>
         /// <exception cref="AffixApi.Api.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="payrunId">The id of the payrun.</param>
