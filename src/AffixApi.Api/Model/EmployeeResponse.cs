@@ -133,9 +133,9 @@ namespace AffixApi.Api.Model
         [DataMember(Name = "ethnicity", IsRequired = true, EmitDefaultValue = true)]
         public EthnicityEnum Ethnicity { get; set; }
         /// <summary>
-        /// &#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc 
+        /// &#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc 
         /// </summary>
-        /// <value>&#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc </value>
+        /// <value>&#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MaritalStatusEnum
         {
@@ -152,30 +152,36 @@ namespace AffixApi.Api.Model
             Married = 2,
 
             /// <summary>
+            /// Enum Divorced for value: divorced
+            /// </summary>
+            [EnumMember(Value = "divorced")]
+            Divorced = 3,
+
+            /// <summary>
             /// Enum NotSpecified for value: not_specified
             /// </summary>
             [EnumMember(Value = "not_specified")]
-            NotSpecified = 3,
+            NotSpecified = 4,
 
             /// <summary>
             /// Enum Other for value: other
             /// </summary>
             [EnumMember(Value = "other")]
-            Other = 4,
+            Other = 5,
 
             /// <summary>
             /// Enum Null for value: null
             /// </summary>
             [EnumMember(Value = "null")]
-            Null = 5
+            Null = 6
 
         }
 
 
         /// <summary>
-        /// &#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc 
+        /// &#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc 
         /// </summary>
-        /// <value>&#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc </value>
+        /// <value>&#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc </value>
         [DataMember(Name = "marital_status", IsRequired = true, EmitDefaultValue = true)]
         public MaritalStatusEnum MaritalStatus { get; set; }
         /// <summary>
@@ -242,7 +248,7 @@ namespace AffixApi.Api.Model
         /// <param name="taxId">taxId (required).</param>
         /// <param name="gender">gender (required).</param>
         /// <param name="ethnicity">ethnicity (required).</param>
-        /// <param name="maritalStatus">&#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc  (required).</param>
+        /// <param name="maritalStatus">&#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc  (required).</param>
         /// <param name="dateOfBirth">dateOfBirth (required).</param>
         /// <param name="employmentStatus">employmentStatus (required).</param>
         /// <param name="employmentType">employmentType (required).</param>

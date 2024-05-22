@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **TaxId** | **string** |  | [optional] 
 **Gender** | **string** |  | [optional] 
 **Ethnicity** | **string** |  | [optional] 
-**MaritalStatus** | **string** |  | [optional] 
+**MaritalStatus** | **string** | &#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc  | [optional] 
 **DateOfBirth** | **DateTime?** |  | [optional] 
 **EmploymentStatus** | [**EmploymentStatusNotNullRequest**](EmploymentStatusNotNullRequest.md) |  | [optional] 
 **EmploymentType** | **string** |  | [optional] 

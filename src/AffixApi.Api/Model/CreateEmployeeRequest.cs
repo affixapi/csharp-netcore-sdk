@@ -121,8 +121,9 @@ namespace AffixApi.Api.Model
         [DataMember(Name = "ethnicity", EmitDefaultValue = true)]
         public EthnicityEnum? Ethnicity { get; set; }
         /// <summary>
-        /// Defines MaritalStatus
+        /// &#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc 
         /// </summary>
+        /// <value>&#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MaritalStatusEnum
         {
@@ -139,17 +140,30 @@ namespace AffixApi.Api.Model
             Married = 2,
 
             /// <summary>
+            /// Enum Divorced for value: divorced
+            /// </summary>
+            [EnumMember(Value = "divorced")]
+            Divorced = 3,
+
+            /// <summary>
             /// Enum NotSpecified for value: not_specified
             /// </summary>
             [EnumMember(Value = "not_specified")]
-            NotSpecified = 3
+            NotSpecified = 4,
+
+            /// <summary>
+            /// Enum Other for value: other
+            /// </summary>
+            [EnumMember(Value = "other")]
+            Other = 5
 
         }
 
 
         /// <summary>
-        /// Gets or Sets MaritalStatus
+        /// &#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc 
         /// </summary>
+        /// <value>&#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc </value>
         [DataMember(Name = "marital_status", EmitDefaultValue = true)]
         public MaritalStatusEnum? MaritalStatus { get; set; }
         /// <summary>
@@ -210,7 +224,7 @@ namespace AffixApi.Api.Model
         /// <param name="taxId">taxId.</param>
         /// <param name="gender">gender.</param>
         /// <param name="ethnicity">ethnicity.</param>
-        /// <param name="maritalStatus">maritalStatus.</param>
+        /// <param name="maritalStatus">&#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc .</param>
         /// <param name="dateOfBirth">dateOfBirth.</param>
         /// <param name="employmentStatus">employmentStatus.</param>
         /// <param name="employmentType">employmentType.</param>
