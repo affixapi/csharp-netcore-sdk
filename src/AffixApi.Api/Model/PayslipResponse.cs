@@ -86,7 +86,7 @@ namespace AffixApi.Api.Model
         /// <param name="contributions">Items paid by the employer that are not included in gross pay, such as employer-paid portion of private health insurance  (required).</param>
         /// <param name="deductions">deductions (required).</param>
         /// <param name="taxes">taxes (required).</param>
-        public PayslipResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string payrunId = default(string), CurrencyEnum currency = default(CurrencyEnum), decimal grossPay = default(decimal), decimal netPay = default(decimal), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), DateTime paymentDate = default(DateTime), List<PayslipResponseEarnings> earnings = default(List<PayslipResponseEarnings>), List<PayslipResponseContributions> contributions = default(List<PayslipResponseContributions>), List<PayslipResponseDeductions> deductions = default(List<PayslipResponseDeductions>), List<PayslipResponseTaxes> taxes = default(List<PayslipResponseTaxes>))
+        public PayslipResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string payrunId = default(string), CurrencyEnum currency = default(CurrencyEnum), decimal? grossPay = default(decimal?), decimal? netPay = default(decimal?), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), DateTime paymentDate = default(DateTime), List<PayslipResponseEarnings> earnings = default(List<PayslipResponseEarnings>), List<PayslipResponseContributions> contributions = default(List<PayslipResponseContributions>), List<PayslipResponseDeductions> deductions = default(List<PayslipResponseDeductions>), List<PayslipResponseTaxes> taxes = default(List<PayslipResponseTaxes>))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for PayslipResponse and cannot be null");
@@ -97,8 +97,10 @@ namespace AffixApi.Api.Model
             // to ensure "payrunId" is required (not null)
             this.PayrunId = payrunId ?? throw new ArgumentNullException("payrunId is a required property for PayslipResponse and cannot be null");
             this.Currency = currency;
-            this.GrossPay = grossPay;
-            this.NetPay = netPay;
+            // to ensure "grossPay" is required (not null)
+            this.GrossPay = grossPay ?? throw new ArgumentNullException("grossPay is a required property for PayslipResponse and cannot be null");
+            // to ensure "netPay" is required (not null)
+            this.NetPay = netPay ?? throw new ArgumentNullException("netPay is a required property for PayslipResponse and cannot be null");
             this.StartDate = startDate;
             this.EndDate = endDate;
             this.PaymentDate = paymentDate;
@@ -142,15 +144,15 @@ namespace AffixApi.Api.Model
         /// if USD/EUR/GBP, in cent
         /// </summary>
         /// <value>if USD/EUR/GBP, in cent</value>
-        [DataMember(Name = "gross_pay", IsRequired = true, EmitDefaultValue = false)]
-        public decimal GrossPay { get; set; }
+        [DataMember(Name = "gross_pay", IsRequired = true, EmitDefaultValue = true)]
+        public decimal? GrossPay { get; set; }
 
         /// <summary>
         /// if USD/EUR/GBP, in cent
         /// </summary>
         /// <value>if USD/EUR/GBP, in cent</value>
-        [DataMember(Name = "net_pay", IsRequired = true, EmitDefaultValue = false)]
-        public decimal NetPay { get; set; }
+        [DataMember(Name = "net_pay", IsRequired = true, EmitDefaultValue = true)]
+        public decimal? NetPay { get; set; }
 
         /// <summary>
         /// Gets or Sets StartDate
@@ -176,7 +178,7 @@ namespace AffixApi.Api.Model
         /// <summary>
         /// Gets or Sets Earnings
         /// </summary>
-        [DataMember(Name = "earnings", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "earnings", IsRequired = true, EmitDefaultValue = true)]
         public List<PayslipResponseEarnings> Earnings { get; set; }
 
         /// <summary>
@@ -189,13 +191,13 @@ namespace AffixApi.Api.Model
         /// <summary>
         /// Gets or Sets Deductions
         /// </summary>
-        [DataMember(Name = "deductions", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "deductions", IsRequired = true, EmitDefaultValue = true)]
         public List<PayslipResponseDeductions> Deductions { get; set; }
 
         /// <summary>
         /// Gets or Sets Taxes
         /// </summary>
-        [DataMember(Name = "taxes", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "taxes", IsRequired = true, EmitDefaultValue = true)]
         public List<PayslipResponseTaxes> Taxes { get; set; }
 
         /// <summary>
@@ -280,11 +282,13 @@ namespace AffixApi.Api.Model
                 ) && 
                 (
                     this.GrossPay == input.GrossPay ||
-                    this.GrossPay.Equals(input.GrossPay)
+                    (this.GrossPay != null &&
+                    this.GrossPay.Equals(input.GrossPay))
                 ) && 
                 (
                     this.NetPay == input.NetPay ||
-                    this.NetPay.Equals(input.NetPay)
+                    (this.NetPay != null &&
+                    this.NetPay.Equals(input.NetPay))
                 ) && 
                 (
                     this.StartDate == input.StartDate ||
@@ -345,8 +349,10 @@ namespace AffixApi.Api.Model
                 if (this.PayrunId != null)
                     hashCode = hashCode * 59 + this.PayrunId.GetHashCode();
                 hashCode = hashCode * 59 + this.Currency.GetHashCode();
-                hashCode = hashCode * 59 + this.GrossPay.GetHashCode();
-                hashCode = hashCode * 59 + this.NetPay.GetHashCode();
+                if (this.GrossPay != null)
+                    hashCode = hashCode * 59 + this.GrossPay.GetHashCode();
+                if (this.NetPay != null)
+                    hashCode = hashCode * 59 + this.NetPay.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)

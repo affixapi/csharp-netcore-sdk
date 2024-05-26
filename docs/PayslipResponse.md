@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **EmployeeId** | **string** |  | 
 **PayrunId** | **string** |  | 
 **Currency** | **string** |  | 
-**GrossPay** | **decimal** | if USD/EUR/GBP, in cent | 
-**NetPay** | **decimal** | if USD/EUR/GBP, in cent | 
+**GrossPay** | **decimal?** | if USD/EUR/GBP, in cent | 
+**NetPay** | **decimal?** | if USD/EUR/GBP, in cent | 
 **StartDate** | **DateTime** |  | 
 **EndDate** | **DateTime** |  | 
 **PaymentDate** | **DateTime** |  | 
