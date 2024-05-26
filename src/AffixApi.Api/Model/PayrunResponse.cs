@@ -48,7 +48,13 @@ namespace AffixApi.Api.Model
             /// Enum Pending for value: pending
             /// </summary>
             [EnumMember(Value = "pending")]
-            Pending = 2
+            Pending = 2,
+
+            /// <summary>
+            /// Enum Null for value: null
+            /// </summary>
+            [EnumMember(Value = "null")]
+            Null = 3
 
         }
 
@@ -56,7 +62,7 @@ namespace AffixApi.Api.Model
         /// <summary>
         /// Gets or Sets RunState
         /// </summary>
-        [DataMember(Name = "run_state", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "run_state", IsRequired = true, EmitDefaultValue = true)]
         public RunStateEnum RunState { get; set; }
         /// <summary>
         /// Defines RunType
@@ -71,10 +77,34 @@ namespace AffixApi.Api.Model
             Regular = 1,
 
             /// <summary>
+            /// Enum OneTime for value: one-time
+            /// </summary>
+            [EnumMember(Value = "one-time")]
+            OneTime = 2,
+
+            /// <summary>
+            /// Enum OffCycle for value: off-cycle
+            /// </summary>
+            [EnumMember(Value = "off-cycle")]
+            OffCycle = 3,
+
+            /// <summary>
+            /// Enum Correction for value: correction
+            /// </summary>
+            [EnumMember(Value = "correction")]
+            Correction = 4,
+
+            /// <summary>
+            /// Enum Reversal for value: reversal
+            /// </summary>
+            [EnumMember(Value = "reversal")]
+            Reversal = 5,
+
+            /// <summary>
             /// Enum Null for value: null
             /// </summary>
             [EnumMember(Value = "null")]
-            Null = 2
+            Null = 6
 
         }
 
