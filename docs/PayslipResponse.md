@@ -7,8 +7,11 @@ Name | Type | Description | Notes
 **Id** | **string** | The Affix-assigned id of the payslip | 
 **RemoteId** | **string** | the remote system-assigned id of the payrun | 
 **EmployeeId** | **string** |  | 
+**EmployeeRemoteId** | **string** |  | 
 **PayrunId** | **string** |  | 
-**Currency** | **string** |  | 
+**PayrunRemoteId** | **string** |  | 
+**PayrunType** | [**PayrunTypeResponse**](PayrunTypeResponse.md) |  | 
+**Currency** | [**CurrencyNotNullResponse**](CurrencyNotNullResponse.md) |  | 
 **GrossPay** | **decimal?** | if USD/EUR/GBP, in cent | 
 **NetPay** | **decimal?** | if USD/EUR/GBP, in cent | 
 **StartDate** | **DateTime** |  | 

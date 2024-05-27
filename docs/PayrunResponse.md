@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | The Affix-assigned id of the individual | 
 **RemoteId** | **string** | the remote system-assigned id of the payrun | 
-**RunState** | **string** |  | 
-**RunType** | **string** |  | 
+**State** | **string** |  | 
+**Type** | [**PayrunTypeResponse**](PayrunTypeResponse.md) |  | 
 **StartDate** | **DateTime?** | Payrun period start date | 
 **EndDate** | **DateTime?** | Payrun period end date | 
 **PaymentDate** | **DateTime?** | Payment date / check date | 

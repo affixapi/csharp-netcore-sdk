@@ -18,6 +18,7 @@ docs/CreateEmployeeRequestDependents.md
 docs/CreateEmployeeRequestEmergencyContacts.md
 docs/CreateEmployeeRequestManager.md
 docs/CurrencyNotNullRequest.md
+docs/CurrencyNotNullResponse.md
 docs/CurrencyResponse.md
 docs/DisconnectResponse.md
 docs/EmployeeResponse.md
@@ -42,6 +43,7 @@ docs/MessageResponse.md
 docs/ModeRequest.md
 docs/ModeResponse.md
 docs/PayrunResponse.md
+docs/PayrunTypeResponse.md
 docs/PayslipResponse.md
 docs/PayslipResponseContributions.md
 docs/PayslipResponseDeductions.md
@@ -77,6 +79,7 @@ src/AffixApi.Api.Test/Model/CreateEmployeeRequestEmergencyContactsTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestManagerTests.cs
 src/AffixApi.Api.Test/Model/CreateEmployeeRequestTests.cs
 src/AffixApi.Api.Test/Model/CurrencyNotNullRequestTests.cs
+src/AffixApi.Api.Test/Model/CurrencyNotNullResponseTests.cs
 src/AffixApi.Api.Test/Model/CurrencyResponseTests.cs
 src/AffixApi.Api.Test/Model/DisconnectResponseTests.cs
 src/AffixApi.Api.Test/Model/EmployeeResponseManagerTests.cs
@@ -100,6 +103,7 @@ src/AffixApi.Api.Test/Model/MessageResponseTests.cs
 src/AffixApi.Api.Test/Model/ModeRequestTests.cs
 src/AffixApi.Api.Test/Model/ModeResponseTests.cs
 src/AffixApi.Api.Test/Model/PayrunResponseTests.cs
+src/AffixApi.Api.Test/Model/PayrunTypeResponseTests.cs
 src/AffixApi.Api.Test/Model/PayslipResponseContributionsTests.cs
 src/AffixApi.Api.Test/Model/PayslipResponseDeductionsTests.cs
 src/AffixApi.Api.Test/Model/PayslipResponseEarningsTests.cs
@@ -150,6 +154,7 @@ src/AffixApi.Api/Model/CreateEmployeeRequestDependents.cs
 src/AffixApi.Api/Model/CreateEmployeeRequestEmergencyContacts.cs
 src/AffixApi.Api/Model/CreateEmployeeRequestManager.cs
 src/AffixApi.Api/Model/CurrencyNotNullRequest.cs
+src/AffixApi.Api/Model/CurrencyNotNullResponse.cs
 src/AffixApi.Api/Model/CurrencyResponse.cs
 src/AffixApi.Api/Model/DisconnectResponse.cs
 src/AffixApi.Api/Model/EmployeeResponse.cs
@@ -173,6 +178,7 @@ src/AffixApi.Api/Model/MessageResponse.cs
 src/AffixApi.Api/Model/ModeRequest.cs
 src/AffixApi.Api/Model/ModeResponse.cs
 src/AffixApi.Api/Model/PayrunResponse.cs
+src/AffixApi.Api/Model/PayrunTypeResponse.cs
 src/AffixApi.Api/Model/PayslipResponse.cs
 src/AffixApi.Api/Model/PayslipResponseContributions.cs
 src/AffixApi.Api/Model/PayslipResponseDeductions.cs

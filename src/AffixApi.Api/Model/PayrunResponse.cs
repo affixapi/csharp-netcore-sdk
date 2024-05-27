@@ -33,10 +33,10 @@ namespace AffixApi.Api.Model
     public partial class PayrunResponse : IEquatable<PayrunResponse>, IValidatableObject
     {
         /// <summary>
-        /// Defines RunState
+        /// Defines State
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
-        public enum RunStateEnum
+        public enum StateEnum
         {
             /// <summary>
             /// Enum Paid for value: paid
@@ -60,60 +60,10 @@ namespace AffixApi.Api.Model
 
 
         /// <summary>
-        /// Gets or Sets RunState
+        /// Gets or Sets State
         /// </summary>
-        [DataMember(Name = "run_state", IsRequired = true, EmitDefaultValue = true)]
-        public RunStateEnum RunState { get; set; }
-        /// <summary>
-        /// Defines RunType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum RunTypeEnum
-        {
-            /// <summary>
-            /// Enum Regular for value: regular
-            /// </summary>
-            [EnumMember(Value = "regular")]
-            Regular = 1,
-
-            /// <summary>
-            /// Enum OneTime for value: one-time
-            /// </summary>
-            [EnumMember(Value = "one-time")]
-            OneTime = 2,
-
-            /// <summary>
-            /// Enum OffCycle for value: off-cycle
-            /// </summary>
-            [EnumMember(Value = "off-cycle")]
-            OffCycle = 3,
-
-            /// <summary>
-            /// Enum Correction for value: correction
-            /// </summary>
-            [EnumMember(Value = "correction")]
-            Correction = 4,
-
-            /// <summary>
-            /// Enum Reversal for value: reversal
-            /// </summary>
-            [EnumMember(Value = "reversal")]
-            Reversal = 5,
-
-            /// <summary>
-            /// Enum Null for value: null
-            /// </summary>
-            [EnumMember(Value = "null")]
-            Null = 6
-
-        }
-
-
-        /// <summary>
-        /// Gets or Sets RunType
-        /// </summary>
-        [DataMember(Name = "run_type", IsRequired = true, EmitDefaultValue = true)]
-        public RunTypeEnum RunType { get; set; }
+        [DataMember(Name = "state", IsRequired = true, EmitDefaultValue = true)]
+        public StateEnum State { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PayrunResponse" /> class.
         /// </summary>
@@ -124,19 +74,20 @@ namespace AffixApi.Api.Model
         /// </summary>
         /// <param name="id">The Affix-assigned id of the individual (required).</param>
         /// <param name="remoteId">the remote system-assigned id of the payrun (required).</param>
-        /// <param name="runState">runState (required).</param>
-        /// <param name="runType">runType (required).</param>
+        /// <param name="state">state (required).</param>
+        /// <param name="type">type (required).</param>
         /// <param name="startDate">Payrun period start date (required).</param>
         /// <param name="endDate">Payrun period end date (required).</param>
         /// <param name="paymentDate">Payment date / check date (required).</param>
-        public PayrunResponse(string id = default(string), string remoteId = default(string), RunStateEnum runState = default(RunStateEnum), RunTypeEnum runType = default(RunTypeEnum), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), DateTime? paymentDate = default(DateTime?))
+        public PayrunResponse(string id = default(string), string remoteId = default(string), StateEnum state = default(StateEnum), PayrunTypeResponse type = default(PayrunTypeResponse), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), DateTime? paymentDate = default(DateTime?))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for PayrunResponse and cannot be null");
             // to ensure "remoteId" is required (not null)
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for PayrunResponse and cannot be null");
-            this.RunState = runState;
-            this.RunType = runType;
+            this.State = state;
+            // to ensure "type" is required (not null)
+            this.Type = type ?? throw new ArgumentNullException("type is a required property for PayrunResponse and cannot be null");
             // to ensure "startDate" is required (not null)
             this.StartDate = startDate ?? throw new ArgumentNullException("startDate is a required property for PayrunResponse and cannot be null");
             // to ensure "endDate" is required (not null)
@@ -158,6 +109,12 @@ namespace AffixApi.Api.Model
         /// <value>the remote system-assigned id of the payrun</value>
         [DataMember(Name = "remote_id", IsRequired = true, EmitDefaultValue = false)]
         public string RemoteId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
+        public PayrunTypeResponse Type { get; set; }
 
         /// <summary>
         /// Payrun period start date
@@ -193,8 +150,8 @@ namespace AffixApi.Api.Model
             sb.Append("class PayrunResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RemoteId: ").Append(RemoteId).Append("\n");
-            sb.Append("  RunState: ").Append(RunState).Append("\n");
-            sb.Append("  RunType: ").Append(RunType).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  PaymentDate: ").Append(PaymentDate).Append("\n");
@@ -243,12 +200,13 @@ namespace AffixApi.Api.Model
                     this.RemoteId.Equals(input.RemoteId))
                 ) && 
                 (
-                    this.RunState == input.RunState ||
-                    this.RunState.Equals(input.RunState)
+                    this.State == input.State ||
+                    this.State.Equals(input.State)
                 ) && 
                 (
-                    this.RunType == input.RunType ||
-                    this.RunType.Equals(input.RunType)
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 ) && 
                 (
                     this.StartDate == input.StartDate ||
@@ -280,8 +238,9 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.RemoteId != null)
                     hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
-                hashCode = hashCode * 59 + this.RunState.GetHashCode();
-                hashCode = hashCode * 59 + this.RunType.GetHashCode();
+                hashCode = hashCode * 59 + this.State.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)

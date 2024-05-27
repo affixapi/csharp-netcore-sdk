@@ -33,38 +33,6 @@ namespace AffixApi.Api.Model
     public partial class PayslipResponse : IEquatable<PayslipResponse>, IValidatableObject
     {
         /// <summary>
-        /// Defines Currency
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum CurrencyEnum
-        {
-            /// <summary>
-            /// Enum Usd for value: usd
-            /// </summary>
-            [EnumMember(Value = "usd")]
-            Usd = 1,
-
-            /// <summary>
-            /// Enum Eur for value: eur
-            /// </summary>
-            [EnumMember(Value = "eur")]
-            Eur = 2,
-
-            /// <summary>
-            /// Enum Gbp for value: gbp
-            /// </summary>
-            [EnumMember(Value = "gbp")]
-            Gbp = 3
-
-        }
-
-
-        /// <summary>
-        /// Gets or Sets Currency
-        /// </summary>
-        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = false)]
-        public CurrencyEnum Currency { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="PayslipResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
@@ -75,7 +43,10 @@ namespace AffixApi.Api.Model
         /// <param name="id">The Affix-assigned id of the payslip (required).</param>
         /// <param name="remoteId">the remote system-assigned id of the payrun (required).</param>
         /// <param name="employeeId">employeeId (required).</param>
+        /// <param name="employeeRemoteId">employeeRemoteId (required).</param>
         /// <param name="payrunId">payrunId (required).</param>
+        /// <param name="payrunRemoteId">payrunRemoteId (required).</param>
+        /// <param name="payrunType">payrunType (required).</param>
         /// <param name="currency">currency (required).</param>
         /// <param name="grossPay">if USD/EUR/GBP, in cent (required).</param>
         /// <param name="netPay">if USD/EUR/GBP, in cent (required).</param>
@@ -86,7 +57,7 @@ namespace AffixApi.Api.Model
         /// <param name="contributions">Items paid by the employer that are not included in gross pay, such as employer-paid portion of private health insurance  (required).</param>
         /// <param name="deductions">deductions (required).</param>
         /// <param name="taxes">taxes (required).</param>
-        public PayslipResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string payrunId = default(string), CurrencyEnum currency = default(CurrencyEnum), decimal? grossPay = default(decimal?), decimal? netPay = default(decimal?), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), DateTime paymentDate = default(DateTime), List<PayslipResponseEarnings> earnings = default(List<PayslipResponseEarnings>), List<PayslipResponseContributions> contributions = default(List<PayslipResponseContributions>), List<PayslipResponseDeductions> deductions = default(List<PayslipResponseDeductions>), List<PayslipResponseTaxes> taxes = default(List<PayslipResponseTaxes>))
+        public PayslipResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string employeeRemoteId = default(string), string payrunId = default(string), string payrunRemoteId = default(string), PayrunTypeResponse payrunType = default(PayrunTypeResponse), CurrencyNotNullResponse currency = default(CurrencyNotNullResponse), decimal? grossPay = default(decimal?), decimal? netPay = default(decimal?), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), DateTime paymentDate = default(DateTime), List<PayslipResponseEarnings> earnings = default(List<PayslipResponseEarnings>), List<PayslipResponseContributions> contributions = default(List<PayslipResponseContributions>), List<PayslipResponseDeductions> deductions = default(List<PayslipResponseDeductions>), List<PayslipResponseTaxes> taxes = default(List<PayslipResponseTaxes>))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for PayslipResponse and cannot be null");
@@ -94,9 +65,16 @@ namespace AffixApi.Api.Model
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for PayslipResponse and cannot be null");
             // to ensure "employeeId" is required (not null)
             this.EmployeeId = employeeId ?? throw new ArgumentNullException("employeeId is a required property for PayslipResponse and cannot be null");
+            // to ensure "employeeRemoteId" is required (not null)
+            this.EmployeeRemoteId = employeeRemoteId ?? throw new ArgumentNullException("employeeRemoteId is a required property for PayslipResponse and cannot be null");
             // to ensure "payrunId" is required (not null)
             this.PayrunId = payrunId ?? throw new ArgumentNullException("payrunId is a required property for PayslipResponse and cannot be null");
-            this.Currency = currency;
+            // to ensure "payrunRemoteId" is required (not null)
+            this.PayrunRemoteId = payrunRemoteId ?? throw new ArgumentNullException("payrunRemoteId is a required property for PayslipResponse and cannot be null");
+            // to ensure "payrunType" is required (not null)
+            this.PayrunType = payrunType ?? throw new ArgumentNullException("payrunType is a required property for PayslipResponse and cannot be null");
+            // to ensure "currency" is required (not null)
+            this.Currency = currency ?? throw new ArgumentNullException("currency is a required property for PayslipResponse and cannot be null");
             // to ensure "grossPay" is required (not null)
             this.GrossPay = grossPay ?? throw new ArgumentNullException("grossPay is a required property for PayslipResponse and cannot be null");
             // to ensure "netPay" is required (not null)
@@ -118,14 +96,14 @@ namespace AffixApi.Api.Model
         /// The Affix-assigned id of the payslip
         /// </summary>
         /// <value>The Affix-assigned id of the payslip</value>
-        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// the remote system-assigned id of the payrun
         /// </summary>
         /// <value>the remote system-assigned id of the payrun</value>
-        [DataMember(Name = "remote_id", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "remote_id", IsRequired = true, EmitDefaultValue = true)]
         public string RemoteId { get; set; }
 
         /// <summary>
@@ -135,10 +113,34 @@ namespace AffixApi.Api.Model
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// Gets or Sets EmployeeRemoteId
+        /// </summary>
+        [DataMember(Name = "employee_remote_id", IsRequired = true, EmitDefaultValue = false)]
+        public string EmployeeRemoteId { get; set; }
+
+        /// <summary>
         /// Gets or Sets PayrunId
         /// </summary>
         [DataMember(Name = "payrun_id", IsRequired = true, EmitDefaultValue = false)]
         public string PayrunId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PayrunRemoteId
+        /// </summary>
+        [DataMember(Name = "payrun_remote_id", IsRequired = true, EmitDefaultValue = false)]
+        public string PayrunRemoteId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PayrunType
+        /// </summary>
+        [DataMember(Name = "payrun_type", IsRequired = true, EmitDefaultValue = true)]
+        public PayrunTypeResponse PayrunType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Currency
+        /// </summary>
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
+        public CurrencyNotNullResponse Currency { get; set; }
 
         /// <summary>
         /// if USD/EUR/GBP, in cent
@@ -211,7 +213,10 @@ namespace AffixApi.Api.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RemoteId: ").Append(RemoteId).Append("\n");
             sb.Append("  EmployeeId: ").Append(EmployeeId).Append("\n");
+            sb.Append("  EmployeeRemoteId: ").Append(EmployeeRemoteId).Append("\n");
             sb.Append("  PayrunId: ").Append(PayrunId).Append("\n");
+            sb.Append("  PayrunRemoteId: ").Append(PayrunRemoteId).Append("\n");
+            sb.Append("  PayrunType: ").Append(PayrunType).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
             sb.Append("  GrossPay: ").Append(GrossPay).Append("\n");
             sb.Append("  NetPay: ").Append(NetPay).Append("\n");
@@ -272,13 +277,29 @@ namespace AffixApi.Api.Model
                     this.EmployeeId.Equals(input.EmployeeId))
                 ) && 
                 (
+                    this.EmployeeRemoteId == input.EmployeeRemoteId ||
+                    (this.EmployeeRemoteId != null &&
+                    this.EmployeeRemoteId.Equals(input.EmployeeRemoteId))
+                ) && 
+                (
                     this.PayrunId == input.PayrunId ||
                     (this.PayrunId != null &&
                     this.PayrunId.Equals(input.PayrunId))
                 ) && 
                 (
+                    this.PayrunRemoteId == input.PayrunRemoteId ||
+                    (this.PayrunRemoteId != null &&
+                    this.PayrunRemoteId.Equals(input.PayrunRemoteId))
+                ) && 
+                (
+                    this.PayrunType == input.PayrunType ||
+                    (this.PayrunType != null &&
+                    this.PayrunType.Equals(input.PayrunType))
+                ) && 
+                (
                     this.Currency == input.Currency ||
-                    this.Currency.Equals(input.Currency)
+                    (this.Currency != null &&
+                    this.Currency.Equals(input.Currency))
                 ) && 
                 (
                     this.GrossPay == input.GrossPay ||
@@ -346,9 +367,16 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.RemoteId.GetHashCode();
                 if (this.EmployeeId != null)
                     hashCode = hashCode * 59 + this.EmployeeId.GetHashCode();
+                if (this.EmployeeRemoteId != null)
+                    hashCode = hashCode * 59 + this.EmployeeRemoteId.GetHashCode();
                 if (this.PayrunId != null)
                     hashCode = hashCode * 59 + this.PayrunId.GetHashCode();
-                hashCode = hashCode * 59 + this.Currency.GetHashCode();
+                if (this.PayrunRemoteId != null)
+                    hashCode = hashCode * 59 + this.PayrunRemoteId.GetHashCode();
+                if (this.PayrunType != null)
+                    hashCode = hashCode * 59 + this.PayrunType.GetHashCode();
+                if (this.Currency != null)
+                    hashCode = hashCode * 59 + this.Currency.GetHashCode();
                 if (this.GrossPay != null)
                     hashCode = hashCode * 59 + this.GrossPay.GetHashCode();
                 if (this.NetPay != null)

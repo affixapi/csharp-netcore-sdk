@@ -74,20 +74,20 @@ namespace AffixApi.Api.Test.Model
             // TODO unit test for the property 'RemoteId'
         }
         /// <summary>
-        /// Test the property 'RunState'
+        /// Test the property 'State'
         /// </summary>
         [Fact]
-        public void RunStateTest()
+        public void StateTest()
         {
-            // TODO unit test for the property 'RunState'
+            // TODO unit test for the property 'State'
         }
         /// <summary>
-        /// Test the property 'RunType'
+        /// Test the property 'Type'
         /// </summary>
         [Fact]
-        public void RunTypeTest()
+        public void TypeTest()
         {
-            // TODO unit test for the property 'RunType'
+            // TODO unit test for the property 'Type'
         }
         /// <summary>
         /// Test the property 'StartDate'
