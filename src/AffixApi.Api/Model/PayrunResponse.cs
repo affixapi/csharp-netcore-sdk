@@ -87,7 +87,7 @@ namespace AffixApi.Api.Model
             this.RemoteId = remoteId ?? throw new ArgumentNullException("remoteId is a required property for PayrunResponse and cannot be null");
             this.State = state;
             // to ensure "type" is required (not null)
-            this.Type = type ?? throw new ArgumentNullException("type is a required property for PayrunResponse and cannot be null");
+            this.Type = type;
             // to ensure "startDate" is required (not null)
             this.StartDate = startDate ?? throw new ArgumentNullException("startDate is a required property for PayrunResponse and cannot be null");
             // to ensure "endDate" is required (not null)

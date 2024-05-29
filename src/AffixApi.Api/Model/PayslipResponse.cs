@@ -72,9 +72,9 @@ namespace AffixApi.Api.Model
             // to ensure "payrunRemoteId" is required (not null)
             this.PayrunRemoteId = payrunRemoteId ?? throw new ArgumentNullException("payrunRemoteId is a required property for PayslipResponse and cannot be null");
             // to ensure "payrunType" is required (not null)
-            this.PayrunType = payrunType ?? throw new ArgumentNullException("payrunType is a required property for PayslipResponse and cannot be null");
+            this.PayrunType = payrunType;
             // to ensure "currency" is required (not null)
-            this.Currency = currency ?? throw new ArgumentNullException("currency is a required property for PayslipResponse and cannot be null");
+            this.Currency = currency;
             // to ensure "grossPay" is required (not null)
             this.GrossPay = grossPay ?? throw new ArgumentNullException("grossPay is a required property for PayslipResponse and cannot be null");
             // to ensure "netPay" is required (not null)
