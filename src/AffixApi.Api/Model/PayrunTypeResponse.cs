@@ -39,15 +39,15 @@ namespace AffixApi.Api.Model
         Regular = 1,
 
         /// <summary>
-        /// Enum OneTime for value: one-time
+        /// Enum OneTime for value: one_time
         /// </summary>
-        [EnumMember(Value = "one-time")]
+        [EnumMember(Value = "one_time")]
         OneTime = 2,
 
         /// <summary>
-        /// Enum OffCycle for value: off-cycle
+        /// Enum OffCycle for value: off_cycle
         /// </summary>
-        [EnumMember(Value = "off-cycle")]
+        [EnumMember(Value = "off_cycle")]
         OffCycle = 3,
 
         /// <summary>
