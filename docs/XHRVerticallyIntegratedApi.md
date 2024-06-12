@@ -332,7 +332,7 @@ This endpoint does not need any parameter.
 
 Payruns
 
-List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
 
 ### Example
 ```csharp
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 
 Payslips
 
-Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
 
 ### Example
 ```csharp
