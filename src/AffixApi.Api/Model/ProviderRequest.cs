@@ -243,40 +243,34 @@ namespace AffixApi.Api.Model
         RemoteCom = 35,
 
         /// <summary>
-        /// Enum Rippling for value: rippling
-        /// </summary>
-        [EnumMember(Value = "rippling")]
-        Rippling = 36,
-
-        /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 37,
+        Sageone = 36,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 38,
+        ShapePayroll = 37,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 39,
+        SimplepayIe = 38,
 
         /// <summary>
         /// Enum QuickbooksOnline for value: quickbooks online
         /// </summary>
         [EnumMember(Value = "quickbooks online")]
-        QuickbooksOnline = 40,
+        QuickbooksOnline = 39,
 
         /// <summary>
         /// Enum Zoho for value: zoho
         /// </summary>
         [EnumMember(Value = "zoho")]
-        Zoho = 41
+        Zoho = 40
 
     }
 
