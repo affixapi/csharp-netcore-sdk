@@ -66,14 +66,14 @@ namespace AffixApi.Api.Model
         /// The Affix-assigned id of the abscence
         /// </summary>
         /// <value>The Affix-assigned id of the abscence</value>
-        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// the remote system-assigned id of the abscence
         /// </summary>
         /// <value>the remote system-assigned id of the abscence</value>
-        [DataMember(Name = "remote_id", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "remote_id", IsRequired = true, EmitDefaultValue = true)]
         public string RemoteId { get; set; }
 
         /// <summary>

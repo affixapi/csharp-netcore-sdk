@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffixApi.Api", "src\AffixApi.Api\AffixApi.Api.csproj", "{7B38C265-614C-4CC3-AD8D-671F369B269A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffixApi.Api", "src\AffixApi.Api\AffixApi.Api.csproj", "{B71BEE77-59DB-448B-A5F9-BA8B0B5B0501}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffixApi.Api.Test", "src\AffixApi.Api.Test\AffixApi.Api.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7B38C265-614C-4CC3-AD8D-671F369B269A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B38C265-614C-4CC3-AD8D-671F369B269A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B38C265-614C-4CC3-AD8D-671F369B269A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B38C265-614C-4CC3-AD8D-671F369B269A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71BEE77-59DB-448B-A5F9-BA8B0B5B0501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71BEE77-59DB-448B-A5F9-BA8B0B5B0501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71BEE77-59DB-448B-A5F9-BA8B0B5B0501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71BEE77-59DB-448B-A5F9-BA8B0B5B0501}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
