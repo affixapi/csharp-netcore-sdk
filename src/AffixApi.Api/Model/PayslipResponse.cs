@@ -57,7 +57,8 @@ namespace AffixApi.Api.Model
         /// <param name="contributions">Items paid by the employer that are not included in gross pay, such as employer-paid portion of private health insurance  (required).</param>
         /// <param name="deductions">deductions (required).</param>
         /// <param name="taxes">taxes (required).</param>
-        public PayslipResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string employeeRemoteId = default(string), string payrunId = default(string), string payrunRemoteId = default(string), PayrunTypeResponse payrunType = default(PayrunTypeResponse), CurrencyNotNullResponse currency = default(CurrencyNotNullResponse), decimal? grossPay = default(decimal?), decimal? netPay = default(decimal?), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), DateTime paymentDate = default(DateTime), List<PayslipResponseEarnings> earnings = default(List<PayslipResponseEarnings>), List<PayslipResponseContributions> contributions = default(List<PayslipResponseContributions>), List<PayslipResponseDeductions> deductions = default(List<PayslipResponseDeductions>), List<PayslipResponseTaxes> taxes = default(List<PayslipResponseTaxes>))
+        /// <param name="reimbursements">reimbursements (required).</param>
+        public PayslipResponse(string id = default(string), string remoteId = default(string), string employeeId = default(string), string employeeRemoteId = default(string), string payrunId = default(string), string payrunRemoteId = default(string), PayrunTypeResponse payrunType = default(PayrunTypeResponse), CurrencyNotNullResponse currency = default(CurrencyNotNullResponse), decimal? grossPay = default(decimal?), decimal? netPay = default(decimal?), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), DateTime paymentDate = default(DateTime), List<PayslipResponseEarnings> earnings = default(List<PayslipResponseEarnings>), List<PayslipResponseContributions> contributions = default(List<PayslipResponseContributions>), List<PayslipResponseDeductions> deductions = default(List<PayslipResponseDeductions>), List<PayslipResponseTaxes> taxes = default(List<PayslipResponseTaxes>), List<PayslipResponseReimbursements> reimbursements = default(List<PayslipResponseReimbursements>))
         {
             // to ensure "id" is required (not null)
             this.Id = id ?? throw new ArgumentNullException("id is a required property for PayslipResponse and cannot be null");
@@ -90,6 +91,8 @@ namespace AffixApi.Api.Model
             this.Deductions = deductions ?? throw new ArgumentNullException("deductions is a required property for PayslipResponse and cannot be null");
             // to ensure "taxes" is required (not null)
             this.Taxes = taxes ?? throw new ArgumentNullException("taxes is a required property for PayslipResponse and cannot be null");
+            // to ensure "reimbursements" is required (not null)
+            this.Reimbursements = reimbursements ?? throw new ArgumentNullException("reimbursements is a required property for PayslipResponse and cannot be null");
         }
 
         /// <summary>
@@ -203,6 +206,12 @@ namespace AffixApi.Api.Model
         public List<PayslipResponseTaxes> Taxes { get; set; }
 
         /// <summary>
+        /// Gets or Sets Reimbursements
+        /// </summary>
+        [DataMember(Name = "reimbursements", IsRequired = true, EmitDefaultValue = true)]
+        public List<PayslipResponseReimbursements> Reimbursements { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -227,6 +236,7 @@ namespace AffixApi.Api.Model
             sb.Append("  Contributions: ").Append(Contributions).Append("\n");
             sb.Append("  Deductions: ").Append(Deductions).Append("\n");
             sb.Append("  Taxes: ").Append(Taxes).Append("\n");
+            sb.Append("  Reimbursements: ").Append(Reimbursements).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -349,6 +359,12 @@ namespace AffixApi.Api.Model
                     this.Taxes != null &&
                     input.Taxes != null &&
                     this.Taxes.SequenceEqual(input.Taxes)
+                ) && 
+                (
+                    this.Reimbursements == input.Reimbursements ||
+                    this.Reimbursements != null &&
+                    input.Reimbursements != null &&
+                    this.Reimbursements.SequenceEqual(input.Reimbursements)
                 );
         }
 
@@ -395,6 +411,8 @@ namespace AffixApi.Api.Model
                     hashCode = hashCode * 59 + this.Deductions.GetHashCode();
                 if (this.Taxes != null)
                     hashCode = hashCode * 59 + this.Taxes.GetHashCode();
+                if (this.Reimbursements != null)
+                    hashCode = hashCode * 59 + this.Reimbursements.GetHashCode();
                 return hashCode;
             }
         }
