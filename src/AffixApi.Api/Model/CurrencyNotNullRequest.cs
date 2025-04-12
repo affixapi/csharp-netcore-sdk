@@ -48,7 +48,19 @@ namespace AffixApi.Api.Model
         /// Enum Eur for value: eur
         /// </summary>
         [EnumMember(Value = "eur")]
-        Eur = 3
+        Eur = 3,
+
+        /// <summary>
+        /// Enum Sek for value: sek
+        /// </summary>
+        [EnumMember(Value = "sek")]
+        Sek = 4,
+
+        /// <summary>
+        /// Enum Cad for value: cad
+        /// </summary>
+        [EnumMember(Value = "cad")]
+        Cad = 5
 
     }
 
