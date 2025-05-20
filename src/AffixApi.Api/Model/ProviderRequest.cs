@@ -207,70 +207,76 @@ namespace AffixApi.Api.Model
         Justworks = 29,
 
         /// <summary>
+        /// Enum KontekSe for value: kontek.se
+        /// </summary>
+        [EnumMember(Value = "kontek.se")]
+        KontekSe = 30,
+
+        /// <summary>
         /// Enum Onpay for value: onpay
         /// </summary>
         [EnumMember(Value = "onpay")]
-        Onpay = 30,
+        Onpay = 31,
 
         /// <summary>
         /// Enum Oysterhr for value: oysterhr
         /// </summary>
         [EnumMember(Value = "oysterhr")]
-        Oysterhr = 31,
+        Oysterhr = 32,
 
         /// <summary>
         /// Enum Paycircle for value: paycircle
         /// </summary>
         [EnumMember(Value = "paycircle")]
-        Paycircle = 32,
+        Paycircle = 33,
 
         /// <summary>
         /// Enum PentoIo for value: pento.io
         /// </summary>
         [EnumMember(Value = "pento.io")]
-        PentoIo = 33,
+        PentoIo = 34,
 
         /// <summary>
         /// Enum Peoplehr for value: peoplehr
         /// </summary>
         [EnumMember(Value = "peoplehr")]
-        Peoplehr = 34,
+        Peoplehr = 35,
 
         /// <summary>
         /// Enum RemoteCom for value: remote.com
         /// </summary>
         [EnumMember(Value = "remote.com")]
-        RemoteCom = 35,
+        RemoteCom = 36,
 
         /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 36,
+        Sageone = 37,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 37,
+        ShapePayroll = 38,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 38,
+        SimplepayIe = 39,
 
         /// <summary>
         /// Enum QuickbooksOnline for value: quickbooks online
         /// </summary>
         [EnumMember(Value = "quickbooks online")]
-        QuickbooksOnline = 39,
+        QuickbooksOnline = 40,
 
         /// <summary>
         /// Enum Zoho for value: zoho
         /// </summary>
         [EnumMember(Value = "zoho")]
-        Zoho = 40
+        Zoho = 41
 
     }
 
