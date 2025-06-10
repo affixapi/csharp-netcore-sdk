@@ -243,40 +243,46 @@ namespace AffixApi.Api.Model
         Peoplehr = 35,
 
         /// <summary>
+        /// Enum QuickbooksOnline for value: quickbooks online
+        /// </summary>
+        [EnumMember(Value = "quickbooks online")]
+        QuickbooksOnline = 36,
+
+        /// <summary>
         /// Enum RemoteCom for value: remote.com
         /// </summary>
         [EnumMember(Value = "remote.com")]
-        RemoteCom = 36,
+        RemoteCom = 37,
 
         /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 37,
+        Sageone = 38,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 38,
+        ShapePayroll = 39,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 39,
+        SimplepayIe = 40,
 
         /// <summary>
-        /// Enum QuickbooksOnline for value: quickbooks online
+        /// Enum Talenox for value: talenox
         /// </summary>
-        [EnumMember(Value = "quickbooks online")]
-        QuickbooksOnline = 40,
+        [EnumMember(Value = "talenox")]
+        Talenox = 41,
 
         /// <summary>
         /// Enum Zoho for value: zoho
         /// </summary>
         [EnumMember(Value = "zoho")]
-        Zoho = 41
+        Zoho = 42
 
     }
 
