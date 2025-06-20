@@ -255,34 +255,46 @@ namespace AffixApi.Api.Model
         RemoteCom = 37,
 
         /// <summary>
+        /// Enum Runa for value: runa
+        /// </summary>
+        [EnumMember(Value = "runa")]
+        Runa = 38,
+
+        /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 38,
+        Sageone = 39,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 39,
+        ShapePayroll = 40,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 40,
+        SimplepayIe = 41,
 
         /// <summary>
         /// Enum Talenox for value: talenox
         /// </summary>
         [EnumMember(Value = "talenox")]
-        Talenox = 41,
+        Talenox = 42,
+
+        /// <summary>
+        /// Enum Unity for value: unity
+        /// </summary>
+        [EnumMember(Value = "unity")]
+        Unity = 43,
 
         /// <summary>
         /// Enum Zoho for value: zoho
         /// </summary>
         [EnumMember(Value = "zoho")]
-        Zoho = 42
+        Zoho = 44
 
     }
 
