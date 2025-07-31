@@ -201,118 +201,136 @@ namespace AffixApi.Api.Model
         Fourthhr = 28,
 
         /// <summary>
+        /// Enum Greythr for value: greythr
+        /// </summary>
+        [EnumMember(Value = "greythr")]
+        Greythr = 29,
+
+        /// <summary>
         /// Enum Gusto for value: gusto
         /// </summary>
         [EnumMember(Value = "gusto")]
-        Gusto = 29,
+        Gusto = 30,
 
         /// <summary>
         /// Enum Itrent for value: itrent
         /// </summary>
         [EnumMember(Value = "itrent")]
-        Itrent = 30,
+        Itrent = 31,
 
         /// <summary>
         /// Enum Justworks for value: justworks
         /// </summary>
         [EnumMember(Value = "justworks")]
-        Justworks = 31,
+        Justworks = 32,
+
+        /// <summary>
+        /// Enum Keypay for value: keypay
+        /// </summary>
+        [EnumMember(Value = "keypay")]
+        Keypay = 33,
 
         /// <summary>
         /// Enum KontekSe for value: kontek.se
         /// </summary>
         [EnumMember(Value = "kontek.se")]
-        KontekSe = 32,
+        KontekSe = 34,
 
         /// <summary>
         /// Enum Onpay for value: onpay
         /// </summary>
         [EnumMember(Value = "onpay")]
-        Onpay = 33,
+        Onpay = 35,
 
         /// <summary>
         /// Enum Oysterhr for value: oysterhr
         /// </summary>
         [EnumMember(Value = "oysterhr")]
-        Oysterhr = 34,
+        Oysterhr = 36,
 
         /// <summary>
         /// Enum Paycircle for value: paycircle
         /// </summary>
         [EnumMember(Value = "paycircle")]
-        Paycircle = 35,
+        Paycircle = 37,
 
         /// <summary>
         /// Enum PentoIo for value: pento.io
         /// </summary>
         [EnumMember(Value = "pento.io")]
-        PentoIo = 36,
+        PentoIo = 38,
 
         /// <summary>
         /// Enum Peoplehr for value: peoplehr
         /// </summary>
         [EnumMember(Value = "peoplehr")]
-        Peoplehr = 37,
+        Peoplehr = 39,
 
         /// <summary>
         /// Enum QuickbooksOnline for value: quickbooks online
         /// </summary>
         [EnumMember(Value = "quickbooks online")]
-        QuickbooksOnline = 38,
+        QuickbooksOnline = 40,
 
         /// <summary>
         /// Enum RemoteCom for value: remote.com
         /// </summary>
         [EnumMember(Value = "remote.com")]
-        RemoteCom = 39,
+        RemoteCom = 41,
 
         /// <summary>
         /// Enum Runa for value: runa
         /// </summary>
         [EnumMember(Value = "runa")]
-        Runa = 40,
+        Runa = 42,
 
         /// <summary>
         /// Enum Sageone for value: sageone
         /// </summary>
         [EnumMember(Value = "sageone")]
-        Sageone = 41,
+        Sageone = 43,
 
         /// <summary>
         /// Enum ShapePayroll for value: shape payroll
         /// </summary>
         [EnumMember(Value = "shape payroll")]
-        ShapePayroll = 42,
+        ShapePayroll = 44,
 
         /// <summary>
         /// Enum SimplepayIe for value: simplepay.ie
         /// </summary>
         [EnumMember(Value = "simplepay.ie")]
-        SimplepayIe = 43,
+        SimplepayIe = 45,
 
         /// <summary>
         /// Enum Talenox for value: talenox
         /// </summary>
         [EnumMember(Value = "talenox")]
-        Talenox = 44,
+        Talenox = 46,
+
+        /// <summary>
+        /// Enum Talentoz for value: talentoz
+        /// </summary>
+        [EnumMember(Value = "talentoz")]
+        Talentoz = 47,
 
         /// <summary>
         /// Enum Unity for value: unity
         /// </summary>
         [EnumMember(Value = "unity")]
-        Unity = 45,
+        Unity = 48,
 
         /// <summary>
         /// Enum Zoho for value: zoho
         /// </summary>
         [EnumMember(Value = "zoho")]
-        Zoho = 46,
+        Zoho = 49,
 
         /// <summary>
         /// Enum Zucchetti for value: zucchetti
         /// </summary>
         [EnumMember(Value = "zucchetti")]
-        Zucchetti = 47
+        Zucchetti = 50
 
     }
 
