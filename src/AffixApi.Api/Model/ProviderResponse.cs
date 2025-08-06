@@ -303,34 +303,40 @@ namespace AffixApi.Api.Model
         SimplepayIe = 45,
 
         /// <summary>
+        /// Enum Sunfish for value: sunfish
+        /// </summary>
+        [EnumMember(Value = "sunfish")]
+        Sunfish = 46,
+
+        /// <summary>
         /// Enum Talenox for value: talenox
         /// </summary>
         [EnumMember(Value = "talenox")]
-        Talenox = 46,
+        Talenox = 47,
 
         /// <summary>
         /// Enum Talentoz for value: talentoz
         /// </summary>
         [EnumMember(Value = "talentoz")]
-        Talentoz = 47,
+        Talentoz = 48,
 
         /// <summary>
         /// Enum Unity for value: unity
         /// </summary>
         [EnumMember(Value = "unity")]
-        Unity = 48,
+        Unity = 49,
 
         /// <summary>
         /// Enum Zoho for value: zoho
         /// </summary>
         [EnumMember(Value = "zoho")]
-        Zoho = 49,
+        Zoho = 50,
 
         /// <summary>
         /// Enum Zucchetti for value: zucchetti
         /// </summary>
         [EnumMember(Value = "zucchetti")]
-        Zucchetti = 50
+        Zucchetti = 51
 
     }
 
